@@ -42,6 +42,7 @@ class HtmlParagraph{
 
 $con = new DbCon();
 $thistext = new Text($con,49);
+$thistext->output();
 #var_dump($thistext->chapters);
 
 ?>
