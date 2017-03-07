@@ -13,13 +13,17 @@ import db
 
 
 class Text():
-    def __init__(self, html):
+    errors = ""
+    def __init__(self, html, address=""):
+        self.address = address
         soup = BeautifulSoup(html,'lxml')
         self.text = soup.find(["div"],{'class':'teksti'})
         self.chapters = list()
         self.getType()
         self.CleanChapters()
         self.GetMeta()
+        self.hasfailed = False
+        self.title = ""
         #header = self.text.find("h3")
         #self.header = header.text
 
@@ -29,7 +33,11 @@ class Text():
         if(len(self.p)<4):
             if "<br/>\n   <br/>\n" in self.prettified:
                 self.title = self.text.find("h3").text
-                self.IterateBr()
+                try:
+                    self.IterateBr()
+                except IndexError:
+                    Text.errors += self.address + "\n"
+                    self.hasfailed = True
         else:
             if "Takaisin" in self.p[0].text:
                 self.title = self.text.find("h1").text
@@ -43,6 +51,7 @@ class Text():
             setattr(self,tds[0].text.replace(":","").strip().lower().replace(" ","_").replace("ä","a").replace("-","_"),tds[1].text)
 
     def IterateP(self):
+        print("Scraping " + self.address)
         for p in self.p[1:]:
             potentialheader = p.find("strong")
             if potentialheader:
@@ -54,6 +63,7 @@ class Text():
                 self.chapters[-1].paragraphs.append(p.text)
 
     def IterateBr(self):
+        print("Scraping " + self.address)
         ps = self.text.findAll("p")
         body = ps[1]
         name = ps[2]
@@ -111,6 +121,8 @@ class Text():
 
     def InsertToDb(self, con):
         """Tulosta teksti ja metadata tiedostoihin"""
+        if self.hasfailed:
+            return False
         dbtext = db.TextMeta(self.title,self.maa,self.korkeakoulu,self.vaihtoaika,self.vaihto_ohjelma,self.lahettava_laitos)
         dbchapters = list()
         for chapter in self.chapters:
@@ -141,32 +153,22 @@ class Chapter():
             self.paragraphs[-1] += " " + ptext
 
 
-#with open("linksource.html","r") as f:
-#    html = f.read()
-
-with open("test.xhtml","r") as f:
-    html = f.read()
-
-#with open("test3.html","r") as f:
-#    html = f.read()
-
-thistext = Text(html)
 con = db.SqlaCon()
-thistext.InsertToDb(con)
 
-#spans = body.findAll("span")
+with open("linksource.html","r") as f:
+    soup = BeautifulSoup(f.read(),'lxml')
 
+links = soup.find_all(["a"],{'href':re.compile(r'.*matkakertomukset/kertomus.*')})
+for idx, link in enumerate(links):
+    href = link.get("href")
+    try:
+        thistext = Text(urlopen(href).read(), href)
+        thistext.InsertToDb(con)
+    except:
+        if href not in Text.errors:
+            Text.errors += href + "\n"
+            print(href + "FAILED!")
+    print("{}/{}".format(idx,len(links)),end="\r")
 
+print("\n\nDone. Errors with the following hrefs:\n {}.".format(Text.errors))
 
-
-
-#paragraphs = [x for x in body.contents if getattr(x, 'name', None) != 'br']
-
-#links = soup.find_all(["a"],{'href':re.compile(r'.*matkakertomukset/kertomus.*')})
-#for link in links:
-#    href = link.get("href")
-
-
-#'http://www.uta.fi/opiskelu/opiskelu_ulkomailla/matkakertomukset/kertomus.html?id=23181'
-
-#paragraphs = justext.justext(body, justext.get_stoplist("Finnish"))

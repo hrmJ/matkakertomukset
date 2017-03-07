@@ -45,15 +45,17 @@ class Paragraph(Base):
     id = Column(Integer, primary_key=True)
     content = Column(String,default='')
     theme = Column(String,default='')
+    parsed = Column(String,default='')
     #text_id = Column(Integer, ForeignKey('textmeta.id'))
     chapter_id = Column(Integer, ForeignKey('chapters.id'))
     ##Itext = relationship("TextMeta", backref=backref("textmeta", order_by=id))
     chapter = relationship("Chapter", backref=backref("paragraphs", order_by=id))
 
-    def __init__(self,content="",theme=""):
+    def __init__(self,content="",theme="", parsed=""):
         """ """
         self.content = content
         self.theme = theme
+        self.parsed = parsed
 
 
 class SqlaCon:
