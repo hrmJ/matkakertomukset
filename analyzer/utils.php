@@ -32,6 +32,7 @@ class Text{
         $form->AddAttribute('action',$url);
         $form->AddAttribute('method','POST');
         $section = new DomEl('section','', $form);
+        $section->AddAttribute('class','cont');
 
         foreach($this->chapters as $id => $header){
             $header = new DomEl('h3',$header,$section);
