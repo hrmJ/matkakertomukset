@@ -38,9 +38,12 @@ class Text{
             $header = new DomEl('h3',$header,$section);
             foreach($this->paragraphs[$id] as $paragraph){
                 if(!empty($paragraph["content"])){
+                    $status = " unanalyzed";
+                    if(!empty($paragraph["theme"]))
+                        $status = " analyzed";
                     $p = new DomEl('p',$paragraph["content"],$section);
                     $p->AddAttribute('id','p_' . $paragraph["id"]);
-                    $p->AddAttribute('class','themeparagraph');
+                    $p->AddAttribute('class',"themeparagraph$status");
                     $p->AddAttribute('onClick','PickTheme(this);');
 
                     $input = new DomEl('input',"",$p);
@@ -55,6 +58,16 @@ class Text{
 }
 
 
+
+function SaveData($con){
+    foreach($_POST as $key => $item){
+        $pos = strpos($key, "theme_");
+        if($pos !== false){
+            $id = substr($key,6);
+            $con->update("paragraphs", Array("theme"=>$item),Array(Array("id","=",intval($id))));
+        }
+    }
+}
 
 #var_dump($thistext->chapters);
 

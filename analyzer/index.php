@@ -1,3 +1,10 @@
+<?php
+
+session_start();
+require("utils.php");
+$con = new DbCon();
+
+?>
 
 <html lang="fi">
 <head>
@@ -19,7 +26,6 @@
 
 <?php
 
-session_start();
 $jselected = "";
 $kselected = "";
 
@@ -34,6 +40,8 @@ if($_SESSION['performer']=="J")
 else
     $kselected = "selected";
 
+if(isset($_POST["saveannotationsbutton"]))
+    SaveData($con);
 
 ?>
 
@@ -59,16 +67,30 @@ else
 <?php
 
 
-require("utils.php");
-
-$con = new DbCon();
 $thistext = new Text($con,$_GET["id"]);
 $thistext->output();
 
-var_dump($_POST);
 ?>
 
 </form>
+
+<div id="themepicker">
+
+<ul>
+    <li OnClick="PickMe(this);">etukäteisjärjestelyt</li>
+    <li OnClick="PickMe(this);">kielikurssi</li>
+    <li OnClick="PickMe(this);">kohdemaahan saapuminen</li>
+    <li OnClick="PickMe(this);">asuminen</li>
+    <li OnClick="PickMe(this);">opiskelu</li>
+    <li OnClick="PickMe(this);">muuta mainitsemisen arvoista</li>
+    <li OnClick="PickMe(this);">paluu tampereelle</li>
+    <li OnClick="PickMe(this);">merkityksellisyys</li>
+    <li OnClick="PickMe(this);">kritiikkiä tai kiitoksia</li>
+    <li OnClick="PickMe(this);">muu</li>
+</ul>
+
+
+</div>
 
 </body>
 
