@@ -2,13 +2,15 @@
 <?php
 
 class DbCon{
+    ///Jotta tietokantaan voisi kirjoittaa, on kansioon annettava (!) kirjoitusoikeudet
+    //chown -R youruser:www-data SolderInstallFolder/ & chmod -R 776 SolderInstallFolder/
 
     public function __construct () {
         $this->Connect();
     }
 
     public function Connect(){
-        $this->connection = new PDO('sqlite:matkakertomukset.db');
+        $this->connection = new PDO('sqlite:dbfolder/matkakertomukset.db');
         // set the error mode to exceptions
         $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         //mysql_set_charset('utf8', $this->connection);  

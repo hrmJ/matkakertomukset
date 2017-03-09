@@ -3,25 +3,33 @@
 session_start();
 require("utils.php");
 $con = new DbCon();
+ReleaseLocks($con);
+
 
 ?>
 
 <html lang="fi">
 <head>
 <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles.css?id=aslkddhddj">
 <script src="scripts.js"></script>
 <title>Framework for annotations</title>
 </head>
 
 <body>
 
-<form name="performer" method="POST" action="index.php?id=49">
+<form name="performer" method="POST" action="index.php">
+
 
 <section id="controls">
 
+
 <span>
-    Yhteensä tehty x / y
+<?php
+if(isset($_POST["saveannotationsbutton"]))
+    SaveData($con);
+PrintStatus($con);
+?>
 </span>
 
 <?php
@@ -40,8 +48,6 @@ if($_SESSION['performer']=="J")
 else
     $kselected = "selected";
 
-if(isset($_POST["saveannotationsbutton"]))
-    SaveData($con);
 
 ?>
 
@@ -54,7 +60,7 @@ if(isset($_POST["saveannotationsbutton"]))
 </span>
 
 <span>
-    Seuraava teksti
+    <a href="javascript:void(0)" onClick="NewText();">Lataa uusi teksti</a>
 </span>
 
 <span>
@@ -66,32 +72,35 @@ if(isset($_POST["saveannotationsbutton"]))
 
 <?php
 
+if(isset($_POST["saveannotationsbutton"]))
+    $textid = $_POST["textid"];
+else
+    $textid = FetchTextId($con);
 
-$thistext = new Text($con,$_GET["id"]);
+$thistext = new Text($con, $textid);
 $thistext->output();
 
 ?>
+
 
 </form>
 
 <div id="themepicker">
 
-<ul>
-    <li OnClick="PickMe(this);">etukäteisjärjestelyt</li>
-    <li OnClick="PickMe(this);">kielikurssi</li>
-    <li OnClick="PickMe(this);">kohdemaahan saapuminen</li>
-    <li OnClick="PickMe(this);">asuminen</li>
-    <li OnClick="PickMe(this);">opiskelu</li>
-    <li OnClick="PickMe(this);">muuta mainitsemisen arvoista</li>
-    <li OnClick="PickMe(this);">paluu tampereelle</li>
-    <li OnClick="PickMe(this);">merkityksellisyys</li>
-    <li OnClick="PickMe(this);">kritiikkiä tai kiitoksia</li>
-    <li OnClick="PickMe(this);">muu</li>
-</ul>
-
+<form name="themesetter" method="POST" action="index.php">
+<?php FetchThemes($con);?>
+<input type="submit" value="Tallenna" class="hidden" name="newthemebutton" id="newthemebutton">
+</form>
 
 </div>
+
+<form name="textidsaver" method="POST" action="index.php" class="hidden">
+    <input type="text"  value="<?php echo $textid;?>" name="textid">
+    <input type="submit" value="Tallenna" name="fetchtextbutton" id="fetchtextbutton">
+</form>
+
 
 </body>
 
 </html>
+

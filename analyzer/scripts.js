@@ -52,3 +52,38 @@ function PickMe(el){
     thisp.className = "themeparagraph analyzed";
 }
 
+function NewText(){
+    document.getElementById("fetchtextbutton").click();
+}
+
+function AddTheme(){
+    var themeinput = document.getElementById("newthemeinput");
+    if(themeinput.value!=""){
+        var ul = document.getElementById("themelist");
+        var li = TagWithText("li",themeinput.value);
+        li.setAttribute("OnClick","PickMe(this);");
+        ul.appendChild(li);
+        themeinput.value = "";
+    }
+}
+
+TagWithText = function(tagname, tagtext, tagclass){
+    var tag = document.createElement(tagname);
+    tag.textContent = tagtext;
+    tag.className = tagclass;
+    return tag;
+}
+
+TagParent = function(tagname, childlist, classname, tagid){
+    var tag = document.createElement(tagname);
+    tag.className = classname;
+    for (child_idx in childlist){
+        tag.appendChild(childlist[child_idx]);
+    }
+    if (tagid!==undefined){
+        tag.id = tagid;
+    
+    }
+    return tag;
+}
+
