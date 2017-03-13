@@ -139,5 +139,21 @@ function PrintStatus($con){
 }
 
 #var_dump($thistext->chapters);
+#
+
+function FetchTexts($con){
+
+    $chapter_ids = $con->select("paragraphs",Array("chapter_id"),Array(Array("analyzedby","=",$_GET["performer"])),"DISTINCT","")->fetchAll();
+    $textids = Array();
+    foreach($chapter_ids as $cid){
+        $text_id = $con->select("chapters",Array("text_id"),Array(Array("id","=",$cid[0])),"","LIMIT 1")->fetch();
+        $thisid = $text_id[0];
+        if(in_array($thisid,$textids)===false){
+            $textids[] = $thisid;
+        }
+    }
+    return $textids;
+}
+
 
 ?>

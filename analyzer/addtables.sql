@@ -1,4 +1,12 @@
 
+ALTER TABLE paragraphs ADD COLUMN analyzedby VARCHAR;
+ALTER TABLE paragraphs ADD COLUMN locked INTEGER;
+UPDATE paragraphs SET locked = 0;
+
+ALTER TABLE textmeta ADD COLUMN analyzed VARCHAR;
+UPDATE textmeta set analyzed = 'no';
+
+
 CREATE TABLE themes(id INTEGER, theme VARCHAR, PRIMARY KEY(id ASC));
 
 INSERT INTO themes (theme) VALUES ('etukäteisjärjestelyt');
