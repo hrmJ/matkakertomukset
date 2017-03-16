@@ -7,7 +7,7 @@ require("htmlutils.php");
 
 class Text{
 
-    public function __construct ($con, $id) {
+    public function __construct ($con, $id, $themefieldname='theme') {
         $this->id = $id;
         $chapters = $con->select("chapters",Array("id","header","text_id"),Array(Array("text_id","=",$this->id)),"","ORDER BY id")->fetchAll();
         $chapter_ids = Array();
@@ -16,13 +16,13 @@ class Text{
             $chapter_ids[] = $chapter["id"];
             $this->chapters[$chapter["id"]] = $chapter["header"];
         }
-        $paragraphs = $con->select("paragraphs",Array("chapter_id","id","content","theme","parsed"),Array(Array("chapter_id",">=", min($chapter_ids)),Array("chapter_id","<=",max($chapter_ids))),"","ORDER BY chapter_id, id")->fetchAll();
+        $paragraphs = $con->select("paragraphs",Array("chapter_id","id","content",$themefieldname,"parsed","uncertain"),Array(Array("chapter_id",">=", min($chapter_ids)),Array("chapter_id","<=",max($chapter_ids))),"","ORDER BY chapter_id, id")->fetchAll();
         $this->paragraphs = Array();
         foreach($paragraphs as $paragraph){
             if(array_key_exists($paragraph["chapter_id"],$this->paragraphs))
-                $this->paragraphs[$paragraph["chapter_id"]][] = Array("id"=>$paragraph["id"],"content"=>$paragraph["content"],"theme"=>$paragraph["theme"]);
+                $this->paragraphs[$paragraph["chapter_id"]][] = Array("uncertain"=>$paragraph["uncertain"],"id"=>$paragraph["id"],"content"=>$paragraph["content"],"theme"=>$paragraph[$themefieldname]);
             else
-                $this->paragraphs[$paragraph["chapter_id"]] = Array(Array("id"=>$paragraph["id"],"content"=>$paragraph["content"],"theme"=>$paragraph["theme"]));
+                $this->paragraphs[$paragraph["chapter_id"]] = Array(Array("uncertain"=>$paragraph["uncertain"], "id"=>$paragraph["id"],"content"=>$paragraph["content"],"theme"=>$paragraph[$themefieldname]));
             #Mark each paragraph locked
             $con->update("paragraphs", Array("locked"=>1),Array(Array("id","=",intval($paragraph["id"]))));
         }
@@ -53,6 +53,12 @@ class Text{
                     $input->AddAttribute("type","text");
                     $input->AddAttribute("value",$paragraph["theme"]);
                     $input->AddAttribute("name","theme_" . $paragraph["id"] );
+
+                    $input = new DomEl('input',"",$p);
+                    $input->AddAttribute("type","text");
+                    $input->AddAttribute("value",$paragraph["uncertain"]);
+                    $input->AddAttribute("name","uncertain_" . $paragraph["id"] );
+
                 }
             }
         }
@@ -69,12 +75,7 @@ class Text{
 
 
 
-function SaveData($con){
-    $themes = $con->select("themes",Array("theme"),Array(),"DISTINCT","")->fetchAll();
-    $themelist = Array();
-    foreach($themes as $theme){
-        $themelist[] = $theme[0];
-    }
+function SaveData($con, $themefieldname="theme"){
     foreach($_POST as $key => $item){
         $pos = strpos($key, "theme_");
         if($pos !== false){
@@ -82,14 +83,15 @@ function SaveData($con){
             #Huom: anna mahdollisuus jättää joku kappale täysin analysoimatta
             if($item=="")
                 $item = "notanalyzed";
-            $con->update("paragraphs", Array("theme"=>$item,"analyzedby"=>$_POST["performer"]),Array(Array("id","=",intval($id))));
-            if($item != "notanalyzed" && in_array($item,$themelist)===false){
-                $con->insert("themes", Array("theme"=>$item));
-                $themelist[] = $item;
-            }
+            $con->update("paragraphs", Array($themefieldname=>$item,"analyzedby"=>$_POST["performer"]),Array(Array("id","=",intval($id))));
+        }
+        $pos = strpos($key, "uncertain_");
+        if($pos !== false){
+            $id = substr($key,10);
+            $con->update("paragraphs", Array("uncertain"=>$item,"analyzedby"=>$_POST["performer"]),Array(Array("id","=",intval($id))));
         }
     }
-    $con->update("textmeta", Array("analyzed"=>"yes"),Array(Array("id","=",intval($_POST["textid"]))));
+    $con->update("textmeta", Array("analyzed"=>"yes","analyzedby"=>$_POST["performer"]),Array(Array("id","=",intval($_POST["textid"]))));
 }
 
 function FetchThemes($con){
@@ -116,7 +118,7 @@ function FetchThemes($con){
 }
 
 function FetchTextIdForTest($con, $bywho, $themefieldname){
-    $chapter_id = $con->select("paragraphs",Array("chapter_id"),Array(Array("analyzedby","=",$bywho),Array("content","!=",""),Array($themefieldname,"=","")),"","ORDER BY id LIMIT 1")->fetch();
+    $chapter_id = $con->select("paragraphs",Array("chapter_id"),Array(Array("analyzedby","=",$bywho),Array("content","!=",""),Array($themefieldname,"=","")),"","ORDER BY id DESC LIMIT 1")->fetch();
     $chapter_id = $chapter_id[0];
     $text_id = $con->select("chapters",Array("text_id"),Array(Array("id","=",$chapter_id)),"","LIMIT 1")->fetch();
     return $text_id[0];
@@ -139,6 +141,12 @@ function ReleaseLocks($con){
         }
         $paragraphs = $con->update("paragraphs",Array("locked"=>0),Array(Array("chapter_id",">=", min($chapter_ids)),Array("chapter_id","<=",max($chapter_ids))));
     }
+}
+
+
+function PrintTestStatus($con,$performer, $max){
+    $ready = $con->select("textmeta",Array("id"),Array(Array("analyzed","=","yes"),Array("analyzedby","=",$performer)))->fetchAll();
+    echo "Testiaineistosta valmis: " . intval(sizeof($ready)) .  " / " . $max ;
 }
 
 function PrintStatus($con){

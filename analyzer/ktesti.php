@@ -5,6 +5,9 @@ require("utils.php");
 $oldcon = new DbCon("sqlite:dbfolder/matkakertomukset_old.db");
 $con = new DbCon();
 ReleaseLocks($con);
+$themefieldname = "theme_k";
+$performer = "K";
+$max = 10;
 
 
 ?>
@@ -19,7 +22,7 @@ ReleaseLocks($con);
 
 <body>
 
-<form name="performer" method="POST" action="index.php">
+<form name="performer" method="POST" action="ktesti.php">
 
 
 <section id="controls">
@@ -27,9 +30,10 @@ ReleaseLocks($con);
 
 <span>
 <?php
+
 if(isset($_POST["saveannotationsbutton"]))
-    SaveData($con);
-PrintStatus($con);
+    SaveData($con, $themefieldname);
+PrintTestStatus($con,$performer,$max);
 ?>
 </span>
 
@@ -43,6 +47,8 @@ if (isset( $_POST['performer']))
     $_SESSION['performer'] = $_POST["performer"];
 else
     $_SESSION['performer'] = "J";
+
+$_SESSION['performer'] = $performer;
 
 if($_SESSION['performer']=="J")
     $jselected = "selected";
@@ -76,10 +82,10 @@ else
 if(isset($_POST["saveannotationsbutton"]))
     $textid = $_POST["textid"];
 else{
-    $textid=FetchTextIdForTest($con,"K");
+    $textid=FetchTextIdForTest($con,$_SESSION["performer"],$themefieldname);
 }
 
-$thistext = new Text($con, $textid);
+$thistext = new Text($con, $textid, $themefieldname);
 $thistext->output();
 
 ?>
@@ -88,11 +94,14 @@ $thistext->output();
 </form>
 
 <div id="themepicker">
+    <input id="uncertain" onChange="MarkCertainty(this, '<?php echo $performer ?>');"type="checkbox">Olen epävarma</input>
+    <ul id="themelist">
+        <li OnClick="PickMe(this);">Etukäteisjärjestelyt</li>
+        <li OnClick="PickMe(this);">Asuminen</li>
+        <li OnClick="PickMe(this);">Hinnat</li>
+        <li OnClick="PickMe(this);">Merkityksellisyys</li>
+    </ul>
 
-<form name="themesetter" method="POST" action="ktesti.php">
-<?php FetchThemes($con);?>
-<input type="submit" value="Tallenna" class="hidden" name="newthemebutton" id="newthemebutton">
-</form>
 
 </div>
 

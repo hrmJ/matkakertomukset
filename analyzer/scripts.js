@@ -1,5 +1,15 @@
 var currentparagraph = undefined;
 
+function MarkCertainty(el, whois){
+    var thisp = document.getElementById(currentparagraph);
+    if(el.checked==true){
+        thisp.getElementsByTagName("input")[1].value = whois;
+    }
+    else{
+        thisp.getElementsByTagName("input")[1].value = "no";
+    }
+}
+
 function PickTheme(el){
     var picker = document.getElementById("themepicker");
     if(currentparagraph !== undefined){
@@ -30,6 +40,20 @@ function PickTheme(el){
         currentparagraph = el.id;
 
         var themelist = picker.getElementsByTagName("li");
+
+        var uncertainty = el.getElementsByTagName("input")[1].value;
+        var certaintybox = document.getElementById("uncertain");
+        if(uncertainty=="no"){
+            certaintybox.checked = false;
+        }
+        else{
+            certaintybox.checked = true;
+        }
+
+        if(certaintybox.checked == true){
+
+        }
+
         for(var i=0;i<themelist.length;i++){
             var li = themelist[i];
             li.className = "unpicked";
