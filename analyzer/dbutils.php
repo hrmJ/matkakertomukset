@@ -9,8 +9,8 @@ class DbCon{
         $this->Connect();
     }
 
-    public function Connect(){
-        $this->connection = new PDO('sqlite:dbfolder/matkakertomukset.db');
+    public function Connect($file='sqlite:dbfolder/matkakertomukset.db'){
+        $this->connection = new PDO($file);
         // set the error mode to exceptions
         $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         //mysql_set_charset('utf8', $this->connection);  

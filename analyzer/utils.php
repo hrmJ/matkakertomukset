@@ -68,6 +68,7 @@ class Text{
 
 
 
+
 function SaveData($con){
     $themes = $con->select("themes",Array("theme"),Array(),"DISTINCT","")->fetchAll();
     $themelist = Array();
@@ -114,6 +115,14 @@ function FetchThemes($con){
     echo $ul->Show();
 }
 
+function FetchTextIdForTest($con, $bywho, $themefieldname){
+    $chapter_id = $con->select("paragraphs",Array("chapter_id"),Array(Array("analyzedby","=",$bywho),Array("content","!=",""),Array($themefieldname,"=","")),"","ORDER BY id LIMIT 1")->fetch();
+    $chapter_id = $chapter_id[0];
+    $text_id = $con->select("chapters",Array("text_id"),Array(Array("id","=",$chapter_id)),"","LIMIT 1")->fetch();
+    return $text_id[0];
+}
+
+
 function FetchTextId($con){
     $chapter_id = $con->select("paragraphs",Array("chapter_id"),Array(Array("locked","=",0),Array("content","!=",""),Array("theme","=","")),"","ORDER BY RANDOM() LIMIT 1")->fetch();
     $chapter_id = $chapter_id[0];
@@ -140,11 +149,30 @@ function PrintStatus($con){
 
 #var_dump($thistext->chapters);
 #
+#
 
-function FetchTexts($con){
+function FetchTextsForTest($con,$bywhom,$count=""){
 
-    $chapter_ids = $con->select("paragraphs",Array("chapter_id"),Array(Array("analyzedby","=",$_GET["performer"])),"DISTINCT","")->fetchAll();
+    $chapter_ids = $con->select("paragraphs",Array("chapter_id"),Array(Array("analyzedby","=",$bywhom),Array("theme","=","")),"DISTINCT","")->fetchAll();
     $textids = Array();
+    if($count=="")
+        $count = sizeof($chapter_ids);
+    foreach($chapter_ids as $cid){
+        $text_id = $con->select("chapters",Array("text_id"),Array(Array("id","=",$cid[0])),"","LIMIT 1")->fetch();
+        $thisid = $text_id[0];
+        if(in_array($thisid,$textids)===false){
+            $textids[] = $thisid;
+        }
+    }
+    return $textids;
+}
+
+function FetchTexts($con,$bywhom,$count=""){
+
+    $chapter_ids = $con->select("paragraphs",Array("chapter_id"),Array(Array("analyzedby","=",$bywhom)),"DISTINCT","")->fetchAll();
+    $textids = Array();
+    if($count=="")
+        $count = sizeof($chapter_ids);
     foreach($chapter_ids as $cid){
         $text_id = $con->select("chapters",Array("text_id"),Array(Array("id","=",$cid[0])),"","LIMIT 1")->fetch();
         $thisid = $text_id[0];
