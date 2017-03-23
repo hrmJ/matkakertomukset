@@ -7,7 +7,7 @@ require("htmlutils.php");
 
 class Text{
 
-    public function __construct ($con, $id, $themefieldname='theme') {
+    public function __construct ($con, $id, $themefieldname='theme',$isteststage2=false) {
         $this->id = $id;
         $chapters = $con->select("chapters",Array("id","header","text_id"),Array(Array("text_id","=",$this->id)),"","ORDER BY id")->fetchAll();
         $chapter_ids = Array();
@@ -23,6 +23,11 @@ class Text{
                 $this->paragraphs[$paragraph["chapter_id"]][] = Array("uncertain"=>$paragraph["uncertain"],"id"=>$paragraph["id"],"content"=>$paragraph["content"],"theme"=>$paragraph[$themefieldname]);
             else
                 $this->paragraphs[$paragraph["chapter_id"]] = Array(Array("uncertain"=>$paragraph["uncertain"], "id"=>$paragraph["id"],"content"=>$paragraph["content"],"theme"=>$paragraph[$themefieldname]));
+
+            if($isteststage2===true){
+                end($this->paragraphs[$paragraph["chapter_id"]]);
+                $this->paragraphs[$paragraph["chapter_id"]][key($this->paragraphs[$paragraph["chapter_id"]])]["uncertain"] = "no";
+            }
             #Mark each paragraph locked
             $con->update("paragraphs", Array("locked"=>1),Array(Array("id","=",intval($paragraph["id"]))));
         }
@@ -117,6 +122,21 @@ function FetchThemes($con){
     echo $ul->Show();
 }
 
+function FetchTextIdForTestStage2($con, $bywho, $themefieldname){
+    if($bywho=="J"){
+        $bywho="K";
+        $oldthemefieldname = "theme_k";
+    }
+    else{
+        $bywho="J";
+        $oldthemefieldname = "theme_j";
+    }
+    $chapter_id = $con->select("paragraphs",Array("chapter_id"),Array(Array("analyzedby","=",$bywho),Array($oldthemefieldname,"!=",""),Array($themefieldname,"=","")),"","ORDER BY id DESC LIMIT 1")->fetch();
+    $chapter_id = $chapter_id[0];
+    $text_id = $con->select("chapters",Array("text_id"),Array(Array("id","=",$chapter_id)),"","LIMIT 1")->fetch();
+    return $text_id[0];
+}
+
 function FetchTextIdForTest($con, $bywho, $themefieldname){
     $chapter_id = $con->select("paragraphs",Array("chapter_id"),Array(Array("analyzedby","=",$bywho),Array("content","!=",""),Array($themefieldname,"=","")),"","ORDER BY id DESC LIMIT 1")->fetch();
     $chapter_id = $chapter_id[0];
@@ -148,6 +168,7 @@ function PrintTestStatus($con,$performer, $max){
     $ready = $con->select("textmeta",Array("id"),Array(Array("analyzed","=","yes"),Array("analyzedby","=",$performer)))->fetchAll();
     echo "Testiaineistosta valmis: " . intval(sizeof($ready)) .  " / " . $max ;
 }
+
 
 function PrintStatus($con){
     $ready = $con->select("textmeta",Array("id"),Array(Array("analyzed","=","yes")))->fetchAll();

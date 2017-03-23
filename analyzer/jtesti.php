@@ -5,8 +5,8 @@ require("utils.php");
 $oldcon = new DbCon("sqlite:dbfolder/matkakertomukset_old.db");
 $con = new DbCon();
 ReleaseLocks($con);
-$themefieldname = "theme_k";
-$performer = "K";
+$themefieldname = "theme_j";
+$performer = "J";
 $max = 10;
 
 
@@ -22,7 +22,7 @@ $max = 10;
 
 <body>
 
-<form name="performer" method="POST" action="ktesti.php">
+<form name="performer" method="POST" action="jtesti.php">
 
 
 <section id="controls">
@@ -85,7 +85,7 @@ else{
     $textid=FetchTextIdForTestStage2($con,$_SESSION["performer"],$themefieldname);
 }
 
-$thistext = new Text($con, $textid, $themefieldname,true);
+$thistext = new Text($con, $textid, $themefieldname, true);
 $thistext->output();
 
 ?>
@@ -105,7 +105,7 @@ $thistext->output();
 
 </div>
 
-<form name="textidsaver" method="POST" action="ktesti.php" class="hidden">
+<form name="textidsaver" method="POST" action="jtesti.php" class="hidden">
     <input type="text"  value="<?php echo $textid;?>" name="textid">
     <input type="submit" value="Tallenna" name="fetchtextbutton" id="fetchtextbutton">
 </form>
