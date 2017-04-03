@@ -101,8 +101,6 @@ $thistext->output();
         <li OnClick="PickMe(this);">Hinnat</li>
         <li OnClick="PickMe(this);">Merkityksellisyys</li>
     </ul>
-
-
 </div>
 
 <form name="textidsaver" method="POST" action="ktesti.php" class="hidden">

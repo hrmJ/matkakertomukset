@@ -48,6 +48,20 @@ if($_SESSION['performer']=="J")
 else
     $kselected = "selected";
 
+#Lataa tekstin id
+if(isset($_GET["id"]))
+    $textid = $_GET["id"];
+elseif(isset($_POST["saveannotationsbutton"]))
+    $textid = $_POST["textid"];
+else
+    $textid = FetchTextId($con);
+
+$res = $con->select("textmeta",Array("ispractice"),Array(Array("id","=",$textid)),"","")->fetch();
+$ispractice = $res[0];
+if($ispractice=='on')
+    $ispractice = " checked='checked' ";
+else
+    $ispractice = "";
 
 ?>
 
@@ -67,15 +81,15 @@ else
     <input type="submit" value="Tallenna" name="saveannotationsbutton" id="saveannotationsbutton">
 </span>
 
+<span> Tekstin tunnistenumero: <?php echo $textid; ?> </span>
+<span> <a href='javascript:void(0)' onClick="LoadById();">Lataa teksti tunnisteen perusteella: </a><input type="text" name="loadtextbyid" id="loadtextbyid" value="" placeholder=""></input> </span>
+<span> <input id="ispractice" name="ispractice" type="checkbox" <?php echo $ispractice;?>>aiheena HARJOITTELU eikä vaihtoopiskelu</input></span>
+   
 </section>
 
 
 <?php
 
-if(isset($_POST["saveannotationsbutton"]))
-    $textid = $_POST["textid"];
-else
-    $textid = FetchTextId($con);
 
 $thistext = new Text($con, $textid);
 $thistext->output();
@@ -86,12 +100,13 @@ $thistext->output();
 </form>
 
 <div id="themepicker">
-
-<form name="themesetter" method="POST" action="index.php">
-<?php FetchThemes($con);?>
-<input type="submit" value="Tallenna" class="hidden" name="newthemebutton" id="newthemebutton">
-</form>
-
+    <input id="uncertain" onChange="MarkCertainty(this, '<?php echo $_SESSION['performer'] ?>');"type="checkbox">Olen epävarma</input>
+    <ul id="themelist">
+        <li OnClick="PickMe(this);">Etukäteisjärjestelyt</li>
+        <li OnClick="PickMe(this);">Asuminen</li>
+        <li OnClick="PickMe(this);">Hinnat</li>
+        <li OnClick="PickMe(this);">Merkityksellisyys</li>
+    </ul>
 </div>
 
 <form name="textidsaver" method="POST" action="index.php" class="hidden">

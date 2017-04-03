@@ -1,5 +1,10 @@
 var currentparagraph = undefined;
 
+function LoadById(){
+    var id = document.getElementById("loadtextbyid").value;
+    window.location = "index.php?id=" + id;
+}
+
 function MarkCertainty(el, whois){
     var thisp = document.getElementById(currentparagraph);
     if(el.checked==true){

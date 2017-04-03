@@ -88,7 +88,7 @@ function SaveData($con, $themefieldname="theme"){
             #Huom: anna mahdollisuus jättää joku kappale täysin analysoimatta
             if($item=="")
                 $item = "notanalyzed";
-            $con->update("paragraphs", Array($themefieldname=>$item,"analyzedby"=>$_POST["performer"]),Array(Array("id","=",intval($id))));
+            $con->update("paragraphs", Array($themefieldname=>$item,"analyzedby"=>$_POST["performer"],"ispractice"=>$_POST["ispractice"]),Array(Array("id","=",intval($id))));
         }
         $pos = strpos($key, "uncertain_");
         if($pos !== false){
@@ -96,7 +96,7 @@ function SaveData($con, $themefieldname="theme"){
             $con->update("paragraphs", Array("uncertain"=>$item,"analyzedby"=>$_POST["performer"]),Array(Array("id","=",intval($id))));
         }
     }
-    $con->update("textmeta", Array("analyzed"=>"yes","analyzedby"=>$_POST["performer"]),Array(Array("id","=",intval($_POST["textid"]))));
+    $con->update("textmeta", Array("analyzed"=>"yes","analyzedby"=>$_POST["performer"],"ispractice"=>$_POST["ispractice"]),Array(Array("id","=",intval($_POST["textid"]))));
 }
 
 function FetchThemes($con){

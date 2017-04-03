@@ -5,6 +5,11 @@ UPDATE paragraphs SET locked = 0;
 
 ALTER TABLE textmeta ADD COLUMN analyzed VARCHAR;
 UPDATE textmeta set analyzed = 'no';
+ALTER TABLE textmeta ADD COLUMN ispractice VARCHAR;
+UPDATE textmeta set ispractice = 'ei';
+
+ALTER TABLE paragraphs ADD COLUMN ispractice VARCHAR;
+UPDATE paragraphs set ispractice = 'ei';
 
 
 CREATE TABLE themes(id INTEGER, theme VARCHAR, PRIMARY KEY(id ASC));
