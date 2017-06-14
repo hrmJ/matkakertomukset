@@ -1,0 +1,85 @@
+```{r load, echo=FALSE}
+library(pander)
+
+if(!exists("paragraphs")){
+    #source("db.R")
+    paragraphs <- readRDS("paragraphs.RDS")
+}
+
+```
+
+
+
+# Tilastoja ristiinannotoinnista
+
+
+Ristiinannotointi koski kahtakymmentä tekstiä, jotka koostuivat yhteensä 
+`r nrow(paragraphs)` kappaleesta. Verrataan aluksi kokonaislukuja siitä, miten
+valitut teemat jakaantuivat:
+
+
+```{r, echo=FALSE}
+
+j <- as.character(table(paragraphs$theme_j))
+k <- as.character(table(paragraphs$theme_k))
+pander(matrix(c(j,k),byrow=T,ncol=5,dimnames=list(c("J","K"),levels(as.factor(paragraphs$theme_j)))))
+
+
+```
+
+Aika tasan siis meni, asumiseen tismalleen yhtä paljon, selkein ero
+etukäteisjärjestelyt, joissa J:llä muutama enemmän.
+
+```{r, echo=FALSE}
+
+difs <- paragraphs[paragraphs$theme_j != paragraphs$theme_k,c("theme_j","theme_k")]
+difcombs <- c()
+for (i in c(1:nrow(difs))){
+    difcombs <- c(difcombs,paste(difs[i,"theme_j"],difs[i,"theme_k"],sep=" / "))
+}
+
+tab <- table(difcombs)
+tab <- as.data.frame(tab[order(tab,decreasing=T)],col.names=c("J / K ","Freq"))
+colnames(tab) <- c("J / K","Freq")
+
+
+```
+
+
+Seuraavassa listattuna kappaleet, joiden osalta analyysi ei ollut identtinen. Yhteensä
+näitä tällaisia oli `r nrow(paragraphs[paragraphs$theme_j != paragraphs$theme_k,])` kpl
+eli noin `r round(nrow(paragraphs[paragraphs$theme_j != paragraphs$theme_k,]) / nrow(paragraphs) *100,2)` 
+prosenttia tapauksista. Kääntäen: "tarkkuus" oli 
+`r 100 - round(nrow(paragraphs[paragraphs$theme_j != paragraphs$theme_k,]) / nrow(paragraphs) *100,2)` %.
+
+
+Tai tässäpä ensin tilastot siitä, mitkä teemojen yhdistelmät menivät herkimmin
+ristiin:
+
+```{r, echo=FALSE}
+
+pander(tab)
+
+```
+
+Toisin sanoen, useimmin kävi niin, että J heitti etukäteisjärjestelyiksi jotain
+sellaista, mikä K:n mielestä ei sitä ollut, toiseksi useimmin sama kävi toisin päin.
+Asumisessa oli erinomainen onnistumisprosentti...
+
+
+
+
+
+```{r, echo=FALSE}
+
+pander(paragraphs[paragraphs$theme_j != paragraphs$theme_k, c("content","theme_j","theme_k")])
+
+```
+
+
+Voisi tietysti orientoitua kirjoittamaan tällaisetkikn höpinät englanniksi,
+vaikka tuskin me näin tarkkaan tätä missään raportoidaan.....
+
+
+
+

@@ -1,0 +1,12 @@
+
+```{r load, echo=FALSE}
+library(pander)
+
+if(!exists("paragraphs")){
+    #source("db <- vars.R")
+    paragraphs <- readRDS("paragraphs.RDS")
+}
+
+```
+
+
