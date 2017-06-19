@@ -9,9 +9,8 @@ Katsotaan yleisesti jotakin, mitä pääverbeistä voisi saada irti.
 Jos katsotaan  
     - tekstistä riippumasta kaikki kappaleet, jossa käsitellään asumista, 
     - näistä kappaleista jokainen virke erikseen
-    - otetaan virkkeestä irti se, mikä on virkkeen ROOT-elementti[^pikkuviil] 
+    - otetaan virkkeestä irti se, mikä on virkkeen ROOT-elementti
 
-[^pikkuviil]: predikatiivitapauksissa pientä säätöä
 
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
