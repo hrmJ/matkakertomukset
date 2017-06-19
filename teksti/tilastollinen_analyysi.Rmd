@@ -49,16 +49,32 @@ kable(hvdf)
 Tämä ei tietysti vielä ole millään tavalla hyödyllistä, mutta antaa
 jonkinlaista yleiskuvaa siitä, että samat verbit todella kiertävät teksteissä.
 
+Periaatteessa pääverbejä voisi eritellä luokkiin, niin että luokkia olisivat 
+esimerkiksi *staattiset verbit*, *evaluoivat verbit* yms., jolloin näistä voisi 
+saada jotakin mielekkäämpää aikaan.
+
+
 Pohditaan seuraavaksi sitä, mihin kohtaan kappaletta yleensä sijoittuvat 
 ensimmäisessä persoonassa esiintyvät verbit, mihin kohtaan toisessa ja niin edelleen.
 
 
-```{r persheadverbsats1, echo=FALSE}
+```{r 1partexts, echo=FALSE}
 
-headverbs$pers <- as.factor(headverbs$pers)
-hist(headverbs$sentence_number, headverbs$pers)
+onepar <- headverbs[headverbs$number_of_paragraphs==1,]
+onepar.texts <- data.frame(textid=unique(onepar$textid))
+onepar.texts$pers_0 <- 0
+onepar.texts$pers_1 <- 0
+onepar.texts$pers_2 <- 0
+onepar.texts$pers_3 <- 0
+onepar.texts$tot <- 0
+for (tid in unique(onepar$textid)){
+    for(i in c(0:3)){
+        onepar.texts[onepar.texts$textid==tid, paste0("pers_",i)] <- length(which(onepar$textid==tid&onepar$pers==i))
+    }
+    onepar.texts[onepar.texts$textid==tid, "tot"] <- length(which(onepar$textid==tid))
+}
 
-qplot(headverbs$sentence_number,headverbs$pers)
-
+onepar.texts$percent_1p <- onepar.texts$pers_1/onepar.texts$tot*100
+ggplot(onepar.texts,aes(x=percent_1p)) + geom_histogram()
 
 ```
