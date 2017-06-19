@@ -3,7 +3,7 @@
 library(pander)
 
 if(!exists("paragraphs")){
-    #source("db <- vars.R")
+    source("db_vars.R")
     paragraphs <- readRDS("paragraphs.RDS")
 }
 

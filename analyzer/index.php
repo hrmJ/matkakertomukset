@@ -1,8 +1,10 @@
 <?php
 
 session_start();
+
 require("utils.php");
 $con = new DbCon();
+var_dump("lkj");
 ReleaseLocks($con);
 
 
