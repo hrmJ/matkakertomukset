@@ -27,34 +27,28 @@ Jos otetaan
 saadaan tulokseksi, että 20 suosituinta verbiä ovat:
 
 
-```
-## Error in `colnames<-`(`*tmp*`, value = c("Lemma", "Frekvenssi")): 'names' attribute [2] must be the same length as the vector [1]
-```
-
-
-
-|           | hvtab[order(hvtab, decreasing = T)][1:20]|
-|:----------|-----------------------------------------:|
-|olla       |                                      1578|
-|asua       |                                       239|
-|saada      |                                       187|
-|kannattaa  |                                       175|
-|maksaa     |                                       114|
-|suositella |                                       114|
-|l�yt��     |                                        88|
-|tulla      |                                        74|
-|sijaita    |                                        71|
-|l�yty�     |                                        68|
-|k�yd�      |                                        66|
-|ei         |                                        63|
-|jakaa      |                                        53|
-|hankkia    |                                        39|
-|p��st�     |                                        38|
-|hakea      |                                        33|
-|tarjota    |                                        33|
-|tehd�      |                                        33|
-|ottaa      |                                        32|
-|vuokrata   |                                        32|
+|Lemma      | Frekvenssi|
+|:----------|----------:|
+|olla       |       1578|
+|asua       |        239|
+|saada      |        187|
+|kannattaa  |        175|
+|maksaa     |        114|
+|suositella |        114|
+|löytää     |         88|
+|tulla      |         74|
+|sijaita    |         71|
+|löytyä     |         68|
+|käydä      |         66|
+|ei         |         63|
+|jakaa      |         53|
+|hankkia    |         39|
+|päästä     |         38|
+|hakea      |         33|
+|tarjota    |         33|
+|tehdä      |         33|
+|ottaa      |         32|
+|vuokrata   |         32|
 
 Tämä ei tietysti vielä ole millään tavalla hyödyllistä, mutta antaa
 jonkinlaista yleiskuvaa siitä, että samat verbit todella kiertävät teksteissä.
@@ -73,4 +67,4 @@ ensimmäisessä persoonassa esiintyvät verbit, mihin kohtaan toisessa ja niin e
 ## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
 ```
 
-![plot of chunk 1partexts](figure/1partexts-1.png) 
+![plot of chunk 1partexts](figure/1partexts-1.png)
