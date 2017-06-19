@@ -29,28 +29,37 @@ saadaan tulokseksi, että 20 suosituinta verbiä ovat:
 
 |Lemma      | Frekvenssi|
 |:----------|----------:|
-|olla       |        172|
-|asua       |         71|
-|saada      |         29|
-|hankkia    |         19|
-|kannattaa  |         15|
-|hakea      |         14|
-|saapua     |         14|
-|löytää     |         13|
-|suositella |         12|
-|käydä      |         10|
-|sijaita    |          9|
-|sujua      |          9|
-|etsiä      |          8|
-|maksaa     |          8|
-|tulla      |          8|
-|ei         |          7|
-|löytyä     |          7|
-|järjestää  |          6|
-|järjestyä  |          6|
-|muuttaa    |          6|
+|olla       |       1578|
+|asua       |        239|
+|saada      |        187|
+|kannattaa  |        175|
+|maksaa     |        114|
+|suositella |        114|
+|löytää     |         88|
+|tulla      |         74|
+|sijaita    |         71|
+|löytyä     |         68|
+|käydä      |         66|
+|ei         |         63|
+|jakaa      |         53|
+|hankkia    |         39|
+|päästä     |         38|
+|hakea      |         33|
+|tarjota    |         33|
+|tehdä      |         33|
+|ottaa      |         32|
+|vuokrata   |         32|
 
 Tämä ei tietysti vielä ole millään tavalla hyödyllistä, mutta antaa
 jonkinlaista yleiskuvaa siitä, että samat verbit todella kiertävät teksteissä.
 
+Pohditaan seuraavaksi sitä, mihin kohtaan kappaletta yleensä sijoittuvat 
+ensimmäisessä persoonassa esiintyvät verbit, mihin kohtaan toisessa ja niin edelleen.
 
+
+
+```
+## Error in Summary.factor(structure(c(0L, 0L, 0L, 0L, 0L, 0L, 0L, 0L, 0L, : 'range' not meaningful for factors
+```
+
+![plot of chunk persheadverbsats1](figure/persheadverbsats1-1.png)
