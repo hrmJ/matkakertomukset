@@ -58,7 +58,7 @@ Pohditaan seuraavaksi sitä, mihin kohtaan kappaletta yleensä sijoittuvat
 ensimmäisessä persoonassa esiintyvät verbit, mihin kohtaan toisessa ja niin edelleen.
 
 
-```{r 1partexts, echo=FALSE}
+```{r 1partexts, echo=FALSE, results='hide'}
 
 onepar <- headverbs[headverbs$number_of_paragraphs==1,]
 onepar.texts <- data.frame(textid=unique(onepar$textid))
