@@ -15,17 +15,19 @@ panderOptions('table.split.table',400)
 
 
 Katsotaan yleisesti jotakin, mitä pääverbeistä voisi saada irti.
-Jos katsotaan  
-    - tekstistä riippumasta kaikki kappaleet, jossa käsitellään asumista, 
-    - näistä kappaleista jokainen virke erikseen
-    - otetaan virkkeestä irti se, mikä on virkkeen ROOT-elementti
+Jos otetaan
 
-...
+* tekstistä riippumasta kaikki kappaleet, jossa käsitellään asumista, 
+* näistä kappaleista jokainen virke erikseen
+* virkkeestä irti se, mikä on virkkeen ROOT-elementti
+
+saadaan tulokseksi, että 20 suosituinta verbiä ovat:
 
 ```{r genheadverbsats, echo=FALSE}
 
 hvtab <- table(headverbs$lemma)
-hvdf <- as.data.frame(hvtab[order(hvtab,decreasing=T)][1:20],col.names=c("Lemma","Frekvenssi"))
+hvdf <- as.data.frame(hvtab[order(hvtab,decreasing=T)][1:20])
+colnames(hvdf) <- c("Lemma","Frekvenssi")
 kable(hvdf)
 
 ```
