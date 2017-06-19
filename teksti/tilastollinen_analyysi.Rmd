@@ -19,11 +19,13 @@ Jos katsotaan
     - näistä kappaleista jokainen virke erikseen
     - otetaan virkkeestä irti se, mikä on virkkeen ROOT-elementti
 
+...
 
 ```{r genheadverbsats, echo=FALSE}
 
 hvtab <- table(headverbs$lemma)
-pander(hvtab[order(hvtab,decreasing=T)][1:20])
+hvdf <- as.data.frame(hvtab[order(hvtab,decreasing=T)][1:20],col.names=c("Lemma","Frekvenssi"))
+pander(hvdf)
 
 ```
 

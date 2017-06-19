@@ -11,11 +11,50 @@ Jos katsotaan
     - näistä kappaleista jokainen virke erikseen
     - otetaan virkkeestä irti se, mikä on virkkeen ROOT-elementti
 
+...
 
 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  olla   asua   saada   hankkia   kannattaa   hakea   saapua   löytää   suositella   käydä   sijaita   sujua   etsiä   maksaa   tulla   ei   löytyä   järjestää   järjestyä   muuttaa
------- ------ ------- --------- ----------- ------- -------- -------- ------------ ------- --------- ------- ------- -------- ------- ---- -------- ----------- ----------- ---------
-   172     71      29        19          15      14       14       13           12      10         9       9       8        8       8    7        7           6           6         6
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------
+Var1         Freq
+---------- ------
+olla          172
+
+asua           71
+
+saada          29
+
+hankkia        19
+
+kannattaa      15
+
+hakea          14
+
+saapua         14
+
+löytää         13
+
+suositella     12
+
+käydä          10
+
+sijaita         9
+
+sujua           9
+
+etsiä           8
+
+maksaa          8
+
+tulla           8
+
+ei              7
+
+löytyä          7
+
+järjestää       6
+
+järjestyä       6
+
+muuttaa         6
+-----------------
 
