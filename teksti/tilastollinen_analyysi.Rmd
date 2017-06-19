@@ -1,12 +1,30 @@
 
 ```{r load, echo=FALSE}
 library(pander)
+library(jsonlite)
+headverbs <- as.data.frame(fromJSON("../data/headverbs.json"))
 
-if(!exists("paragraphs")){
-    source("db_vars.R")
-    paragraphs <- readRDS("paragraphs.RDS")
-}
+panderOptions('table.alignment.default', function(df) ifelse(sapply(df, is.numeric), 'right', 'left'))
+panderOptions('table.split.table',400)
 
 ```
 
+
+### Tilastoja pääverbeistä
+
+
+Katsotaan yleisesti jotakin, mitä pääverbeistä voisi saada irti.
+Jos katsotaan  
+    - tekstistä riippumasta kaikki kappaleet, jossa käsitellään asumista, 
+    - näistä kappaleista jokainen virke erikseen
+    - otetaan virkkeestä irti se, mikä on virkkeen ROOT-elementti[^pikkuviil] 
+
+[^pikkuviil]: predikatiivitapauksissa pientä säätöä
+
+```{r genheadverbsats, echo=FALSE}
+
+hvtab <- table(headverbs$lemma)
+pander(hvtab[order(hvtab,decreasing=T)][1:20])
+
+```
 

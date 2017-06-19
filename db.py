@@ -17,6 +17,9 @@ class TextMeta(Base):
     vaihtoaika = Column(String,default='unspecified')
     vaihto_ohjelma = Column(String,default='unspecified')
     lahettava_laitos = Column(String,default='unspecified')
+    analyzedby = Column(String,default='unspecified')
+    analyzed = Column(String,default='unspecified')
+    ispractice = Column(String,default='unspecified')
 
     def __init__(self,title='unspecified',maa='unspecified',korkeakoulu='unspecified',vaihtoaika='unspecified',vaihto_ohjelma='unspecified',lahettava_laitos='unspecified'):
         self.title = title
@@ -24,6 +27,7 @@ class TextMeta(Base):
         self.korkeakoulu = korkeakoulu
         self.vaihtoaika = vaihtoaika
         self.vaihto_ohjelma = vaihto_ohjelma
+        self.lahettava_laitos = lahettava_laitos
         self.lahettava_laitos = lahettava_laitos
 
 class Chapter(Base):
