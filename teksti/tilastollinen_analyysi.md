@@ -1,6 +1,18 @@
 
 
 
+### Yleisiä tilastoja
+
+Kaiken kaikkiaan teksteistä voidaan antaa seuraavat yleiset tiedot:
+
+* Tekstejä ylipäätään: 492
+* Tekstejä, joissa ei käsitellä asumista  ollenkaan: 75
+* Tekstejä, joissa 1 kpl asumista: 284
+* Tekstejä, joissa 2 kpl asumista: 81
+* Tekstejä, joissa 3 kpl asumista: 29
+* Tekstejä, joissa enemmän kuin 3 kpl asumista: 23
+* Asumista käsitteleviä kappaleita yhteensä: 643
+
 
 ### Tilastoja pääverbeistä
 
@@ -8,7 +20,7 @@
 Katsotaan yleisesti jotakin, mitä pääverbeistä voisi saada irti.
 Jos otetaan
 
-* tekstistä riippumasta kaikki kappaleet, jossa käsitellään asumista, 
+* tekstistä riippumatta kaikki kappaleet, jossa käsitellään asumista, 
 * näistä kappaleista jokainen virke erikseen
 * virkkeestä irti se, mikä on virkkeen ROOT-elementti
 
@@ -37,4 +49,8 @@ saadaan tulokseksi, että 20 suosituinta verbiä ovat:
 |järjestää  |          6|
 |järjestyä  |          6|
 |muuttaa    |          6|
+
+Tämä ei tietysti vielä ole millään tavalla hyödyllistä, mutta antaa
+jonkinlaista yleiskuvaa siitä, että samat verbit todella kiertävät teksteissä.
+
 

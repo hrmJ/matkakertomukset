@@ -25,10 +25,9 @@ def GetHeadVerbs(parsedstring, pidx, totalp, textid):
 
 
 
-def CountHeadVerbsFromAsuminen(session):
+def CountHeadVerbsFromAsuminen(textids, session):
     """Laske 
     """
-    textids = session.query(db.TextMeta.id).filter(db.TextMeta.analyzed=="yes").all()
     verbs = list()
     print("Processing..")
     for tnumber, tid in enumerate(textids):
@@ -40,7 +39,30 @@ def CountHeadVerbsFromAsuminen(session):
     with open("data/headverbs.json","w") as f:
         json.dump(verbs, f, indent=4,ensure_ascii = False)
 
+def GeneralStatitics(session, textids):
+    """Laske 
+    """
+    allparagraphs = list()
+    ps_with_theme_asuminen = 0
+    pamounts={0:0, 1:0,2:0,3:0,"n":0}
+    for tnumber, tid in enumerate(textids):
+        chapterids = [thisid[0] for thisid in session.query(db.Chapter.id).filter(db.Chapter.text_id==tid[0]).all()]
+        ps = session.query(db.Paragraph).filter(db.Paragraph.chapter_id.in_(chapterids)).filter(db.Paragraph.theme=="Asuminen").all()
+        if len(ps)>3:
+            pamounts["n"]+=1
+        else:
+            pamounts[len(ps)]+=1
+        for pidx, p in enumerate(ps):
+            ps_with_theme_asuminen += 1
+
+    output = {"tekstit":len(textids),"asumiskappaleet":ps_with_theme_asuminen, "kpl_0":pamounts[0],"kpl_1":pamounts[1],"kpl_2":pamounts[2],"kpl_3":pamounts[3],"kpl_n":pamounts["n"]}
+    with open("data/genstats.json","w") as f:
+        json.dump(output, f, indent=4,ensure_ascii = False)
+
 engine = db.create_engine('sqlite:///matkakertomukset.db', echo=False)
 Session = db.sessionmaker(bind=engine)
 session = Session()
-CountHeadVerbsFromAsuminen(session)
+textids = session.query(db.TextMeta.id).filter(db.TextMeta.analyzed=="yes").all()
+
+#CountHeadVerbsFromAsuminen(session, textids)
+GeneralStatitics(session, textids)
