@@ -3,6 +3,7 @@
 library(pander)
 library(knitr)
 library(jsonlite)
+library(ggplot2)
 headverbs <- as.data.frame(fromJSON("../data/headverbs.json"))
 genstats <- as.data.frame(fromJSON("../data/genstats.json"))
 
@@ -48,4 +49,16 @@ kable(hvdf)
 Tämä ei tietysti vielä ole millään tavalla hyödyllistä, mutta antaa
 jonkinlaista yleiskuvaa siitä, että samat verbit todella kiertävät teksteissä.
 
+Pohditaan seuraavaksi sitä, mihin kohtaan kappaletta yleensä sijoittuvat 
+ensimmäisessä persoonassa esiintyvät verbit, mihin kohtaan toisessa ja niin edelleen.
 
+
+```{r persheadverbsats1, echo=FALSE}
+
+headverbs$pers <- as.factor(headverbs$pers)
+hist(headverbs$sentence_number, headverbs$pers)
+
+qplot(headverbs$sentence_number,headverbs$pers)
+
+
+```
