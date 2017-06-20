@@ -1,70 +1,100 @@
 import db
 import language
-import re
+from language import re
 import json
 from utils import BuildString
 
 
+class Analysis():
 
-def GetHeadVerbs(sentencestring, sidx, totals, pidx, totalp, textid):
-    s = language.Sentence(sentencestring)
-    h = s.GetVerbalHead()
-    if h:
-        try:
-            pers = re.findall(r"Person=(\d)",h.feat)[0]
-        except IndexError:
-            pers = 0
-        return {"lemma":h.lemma,"pers":pers,
-                "sentence_number":sidx+1, "number_of_sentences":totals,
-                "paragraph_number":pidx+1, "number_of_paragraphs":totalp,
-                "sentence": BuildString(s.tokens), "textid":textid}
-    else:
-        print("no head verb for this sentence: {}".format(BuildString(s.tokens)))
-        return False
+    paragraphs = list()
+    textids = list()
+
+    def __init__(self):
+        if not Analysis.paragraphs:
+            self.LoadParagraphs()
+        self.data = list()
+        self.Analyze()
+        self.WriteResults()
+
+    def LoadParagraphs(self):
+        print("Loading paragraphs...")
+        engine = db.create_engine('sqlite:///matkakertomukset.db', echo=False)
+        Session = db.sessionmaker(bind=engine)
+        session = Session()
+        textids = session.query(db.TextMeta.id).filter(db.TextMeta.analyzed=="yes").all()
+        Analysis.textids = textids
+        pamounts={0:0, 1:0,2:0,3:0,"n":0}
+        for tnumber, tid in enumerate(textids):
+            chapterids = [thisid[0] for thisid in session.query(db.Chapter.id).filter(db.Chapter.text_id==tid[0]).all()]
+            ps = session.query(db.Paragraph).filter(db.Paragraph.chapter_id.in_(chapterids)).filter(db.Paragraph.theme=="Asuminen").all()
+
+            if len(ps)>3:
+                pamounts["n"]+=1
+            else:
+                pamounts[len(ps)]+=1
+
+            for pidx, p in enumerate(ps):
+                p.textid = tid[0]
+                p.pnumber = pidx + 1
+                p.ptotal = len(ps)
+                Analysis.paragraphs.append(p)
+            if tnumber % 100 == 0:
+                print("{}/{}".format(tnumber,len(textids)))
+
+        with open("data/genstats.json","w") as f:
+            json.dump({"tekstit":len(textids),"asumiskappaleet":len(Analysis.paragraphs), "kpl_0":pamounts[0],"kpl_1":pamounts[1],"kpl_2":pamounts[2],"kpl_3":pamounts[3],"kpl_n":pamounts["n"]}, f, indent=4,ensure_ascii = False)
+
+    def Analyze(self):
+        print("Performing analysis: " + self.name)
+        for p in Analysis.paragraphs:
+            self.ProcessParagraph(p)
+
+    def WriteResults(self):
+        with open("data/" + self.name + ".json","w") as f:
+            json.dump(self.data, f, indent=4,ensure_ascii = False)
+        print("Results saved.")
 
 
+class HeadverbStats(Analysis):
+    """Laske tilastoja virkkeiden pääverbeistä."""
+    def __init__(self):
+        self.name = "headverbs"
+        super().__init__()
 
-def CountHeadVerbsFromAsuminen(textids, session):
-    """Laske 
-    """
-    verbs = list()
-    for tnumber, tid in enumerate(textids):
-        chapterids = [thisid[0] for thisid in session.query(db.Chapter.id).filter(db.Chapter.text_id==tid[0]).all()]
-        ps = session.query(db.Paragraph).filter(db.Paragraph.chapter_id.in_(chapterids)).filter(db.Paragraph.theme=="Asuminen").all()
-        for pidx, p in enumerate(ps):
+    def ProcessParagraph(self, p):
+        sentences = p.parsed.strip().split("\n\n")
+        for idx, sentencestring in enumerate(sentences):
+            s = language.Sentence(sentencestring)
+            h = s.GetVerbalHead()
+            if h:
+                try:
+                    pers = re.findall(r"Person=(\d)",h.feat)[0]
+                except IndexError:
+                    pers = 0
+                self.data.append({"lemma":h.lemma,"pers":pers,
+                                  "sentence_number":idx+1, "number_of_sentences":len(sentences),
+                                  "paragraph_number":p.pnumber, "number_of_paragraphs":p.ptotal,
+                                  "sentence": BuildString(s.tokens), "textid":p.textid})
+            else:
+                print("no head verb for this sentence: {}".format(BuildString(s.tokens)))
+
+class FirstSentenceStats(Analysis):
+    """Laske tilastoja virkkeiden pääverbeistä."""
+    def __init__(self):
+        self.name = "firstsentence"
+        super().__init__()
+
+    def ProcessParagraph(self, p):
+        if p.pnumber == 1:
             sentences = p.parsed.strip().split("\n\n")
-            for idx, sentencestring in enumerate(sentences):
-                thisverb = GetHeadVerbs(sentencestring, idx, len(sentences), pidx, len(ps), tid[0])
-                if thisverb:
-                    verbs.append(thisverb)
+            s = language.Sentence(sentences[0])
+            s.CheckIfAsuminen()
+            self.data.append({"asuminen_expressed": s.asuminen_expressed_in,
+                              "number_of_paragraphs":p.ptotal,
+                              "sentence": BuildString(s.tokens), "textid":p.textid})
 
-    with open("data/headverbs.json","w") as f:
-        json.dump(verbs, f, indent=4,ensure_ascii = False)
 
-def GeneralStatitics(session, textids):
-    """Laske 
-    """
-    allparagraphs = list()
-    ps_with_theme_asuminen = 0
-    pamounts={0:0, 1:0,2:0,3:0,"n":0}
-    for tnumber, tid in enumerate(textids):
-        chapterids = [thisid[0] for thisid in session.query(db.Chapter.id).filter(db.Chapter.text_id==tid[0]).all()]
-        ps = session.query(db.Paragraph).filter(db.Paragraph.chapter_id.in_(chapterids)).filter(db.Paragraph.theme=="Asuminen").all()
-        if len(ps)>3:
-            pamounts["n"]+=1
-        else:
-            pamounts[len(ps)]+=1
-        for pidx, p in enumerate(ps):
-            ps_with_theme_asuminen += 1
+#hv = HeadverbStats()
+fs = FirstSentenceStats()
 
-    output = {"tekstit":len(textids),"asumiskappaleet":ps_with_theme_asuminen, "kpl_0":pamounts[0],"kpl_1":pamounts[1],"kpl_2":pamounts[2],"kpl_3":pamounts[3],"kpl_n":pamounts["n"]}
-    with open("data/genstats.json","w") as f:
-        json.dump(output, f, indent=4,ensure_ascii = False)
-
-engine = db.create_engine('sqlite:///matkakertomukset.db', echo=False)
-Session = db.sessionmaker(bind=engine)
-session = Session()
-textids = session.query(db.TextMeta.id).filter(db.TextMeta.analyzed=="yes").all()
-
-CountHeadVerbsFromAsuminen(textids, session)
-#GeneralStatitics(session, textids)

@@ -1,3 +1,5 @@
+import constants
+import re
 
 class Sentence():
     def __init__(self, raw):
@@ -22,6 +24,17 @@ class Sentence():
                 else:
                     return w
 
+    def CheckIfAsuminen(self):
+        self.asuminen_expressed_in = ""
+        for w in self.words: 
+            if re.search("(" + "|".join(constants.asuminen) + ")", w.lemma):
+                if self.asuminen_expressed_in:
+                    self.asuminen_expressed_in += ";" + w.deprel
+                else:
+                    self.asuminen_expressed_in = w.deprel
+        if not self.asuminen_expressed_in:
+            self.asuminen_expressed_in = "None"
+
 
 class Word():
     def __init__(self, raw):
@@ -32,6 +45,7 @@ class Word():
         self.head = int(props[6])
         self.pos = props[3]
         self.feat = props[5]
+        self.deprel = props[7]
 
     def GetDependents(self, words):
         """Listaa kaikki sanan dependentit"""

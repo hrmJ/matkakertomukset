@@ -1,7 +1,7 @@
 
 
 
-### Yleisiä tilastoja
+# Yleisiä tilastoja
 
 Kaiken kaikkiaan teksteistä voidaan antaa seuraavat yleiset tiedot:
 
@@ -13,8 +13,53 @@ Kaiken kaikkiaan teksteistä voidaan antaa seuraavat yleiset tiedot:
 * Tekstejä, joissa enemmän kuin 3 kpl asumista: 23
 * Asumista käsitteleviä kappaleita yhteensä: 643
 
+# Ajatuksia siitä, minkä analysointi olisi mielekästä
 
-### Tilastoja pääverbeistä
+Mikä olisi metodologisesti mielekäs lähestymistapa, jos miettii, että
+tarkoituksena olisi esimerkiksi *löytää x erilaista tapaa rakentaa
+kappale(kappaleet) asumisesta*?
+
+Tässä jotain siitä, mitä itselleni on tullut mieleen.
+
+
+## Ensimmäisen (ja viimeisen?) virkkeen tutkiminen
+
+Sanotaan, ettei suomessa ole tarkkaa konventiota sille, että kappaleen alussa 
+tai ylipäätään jossain kohden kappaletta pitäisi olla *topic sentence* (topiikkivirke?).
+Mitä eri tapoja sitten ihmiset käyttävät aloittaessaan asumisesta kertovaa kappaletta?
+
+###  Asumisen mainitseminen
+
+Yksi ajatus olisi tarkastella sitä, esitelläänkö ensimmäisessä virkkeessä asumista ja millä tavalla.
+Tätä  varten laadin lyhyen listan sanoista (joko verbejä tai substantiiveja), jotka liittyvät asumiseen:
+
+
+```
+## * asua, asunto, asuminen, asumis#järjestely, kämppä, majoittua, majoittuminen, majoitus, asuntola *
+```
+
+Nopea tilasto näistä:
+
+
+|Asuminen ilmaistu | Frekvenssi|
+|:-----------------|----------:|
+|None              |        100|
+|dobj              |         65|
+|root              |         35|
+|nmod:gobj         |         28|
+|nsubj             |         24|
+|nmod              |         22|
+|nmod:poss         |         22|
+|root;nmod         |         16|
+|nsubj:cop         |         13|
+|dobj;dobj         |          6|
+|nmod;dobj         |          6|
+|dobj;nmod         |          5|
+
+
+
+
+# Tilastoja pääverbeistä
 
 
 Katsotaan yleisesti jotakin, mitä pääverbeistä voisi saada irti.
@@ -68,3 +113,4 @@ ensimmäisessä persoonassa esiintyvät verbit, mihin kohtaan toisessa ja niin e
 ```
 
 ![plot of chunk 1partexts](figure/1partexts-1.png)
+

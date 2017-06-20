@@ -4,15 +4,17 @@ library(pander)
 library(knitr)
 library(jsonlite)
 library(ggplot2)
+library(readr)
 headverbs <- as.data.frame(fromJSON("../data/headverbs.json"))
 genstats <- as.data.frame(fromJSON("../data/genstats.json"))
+fsstats1 <- as.data.frame(fromJSON("../data/firstsentence.json"))
 
 panderOptions('table.alignment.default', function(df) ifelse(sapply(df, is.numeric), 'right', 'left'))
 panderOptions('table.split.table',400)
 
 ```
 
-### Yleisiä tilastoja
+# Yleisiä tilastoja
 
 Kaiken kaikkiaan teksteistä voidaan antaa seuraavat yleiset tiedot:
 
@@ -24,8 +26,50 @@ Kaiken kaikkiaan teksteistä voidaan antaa seuraavat yleiset tiedot:
 * Tekstejä, joissa enemmän kuin 3 kpl asumista: `r genstats["kpl_n"]`
 * Asumista käsitteleviä kappaleita yhteensä: `r genstats["asumiskappaleet"]`
 
+# Ajatuksia siitä, minkä analysointi olisi mielekästä
 
-### Tilastoja pääverbeistä
+Mikä olisi metodologisesti mielekäs lähestymistapa, jos miettii, että
+tarkoituksena olisi esimerkiksi *löytää x erilaista tapaa rakentaa
+kappale(kappaleet) asumisesta*?
+
+Tässä jotain siitä, mitä itselleni on tullut mieleen.
+
+
+## Ensimmäisen (ja viimeisen?) virkkeen tutkiminen
+
+Sanotaan, ettei suomessa ole tarkkaa konventiota sille, että kappaleen alussa 
+tai ylipäätään jossain kohden kappaletta pitäisi olla *topic sentence* (topiikkivirke?).
+Mitä eri tapoja sitten ihmiset käyttävät aloittaessaan asumisesta kertovaa kappaletta?
+
+###  Asumisen mainitseminen
+
+Yksi ajatus olisi tarkastella sitä, esitelläänkö ensimmäisessä virkkeessä asumista ja millä tavalla.
+Tätä  varten laadin lyhyen listan sanoista (joko verbejä tai substantiiveja), jotka liittyvät asumiseen:
+
+```{r asumissanat, echo=FALSE}
+
+awords <- read_lines("../data/asumissanat.txt")
+cat("*",paste(awords,collapse=", "),"*","\n")
+
+```
+
+Nopea tilasto näistä:
+
+```{r asumissanatilastot1, echo=FALSE}
+
+tab <- table(fsstats1$asuminen_expressed)
+tab <- tab[tab>4]
+tab <- tab[order(tab,decreasing=T)]
+dftab <- as.data.frame(tab)
+colnames(dftab) <- c("Asuminen ilmaistu","Frekvenssi")
+kable(dftab)
+
+```
+
+
+
+
+# Tilastoja pääverbeistä
 
 
 Katsotaan yleisesti jotakin, mitä pääverbeistä voisi saada irti.
@@ -78,3 +122,4 @@ onepar.texts$percent_1p <- onepar.texts$pers_1/onepar.texts$tot*100
 ggplot(onepar.texts,aes(x=percent_1p)) + geom_histogram()
 
 ```
+
