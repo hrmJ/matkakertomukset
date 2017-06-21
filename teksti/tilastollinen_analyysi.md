@@ -33,25 +33,19 @@ Mitä eri tapoja sitten ihmiset käyttävät aloittaessaan asumisesta kertovaa k
 Yksi ajatus olisi tarkastella sitä, esitelläänkö ensimmäisessä virkkeessä asumista ja millä tavalla.
 Tätä  varten laadin lyhyen listan sanoista (joko verbejä tai substantiiveja), jotka liittyvät asumiseen:
 
-  -- * asua, asunto, asuminen, asumis#järjestely, kämppä, majoittua, majoittuminen, majoitus, asuntola * 
+asua, asunto, asuminen, asumis#järjestely, kämppä, majoittua, majoittaa, majoittuminen, majoitus, asuntola, asun#tola, vuokrataso,  
 
 Nopea tilasto näistä:
 
 
-|Asuminen ilmaistu | Frekvenssi|
-|:-----------------|----------:|
-|None              |        100|
-|dobj              |         65|
-|root              |         35|
-|nmod:gobj         |         28|
-|nsubj             |         24|
-|nmod              |         22|
-|nmod:poss         |         22|
-|root;nmod         |         16|
-|nsubj:cop         |         13|
-|dobj;dobj         |          6|
-|nmod;dobj         |          6|
-|dobj;nmod         |          5|
+```
+## Error in names(x) <- value: 'names' attribute [2] must be the same length as the vector [1]
+```
+
+
+
+| tab|
+|---:|
 
 
 
