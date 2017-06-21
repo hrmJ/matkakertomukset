@@ -46,7 +46,7 @@ Mitä eri tapoja sitten ihmiset käyttävät aloittaessaan asumisesta kertovaa k
 Yksi ajatus olisi tarkastella sitä, esitelläänkö ensimmäisessä virkkeessä asumista ja millä tavalla.
 Tätä  varten laadin lyhyen listan sanoista (joko verbejä tai substantiiveja), jotka liittyvät asumiseen:
 
-```{r asumissanat, echo=FALSE}
+```{r asumissanat, echo=FALSE, results="asis"}
 
 awords <- read_lines("../data/asumissanat.txt")
 cat("*",paste(awords,collapse=", "),"*","\n")
