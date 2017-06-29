@@ -49,7 +49,7 @@ Tätä  varten laadin lyhyen listan sanoista (joko verbejä tai substantiiveja),
 ```{r asumissanat, echo=FALSE, results="asis"}
 
 awords <- read_lines("../data/asumissanat.txt")
-cat("*",paste(awords,collapse=", "),"*","\n")
+cat(paste(awords,collapse=", "),"\n")
 
 ```
 

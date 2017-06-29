@@ -1,2504 +1,2504 @@
 [
     {
-        "asuminen_expressed": "nmod:gobj",
         "textid": 2,
         "sentence": "Asunnon etsiminen Hollannista on tunnetusti vaikeaa.",
+        "asuminen_expressed": "nmod:gobj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "dobj",
         "textid": 3,
         "sentence": "Aloin etsimään asuntoa heti harjoittelupaikan varmistuttua, joka ei Hollannissa niin helppoa ulkomaalaiselle ole.",
+        "asuminen_expressed": "dobj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nmod:poss",
         "textid": 4,
         "sentence": "Asuntojen hinnat vaihtelevat huomattavasti Amsterdamin ja lähikuntien välillä.",
+        "asuminen_expressed": "nmod:poss",
         "number_of_paragraphs": 3
     },
     {
-        "asuminen_expressed": "root",
         "textid": 5,
         "sentence": "Asuin kevään The Student Hotellissa( thestudenthotel.com)",
+        "asuminen_expressed": "root",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "root",
         "textid": 6,
         "sentence": "Itse asuin Amsterdamissa Student hotellissa.",
+        "asuminen_expressed": "root",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nmod;conj",
         "textid": 7,
         "sentence": "Monet Dameissa olevat vaihtarit varmasti kertovat asumiskokemuksistaan Uilenstede:n kampuksella, mutta minä vuorostani asuin vaihto kevääni The Student Hotellissa, ja voin suositella tätä paikkaa todella lämpimästi( lisä infoa siitä haluaville; http: / / www.thestudenthotel.com/ amsterdam) .",
+        "asuminen_expressed": "nmod;conj",
         "number_of_paragraphs": 2
     },
     {
-        "asuminen_expressed": "nsubj:cop",
         "textid": 9,
         "sentence": "Asuminen Hollannissa on lähtökohtaisesti kalliimpaa, mihin Tampereella on tottunut ja muutenkin hieman eri tasoista.",
+        "asuminen_expressed": "nsubj:cop",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nmod:poss",
         "textid": 11,
         "sentence": "Vuokrasin asunnon SSH:lta.",
+        "asuminen_expressed": "root;nmod:poss",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "root;nmod;nmod:gobj",
         "textid": 13,
         "sentence": "Asuin yksityiseltä hankitussa asunnossa tuttuni kanssa, joka hoiti käytännössä asunnon etsimisen.",
+        "asuminen_expressed": "root;nmod;nmod:gobj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nmod:poss",
         "textid": 14,
         "sentence": "Vuokrat Groningenissa ovat jonkin verran korkeampia kuin Tampereella, ja yleisesti asuntojen kunto on selvästi heikompi kuin mihin Suomessa on tottunut.",
+        "asuminen_expressed": "nsubj:cop;nmod:poss",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "None",
         "textid": 15,
         "sentence": "Matkustin Groningeniin lentämällä ensin Bremeniin, josta otin bussin Groningeniin, sillä tämä oli edullisin löytämäni vaihtoehto näin Tamperelaisena.",
+        "asuminen_expressed": "None",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "None",
         "textid": 18,
         "sentence": "Lähdin vaihtoon kaverini kanssa, joka oli valinnut kohteekseen Groningenin Hanzehogeschoolin, joka vastaa Suomen ammattikorkeakoulua.",
+        "asuminen_expressed": "None",
         "number_of_paragraphs": 2
     },
     {
-        "asuminen_expressed": "nmod",
         "textid": 20,
         "sentence": "Asunnosta muodostui kriittisin osa koko vaihtoa.",
+        "asuminen_expressed": "nmod",
         "number_of_paragraphs": 2
     },
     {
-        "asuminen_expressed": "nmod:gobj",
         "textid": 22,
         "sentence": "Kaikkein vaikein asia oli asunnon löytäminen.",
+        "asuminen_expressed": "nmod:gobj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nmod:gobj;nmod:gobj",
         "textid": 23,
         "sentence": "Asunnon hankkiminen aiheutti hieman päänvaivaa ennen lähtöä, sillä yliopisto ei auttanut asunnon löytämisessä.",
+        "asuminen_expressed": "nmod:gobj;nmod:gobj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "root;nmod",
         "textid": 24,
         "sentence": "Asuimme kaikki kuusi Avantgarde-opiskelija-asuntolassa noin 10-15min pyörämatkan päässä yliopistolta.",
+        "asuminen_expressed": "root;nmod",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "root",
         "textid": 25,
         "sentence": "Ensimmäinen asia Maastrichtiin saapuessamme oli majoittuminen.",
+        "asuminen_expressed": "root",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nsubj:cop;compound:nn",
         "textid": 26,
         "sentence": "Asumisratkaisumme oli kaupungin reunalla pellon laidalla sijaitseva opiskelija-asuntola Avant-Garde, jossa jokaisella oli yksiö vessalla ja suihkulla.",
+        "asuminen_expressed": "nsubj:cop;compound:nn",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "None",
         "textid": 29,
         "sentence": "Vuokrasin huoneen yksityiseltä taholta yliopiston suosittelemalle facebook-sivun kautta.",
+        "asuminen_expressed": "root;dobj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "root;acl:relcl",
         "textid": 31,
         "sentence": "Asuimme kaupungin laidalla vaihtaritalossa nimeltä Avant Garde, jossa asui pari sataa vaihtaria ympäri maailmaa.",
+        "asuminen_expressed": "root;acl:relcl",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "None",
         "textid": 32,
         "sentence": "Saavuttuamme asuntolaamme, Avant-Garden:iin, huomasimme nopeasti mihin paholaisen loukkuun olimme päätyneet.",
+        "asuminen_expressed": "dobj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "dobj;nmod",
         "textid": 36,
         "sentence": "Yliopistoon hakiessa voi samalla hakea myös asuntoa paikalliselta opiskelija-asuntosäätiöltä SSHN:lta.",
+        "asuminen_expressed": "dobj;nmod",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nmod:gobj",
         "textid": 39,
         "sentence": "Asunnon etsiminen Utrechtista oli ainoa asia, joka aiheutti harmaita hiuksia ennen lähtöä.",
+        "asuminen_expressed": "nmod:gobj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "root",
         "textid": 40,
         "sentence": "Utrechissä asuin jaetussa talossa 20 paikallisen kanssa enkä tarvinnut sitä varten erillistä kotivakuutusta.",
+        "asuminen_expressed": "root",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nmod:gobj",
         "textid": 42,
         "sentence": "Suurlähetystön henkilökunta tarjosi resurssiensa puitteissa apuaan mm. maahantuloon, käytännön järjestelyihin sekä asunnon löytämiseen liittyvissä asioissa.",
+        "asuminen_expressed": "nmod:gobj",
         "number_of_paragraphs": 2
     },
     {
-        "asuminen_expressed": "root",
         "textid": 44,
         "sentence": "Saavuttuani Buenos Airesiin asuin ensimmäisen viikon hostellissa.",
+        "asuminen_expressed": "root",
         "number_of_paragraphs": 3
     },
     {
-        "asuminen_expressed": "None",
         "textid": 45,
         "sentence": "Vietin ensimmäiset kaksi viikkoa saapumisestani Buenos Airesiin hostellissa.",
+        "asuminen_expressed": "None",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nmod:poss",
         "textid": 51,
         "sentence": "Asumisen osalta vaihtoehdot ovat asuntola ja yksityinen vuokranantaja, joilla kummallakin on puolensa.",
+        "asuminen_expressed": "nmod:poss;root;conj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "dobj",
         "textid": 52,
         "sentence": "Asuntoa minulla ei vielä ennen Brysseliin saapumista ollut, mutta olin sopinut muutamia näyttöjä jo etukäteen.",
+        "asuminen_expressed": "dobj",
         "number_of_paragraphs": 3
     },
     {
-        "asuminen_expressed": "None",
         "textid": 58,
         "sentence": "Käytännön asioiden näkökulmasta Berliiniin asettuminen ei ollut yhtä helppoa kuin ihmiskontaktien ja oman kaupunkisuhteen muodostaminen.",
+        "asuminen_expressed": "None",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "dobj",
         "textid": 59,
         "sentence": "Yritin etsiä asuntoa jo Suomesta käsin, mutta se osoittautui vaikeaksi.",
+        "asuminen_expressed": "dobj",
         "number_of_paragraphs": 2
     },
     {
-        "asuminen_expressed": "nmod",
         "textid": 61,
         "sentence": "Sain itselleni huoneen Kotmerckx-asuntolasta yliopiston kautta aivan keskuskampukselta, jossa kurssini järjestettiin.",
+        "asuminen_expressed": "nmod:poss;nmod",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "dobj;nmod;dobj",
         "textid": 62,
         "sentence": "Haimme alun perin asuntoa yliopiston asuntotoimiston kautta, mutta heillä ei ollut tarjota meille sopivaa asuntoa, koska emme halunneet soluun.",
+        "asuminen_expressed": "dobj;nmod;dobj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "dobj",
         "textid": 68,
         "sentence": "Aloitin asunnonetsinnän noin kaksi kuukautta ennen vaihdon alkua.",
+        "asuminen_expressed": "dobj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "root;nmod",
         "textid": 71,
         "sentence": "Asuminen: Vuokrasin huoneen yliopiston omista asuntoloista.",
+        "asuminen_expressed": "root;parataxis;nmod:poss;nmod",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "dobj",
         "textid": 73,
         "sentence": "Asunnon hankin yliopiston kautta.",
+        "asuminen_expressed": "dobj",
         "number_of_paragraphs": 5
     },
     {
-        "asuminen_expressed": "acl",
         "textid": 74,
         "sentence": "Leuven oli mitä ihanin paikka asua.",
+        "asuminen_expressed": "acl",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "dobj",
         "textid": 76,
         "sentence": "Koska kurssini olivat kaikki yliopiston keskustakampuksella ja yliopiston asuntola kahdeksan kilometrin päässä laitakaupungin Sart Tilman–kampuksella, oli järkevintä etsiä asunto yksityiseltä vuokranantajalta.",
+        "asuminen_expressed": "nsubj:cop;dobj;nmod",
         "number_of_paragraphs": 2
     },
     {
-        "asuminen_expressed": "None",
         "textid": 77,
         "sentence": "Saavuin Namuriin tammikuun viimeisenä viikonloppuna ja rautatieasemalla minua oli vastassa Erasmus-opiskelijoista vastaava yliopiston opiskelija.",
+        "asuminen_expressed": "None",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nmod",
         "textid": 79,
         "sentence": "Yksi Namurin vahvuuksia vaihtokohteena on ehdottomasti se, että lähes poikkeuksetta Erasmus-opiskelijoille järjestetään huone paikallisista opiskelija-asunnoista, joista Belgialaiset käyttävät nimitystä ” kot ”.",
+        "asuminen_expressed": "dobj;nmod",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nsubj",
         "textid": 81,
         "sentence": "Asuminen tulee järjestää itse, mutta Feevale auttaa kyllä.",
+        "asuminen_expressed": "nsubj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "root",
         "textid": 82,
         "sentence": "Asuin aluksi halvassa hotellissa yliopiston lähellä.",
+        "asuminen_expressed": "root",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nsubj;dobj",
         "textid": 84,
         "sentence": "Minulla ei ollut asuntoa valmiina, mutta minulla on ystäviä Brasiliasta, joten he järjestivät minulle majoituksen pariksi ensimmäiseksi viikoksi erääseen perheeseen.",
+        "asuminen_expressed": "nsubj;dobj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nsubj:cop;dobj",
         "textid": 85,
         "sentence": "Asuminen Riossa ei ole kovinkaan edullista, eikä Ibmec tarjoa majoitusvaihtoehtoja opiskelijoille.",
+        "asuminen_expressed": "nsubj:cop;dobj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "None",
         "textid": 86,
         "sentence": "Ibmecistä oli ilmoitettu luentojen alkavan helmikuun alussa, joten olin varannut lähtölentoni 24. tammikuuta ja paluulennon elokuulle.",
+        "asuminen_expressed": "None",
         "number_of_paragraphs": 3
     },
     {
-        "asuminen_expressed": "nsubj;dobj",
         "textid": 87,
         "sentence": "Asumisjärjestelyt Riossa pitää hoitaa itse, sillä paikallinen yliopisto ei tarjoa asuntoja.",
+        "asuminen_expressed": "nsubj;dobj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "root;nmod;acl:relcl",
         "textid": 88,
         "sentence": "Asuin elokuun lopusta marraskuun loppuun Araraquaran keskustassa sijaitsevassa kerrostaloasunnossa, jossa lisäkseni asui neljä brasilialaista tyttöä.",
+        "asuminen_expressed": "root;nmod;acl:relcl",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "dobj",
         "textid": 89,
         "sentence": "Kuulin vasta vähän ennen lähtöä, että asunto olisi hommattava itse.",
+        "asuminen_expressed": "dobj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nsubj",
         "textid": 91,
         "sentence": "USPilla ei ole opiskelija-asuntoja vaihto-opiskelijoille.",
+        "asuminen_expressed": "nsubj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nmod;nsubj:cop",
         "textid": 99,
         "sentence": "Pähkäilin pitkään asumisen kanssa, sillä asuminen on melko kallista Britanniassa.",
+        "asuminen_expressed": "nmod;nsubj:cop",
         "number_of_paragraphs": 4
     },
     {
-        "asuminen_expressed": "nsubj",
         "textid": 100,
         "sentence": "Asuminen järjestyi yliopiston puolesta helposti, sain huoneen kampuksella olevasta Cwrt Mawr –nimisestä asuntolasta, joka oli ihan perussiisti ja huomattavasti kivempi kuin olisin odottanut.",
+        "asuminen_expressed": "nsubj;nmod:poss;nmod",
         "number_of_paragraphs": 3
     },
     {
-        "asuminen_expressed": "nmod:poss;nmod",
         "textid": 104,
         "sentence": "- Jos haluat löytää asunnon yksityiseltä puolelta( kampusasumisen sijaan) , tältä nettisivustolta löytyy todella hyvin Iso-Britannian vuokralaisenhakuilmoituksia: spareroom.com",
+        "asuminen_expressed": "nmod:poss;nmod;nsubj",
         "number_of_paragraphs": 11
     },
     {
-        "asuminen_expressed": "xcomp;nmod",
         "textid": 105,
         "sentence": "Lopulta päädyin kuitenkin majoittumaan Hamstead Hall-nimiseen yksityiseen opiskelija-asuntolaan.",
+        "asuminen_expressed": "xcomp;nmod",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nmod:poss",
         "textid": 106,
         "sentence": "Ensimmäinen vinkkini asunnon etsintään: OLKAA AJOISSA LIIKKEELLÄ!",
+        "asuminen_expressed": "nmod:poss",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "root;nmod:gobj",
         "textid": 107,
         "sentence": "Asuminen, tai siis lähinnä asunnon hankkiminen, oli varmaankin vaihdon hankalin juttu.",
+        "asuminen_expressed": "root;nmod:gobj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "None",
         "textid": 110,
         "sentence": "Huone minulla oli valmiina ja se sijaitsi, kuten mainittua, kampuksella, Parkwood-nimisellä alueella.",
+        "asuminen_expressed": "nsubj",
         "number_of_paragraphs": 2
     },
     {
-        "asuminen_expressed": "root;nmod",
         "textid": 111,
         "sentence": "Asuin kevään kampuksella ihanassa Park Woodin opiskelijakylässä, joka oli ehdottomasti paras valinta kaikista kampuksen majoitusvaihtoehdoista.",
+        "asuminen_expressed": "root;nmod",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "dobj",
         "textid": 112,
         "sentence": "Hankin asunnon yksityisiltä markkinoilta.",
+        "asuminen_expressed": "dobj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "root",
         "textid": 116,
         "sentence": "Asuin yliopiston asuntolassa, jonka olin varannut ja maksanut etukäteen.",
+        "asuminen_expressed": "root;nmod",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "dobj;conj",
         "textid": 117,
         "sentence": "Asuminen Kentissä on järjestetty niin että paikalliset ekavuotiset ja vaihtarit asuvat kampuksen opiskelijakylässä tai collegeissa ja vanhemmat opiskelijat muuttavat lähemmäksi n. 5 kilometrin päässä sijaitsevaa Canterburyn kylää.",
+        "asuminen_expressed": "dobj;conj",
         "number_of_paragraphs": 2
     },
     {
-        "asuminen_expressed": "nmod:poss;acl:relcl",
         "textid": 119,
         "sentence": "Vuokrasin asunnon kampukselta Parkwoodista, jossa useimmat vaihto-opiskelijat asuivat.",
+        "asuminen_expressed": "root;nmod:poss;acl:relcl",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "root;dobj",
         "textid": 120,
         "sentence": "Asuin yliopiston kampuksella ja asunnon olin hankkinut jo etukäteen yliopiston nettisivuilta, mikä oli suhteellisen helppoa.",
+        "asuminen_expressed": "root;dobj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nsubj",
         "textid": 125,
         "sentence": "Suurella perheellämme oli myös yhteinen asunto.",
+        "asuminen_expressed": "nsubj",
         "number_of_paragraphs": 4
     },
     {
-        "asuminen_expressed": "nmod;nmod",
         "textid": 126,
         "sentence": "Sain noin viikon sisällä siitä kun olin laittanut hakemuksen yliopiston asuntopalveluihin tarjouksen soluasunnosta.",
+        "asuminen_expressed": "nmod;nmod",
         "number_of_paragraphs": 2
     },
     {
-        "asuminen_expressed": "nmod;dobj",
         "textid": 130,
         "sentence": "Tiukan aikataulun vuoksi päädyinkin asuntopolitiikassa helpoimpaan ratkaisuun, nimittäin asuntolaan, sillä minulla ei ollut aikaa mennä paikanpäälle asuntoja katselemaan.",
+        "asuminen_expressed": "nmod;appos;dobj",
         "number_of_paragraphs": 2
     },
     {
-        "asuminen_expressed": "nmod",
         "textid": 132,
         "sentence": "Mitä asumiseen tulee, niin itse päädyin hankkimaan huoneen yliopiston kautta.",
+        "asuminen_expressed": "nmod;nmod:poss",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "None",
         "textid": 134,
         "sentence": "Loughborough ’ n kampus on suuri, ja jokaiselle opiskelijalle on määrätty oma saapumispäivä- ja aika.",
+        "asuminen_expressed": "None",
         "number_of_paragraphs": 3
     },
     {
-        "asuminen_expressed": "nmod:gobj",
         "textid": 135,
         "sentence": "Kesäkuun alussa sain Englannista sähköpostia asunnon hankkimiseen liittyen.",
+        "asuminen_expressed": "nmod:gobj",
         "number_of_paragraphs": 4
     },
     {
-        "asuminen_expressed": "xcomp",
         "textid": 136,
         "sentence": "Päädyin itse asumaan yliopiston kautta asuntolaan, jossa oli hyvät ja huonot puolensa.",
+        "asuminen_expressed": "xcomp;nmod",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "root",
         "textid": 138,
         "sentence": "Asuin kahdessakin eri asuntolassa kampuksella vuoteni aikana.",
+        "asuminen_expressed": "root;nmod",
         "number_of_paragraphs": 6
     },
     {
-        "asuminen_expressed": "None",
         "textid": 142,
         "sentence": "Sain siis asuntolapaikan automaattisesti, koska olin vaihdossa vain yhden lukukauden.",
+        "asuminen_expressed": "dobj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "None",
         "textid": 144,
         "sentence": "Vaihtoon haettaessa hain myös asuntolapaikkaa, ja sain valita itse mieluisimman asuntolan( tästä myöhemmin lisää) .",
+        "asuminen_expressed": "dobj;dobj",
         "number_of_paragraphs": 4
     },
     {
-        "asuminen_expressed": "nmod;dobj",
         "textid": 145,
         "sentence": "Mitä asumiseen Oxfordissa tulee niin esimieheni auttoi minua löytämään asunnon.",
+        "asuminen_expressed": "nmod;dobj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nsubj",
         "textid": 147,
         "sentence": "Syy miksi saavuin Britteihin viikkoa ennen lukukauden alkua oli se, ettei minulla ollut vielä asuntoa.",
+        "asuminen_expressed": "nsubj",
         "number_of_paragraphs": 3
     },
     {
-        "asuminen_expressed": "None",
         "textid": 149,
         "sentence": "Oma tilanteeni Sheffieldissä luultavasti poikkeaa useimmista vaihto-opiskelijoista siinä, että minulla oli jo ennestään tuttuja kyseisessä kaupungissa.",
+        "asuminen_expressed": "None",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nmod;nmod",
         "textid": 150,
         "sentence": "Orientaatioviikon jälkeen muutin tavarani 300 metriä väliaikaisesta majoituksesta asuntoon, josta tuli kotini seuraavan kymmenen kuukauden ajaksi.",
+        "asuminen_expressed": "nmod;nmod",
         "number_of_paragraphs": 2
     },
     {
-        "asuminen_expressed": "dobj",
         "textid": 151,
         "sentence": "Hain asuntoa yliopistolta, mutta koska huomasin tarjouskirjeen vasta niin myöhään, myöhästyin yliopiston asuntolahakemusten deadlinesta.",
+        "asuminen_expressed": "dobj;nmod:poss",
         "number_of_paragraphs": 3
     },
     {
-        "asuminen_expressed": "None",
         "textid": 152,
         "sentence": "Sain yliopiston kautta huoneen Burma Roadilta kahdeksan hengen solusta.",
+        "asuminen_expressed": "nmod:poss",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "dobj",
         "textid": 162,
         "sentence": "Asunnon hankin vasta paikan päältä.",
+        "asuminen_expressed": "dobj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nmod:gobj;dobj",
         "textid": 163,
         "sentence": "Ei ole mitään syytä stressata asunnon löytämisen suhteen, jos on valmis jakamaan asunnon toisen henkilön kanssa.",
+        "asuminen_expressed": "nmod:gobj;dobj",
         "number_of_paragraphs": 2
     },
     {
-        "asuminen_expressed": "None",
         "textid": 164,
         "sentence": "Saavuin Santiagoon noin kaksi viikkoa ennen vaihtareille tarkoitetun espanjan kurssin alkua, eli helmikuun puolivälissä.",
+        "asuminen_expressed": "None",
         "number_of_paragraphs": 2
     },
     {
-        "asuminen_expressed": "None",
         "textid": 175,
         "sentence": "Suurimman osan käytännön valmisteluista tein tammikuussa, viimeisen kuukauden aikana ennen lähtöä.",
+        "asuminen_expressed": "None",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "xcomp:ds;advcl;dobj",
         "textid": 177,
         "sentence": "Espanjassa on hyvin yleistä asua ns. kommuuneissa, mutta koska olen asunut yksin yli 15 vuotta, halusin ehdottomasti vuokrata asunnon itselleni, ja keskeltä kaupunkia.",
+        "asuminen_expressed": "xcomp:ds;advcl;xcomp;dobj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nmod;dobj",
         "textid": 180,
         "sentence": "Cantabrian yliopistosta sain tietoa Emancipia-nimisestä opiskelija-asuntosäätiöstä, ja täytinkin opiskelija-asuntohakemuksen heidän nettisivuillaan.",
+        "asuminen_expressed": "nmod;dobj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "None",
         "textid": 183,
         "sentence": "Matkajärjestelyissä ei ollut sen kummempaa, varasin vain yhdensuuntaisen lentolipun Barcelonaan.",
+        "asuminen_expressed": "None",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "None",
         "textid": 186,
         "sentence": "Muutimme kolme matkalaukun kanssa Carolinas Bajas –nimiselle alueelle.",
+        "asuminen_expressed": "None",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "dobj",
         "textid": 187,
         "sentence": "Aloin katsella asuntoilmoituksia Suomessa vähän ennen lähtöäni, mutten varannut vielä mitään.",
+        "asuminen_expressed": "dobj",
         "number_of_paragraphs": 2
     },
     {
-        "asuminen_expressed": "dobj;advcl;dobj",
         "textid": 189,
         "sentence": "Asunnon olin tosin etsinyt jo Suomesta käsin, mikä onnistui kohdallani erityisen hyvin, koska poikaystäväni asui Barcelonassa, joten hän pystyi käymään tarkistamassa asunnon.",
+        "asuminen_expressed": "dobj;advcl;dobj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "dobj",
         "textid": 191,
         "sentence": "Etsin asunnon vasta paikan päällä, sillä minulla oli kaupungissa kavereita, joiden luona sain viettää ensimmäiset pari viikkoa.",
+        "asuminen_expressed": "dobj",
         "number_of_paragraphs": 2
     },
     {
-        "asuminen_expressed": "dobj",
         "textid": 193,
         "sentence": "Hankin asunnon ennen kuin saavuin kaupunkiin.",
+        "asuminen_expressed": "dobj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "None",
         "textid": 194,
         "sentence": "Kasvatustieteen yksikkö sijaitsee ”sivukampuksella ” noin 20 min metromatkan päässä Barcelonan keskustasta.",
+        "asuminen_expressed": "None",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "dobj",
         "textid": 195,
         "sentence": "Olin etsinyt asunnon etukäteen Facebookin avulla.",
+        "asuminen_expressed": "dobj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "None",
         "textid": 198,
         "sentence": "Saavuin Barcelonaan muutaman viikon ennen opintojen alkua.",
+        "asuminen_expressed": "None",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nmod:poss",
         "textid": 199,
         "sentence": "Asumisen Barcelonassa olin järjestänyt jo Suomesta käsin.",
+        "asuminen_expressed": "nmod:poss",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nsubj",
         "textid": 200,
         "sentence": "Ennen lähtöäni luin monesta paikasta, että asunto kannattaisi ehdottomasti hankkia vasta paikanpäällä.",
+        "asuminen_expressed": "nsubj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "conj",
         "textid": 204,
         "sentence": "Monella varmaan herää jo kysymys, entäs asuminen?",
+        "asuminen_expressed": "conj",
         "number_of_paragraphs": 4
     },
     {
-        "asuminen_expressed": "nmod",
         "textid": 205,
         "sentence": "Espanjan asuntoihin verrattuna talot Suomessa ovat luksusta.",
+        "asuminen_expressed": "nmod",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "root;dobj",
         "textid": 206,
         "sentence": "Asuin ensimmäiset päivät hostellissa ja kävin katsomassa muutamaa kämppää, joiden katsomisesta olin sopinut etukäteen facebookissa.",
+        "asuminen_expressed": "root;dobj",
         "number_of_paragraphs": 2
     },
     {
-        "asuminen_expressed": "nmod:gobj",
         "textid": 209,
         "sentence": "Granadaan tullessa ensimmäinen askel oli asunnon etsiminen.",
+        "asuminen_expressed": "nmod:gobj",
         "number_of_paragraphs": 2
     },
     {
-        "asuminen_expressed": "nmod",
         "textid": 210,
         "sentence": "Kun saavuin Madridiin elokuun lopussa, minulla oli noin viisi hostelliyötä varattuna ja rahaa taskussa, mutta ei tietoa asunnosta, liittymästä tai oikeastaan edes yliopiston sijainnista.",
+        "asuminen_expressed": "nmod",
         "number_of_paragraphs": 2
     },
     {
-        "asuminen_expressed": "root",
         "textid": 211,
         "sentence": "Kuten mainitsin, asuin ensimmäiset päivät keskustan hostellissa, jonka olin varannut Suomesta etukäteen.",
+        "asuminen_expressed": "root",
         "number_of_paragraphs": 2
     },
     {
-        "asuminen_expressed": "dobj",
         "textid": 212,
         "sentence": "Olin katsonut Couch Surfing palvelut Renting rooms in Madrid( tai jokin vastaavan niminen) -palstalta sopivan asunnon etukäteen ja jutellut omistajan kanssa netissä.",
+        "asuminen_expressed": "dobj",
         "number_of_paragraphs": 2
     },
     {
-        "asuminen_expressed": "nsubj",
         "textid": 213,
         "sentence": "Espanjaan saapuessani minulla ei vielä ollut asuntoa, vaan majailin viikon hostellissa.",
+        "asuminen_expressed": "nsubj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nmod;nmod",
         "textid": 214,
         "sentence": "Olin saanut sovituksi huoneen kimppakämpästä jo Suomesta käsin, mutta lopulta en kuitenkaan viihtynyt asunnossa.",
+        "asuminen_expressed": "nmod:poss;nmod;nmod",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "dobj",
         "textid": 215,
         "sentence": "Itse löysin asunnon jo ennen vaihtoon lähtöä yliopiston sivujen vuokrailmoituksista, ja päätin luottaa siihen että perille päästyäni kaikki on niin kuin pitää.",
+        "asuminen_expressed": "dobj;nmod",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "dobj;dobj;nmod",
         "textid": 217,
         "sentence": "Asuntoni hommasin etukäteen, mutta käsittääkseni suurin osa löysi asunnon helposti paikan päältä Santiagon vaihtareiden Facebook-ryhmästä, joka on täynnä kämppäilmoituksia.",
+        "asuminen_expressed": "dobj;dobj;nmod",
         "number_of_paragraphs": 2
     },
     {
-        "asuminen_expressed": "None",
         "textid": 218,
         "sentence": "Kampuksia Santiagosta löytyy kaksi, Campus Sur ja Campus Norte.",
+        "asuminen_expressed": "None",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "dobj",
         "textid": 219,
         "sentence": "Asuntoa minulla ei ollut valmiina Sevillaan saapuessani.",
+        "asuminen_expressed": "dobj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "dobj;nsubj",
         "textid": 220,
         "sentence": "Asuntoa minulla ei ollut valmiiksi, mutta kämppäkaverit olivat.",
+        "asuminen_expressed": "dobj;nsubj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "root;dobj",
         "textid": 222,
         "sentence": "Majoituin alussa ydinkeskustassa sijaitsevassa hostellissa, sillä halusin etsiä kämpän vasta paikanpäällä.",
+        "asuminen_expressed": "root;dobj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "dobj",
         "textid": 223,
         "sentence": "Asunnon hankin vasta saavuttuani paikan päälle.",
+        "asuminen_expressed": "dobj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nsubj:cop",
         "textid": 224,
         "sentence": "Asumisjärjestelyt olivat vaihdon aikana paljon puhuttu sirkus, kun jatkuvasti joku muutti paikasta toiseen erinäisistä syistä.",
+        "asuminen_expressed": "nsubj:cop",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nmod;nsubj",
         "textid": 225,
         "sentence": "Minulla kävi hyvä tuuri asumisen kanssa, sillä minua odotti asunto valmiina Sevillassa.",
+        "asuminen_expressed": "nmod;nsubj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "dobj;conj",
         "textid": 226,
         "sentence": "Asunnon olin katsonut jo etukäteen ja asuin kahden muun vaihtaritytön kanssa Sevillan keskustassa.",
+        "asuminen_expressed": "dobj;conj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "dobj",
         "textid": 227,
         "sentence": "Varasin itselleni asunnon Roommates Sevilla –nimisen välitysfirman kautta netistä jo ennen vaihtoon lähtöäni.",
+        "asuminen_expressed": "dobj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "root;nmod:poss",
         "textid": 230,
         "sentence": "Itse asuin Trianassa kuuden hengen solussa, muutaman minuutin päästä Plaza de Cuba -metropysäkistä, ja olin erittäin tyytyväinen asuntoni sijaintiin koko kevään ajan.",
+        "asuminen_expressed": "root;nmod:poss",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nmod;dobj",
         "textid": 231,
         "sentence": "Majoituksen suhteen päätin, että hankin pysyvän asunnon vasta paikan päällä.",
+        "asuminen_expressed": "nmod;dobj",
         "number_of_paragraphs": 2
     },
     {
-        "asuminen_expressed": "nmod:gobj",
         "textid": 232,
         "sentence": "Kaikkein tärkein asia, jota minun täytyy painottaa, on asumisen järjesteleminen.",
+        "asuminen_expressed": "nmod:gobj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nsubj;dobj",
         "textid": 235,
         "sentence": "Minulla oli asunto valmiina Valenciaan saapuessa, sillä eräs tuttuni oli Valenciassa pari vuotta sitten vaihdossa ja hän kehui minulle vanhaa asuntoansa, joten päädyin vuokraamaan sen aluksi.",
+        "asuminen_expressed": "nsubj;dobj;xcomp",
         "number_of_paragraphs": 3
     },
     {
-        "asuminen_expressed": "None",
         "textid": 237,
         "sentence": "Saavuin Zaragozaan noin viikkoa ennen opintojen alkua.",
+        "asuminen_expressed": "None",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nsubj",
         "textid": 242,
         "sentence": "Asunto oli välittömästi valmiina käyttöön kun saavuin paikalle.",
+        "asuminen_expressed": "nsubj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "root",
         "textid": 249,
         "sentence": "Saavuttuani kampukselle majoituin huoneistoon ISO flat 1, jonka yhteydessä oli keittiö ja ac, vuokra oli noin 250 USA:n dollaria.",
+        "asuminen_expressed": "root;nmod;nsubj:cop",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "dobj",
         "textid": 252,
         "sentence": "Asunto jokaisen on hankittava itse.",
+        "asuminen_expressed": "dobj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "dobj;parataxis",
         "textid": 254,
         "sentence": "Itse hankin asunnon jo Suomesta käsin, asuin College Courtissa joka sijaitsee aivan kampuksen kyljessä.",
+        "asuminen_expressed": "dobj;parataxis",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "root",
         "textid": 256,
         "sentence": "Asuin koko lukuvuoden kampuksen ulkopuolella Brookfield Hallissa.",
+        "asuminen_expressed": "root",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nsubj",
         "textid": 257,
         "sentence": "Minulla ei ollut asuntoa lähtiessäni Irlantiin.",
+        "asuminen_expressed": "nsubj",
         "number_of_paragraphs": 2
     },
     {
-        "asuminen_expressed": "nmod:gobj",
         "textid": 258,
         "sentence": "Hankalin osuus vaihtoon lähdössä oli majoituksen etsiminen Irlannista.",
+        "asuminen_expressed": "nmod:gobj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nmod:gobj",
         "textid": 259,
         "sentence": "Ennen Irlantiin lähtöä kuitenkin yksi haasteellisimmista asioista oli majoituksen löytyminen.",
+        "asuminen_expressed": "nmod:gobj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "root",
         "textid": 260,
         "sentence": "Suurinosa vaihtareista asuu guest houseissa, jotka vapautuvat turistikauden päätyttyä 1.9.",
+        "asuminen_expressed": "root",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "conj;root",
         "textid": 263,
         "sentence": "Koska Reykjavikin vuokra- ja opiskelija-asuntotilanne on hyvin huono, vaihto-opiskelijat majoittuvat useimmiten guesthouseissa.",
+        "asuminen_expressed": "nsubj:cop;conj;root",
         "number_of_paragraphs": 5
     },
     {
-        "asuminen_expressed": "dobj",
         "textid": 266,
         "sentence": "Asuntoa minun ei tarvinnut hankkia.",
+        "asuminen_expressed": "dobj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "None",
         "textid": 267,
         "sentence": "Hankin matkavakuutuksen ja vastuuvakuutuksen( jonka hankkimiseen sain onneksi apua Erasmus-toimistosta) sekä varmistin, että eurooppalainen sairaanhoitokorttini oli voimassa.",
+        "asuminen_expressed": "None",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "None",
         "textid": 268,
         "sentence": "Kielikurssin jälkeen matkustin paikallisjunalla Milanoon.",
+        "asuminen_expressed": "None",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nmod:gobj;dobj",
         "textid": 270,
         "sentence": "Asunnon hankkimiseen liittyen yliopisto tarjosi palvelua, jossa paikallinen toimisto hankkii vaihtareille asuntoja paikallisilta.",
+        "asuminen_expressed": "nmod:gobj;dobj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "dobj",
         "textid": 272,
         "sentence": "Olin löytänyt asunnon ensimmäiseksi kuukaudeksi Airbnb:n kautta ennen Italiaan saapumista.",
+        "asuminen_expressed": "dobj",
         "number_of_paragraphs": 3
     },
     {
-        "asuminen_expressed": "None",
         "textid": 273,
         "sentence": "Minulla kävi todella hyvä tuuri vaihtoani edeltävänä syksynä.",
+        "asuminen_expressed": "None",
         "number_of_paragraphs": 4
     },
     {
-        "asuminen_expressed": "dobj",
         "textid": 274,
         "sentence": "Asunnon olin hankkinut jo ennen Roomaan saapumista, mikä hieman hirvitti, mutta kaikki meni lopulta hyvin.",
+        "asuminen_expressed": "dobj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "root",
         "textid": 275,
         "sentence": "Hain asuntoa Erasmus-haun yhteydessä yliopiston asuntolasta.",
+        "asuminen_expressed": "root;nmod",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nmod",
         "textid": 286,
         "sentence": "Asuntoloista valitsin Julius Raab Heimin vanhojen matkakertomusten perusteella.",
+        "asuminen_expressed": "nmod",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "None",
         "textid": 290,
         "sentence": "Suurin osa vaihtareista majoitetaan Julius Raabheimille, josta on noin 10 min kävelymatka kampukselle ja keskustaan pääsee ratikalla noin 15 minuutissa.",
+        "asuminen_expressed": "root",
         "number_of_paragraphs": 2
     },
     {
-        "asuminen_expressed": "nmod:gobj",
         "textid": 292,
         "sentence": "Asunnon hakeminen oli todella helppoa.",
+        "asuminen_expressed": "nmod:gobj",
         "number_of_paragraphs": 3
     },
     {
-        "asuminen_expressed": "root",
         "textid": 293,
         "sentence": "Asuin Julius Raab Heimissä 10 minuutin kävelymatkan päässä kampuksesta.",
+        "asuminen_expressed": "root",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nsubj",
         "textid": 294,
         "sentence": "Asunto järjestyi erittäin helposti jo etukäteen yliopiston tarjoamassa asuntolassa.",
+        "asuminen_expressed": "nsubj;nmod",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nmod",
         "textid": 298,
         "sentence": "Sitten pari sanaa asumisesta.",
+        "asuminen_expressed": "nmod",
         "number_of_paragraphs": 3
     },
     {
-        "asuminen_expressed": "nmod",
         "textid": 300,
         "sentence": "Viittasinkin jo Berliiniläiseen kämppikseeni, joten on syytä mainita asuntoasioista muutama sana.",
+        "asuminen_expressed": "nmod",
         "number_of_paragraphs": 2
     },
     {
-        "asuminen_expressed": "root;dobj",
         "textid": 302,
         "sentence": "Hain asuntoa vaihto-opiskelijoille asuntoja järjestävän OeADin kautta varsin myöhään, kesäkuun puolivälissä.",
+        "asuminen_expressed": "root;dobj",
         "number_of_paragraphs": 5
     },
     {
-        "asuminen_expressed": "None",
         "textid": 303,
         "sentence": "Vapaa-aikaa vietin kämppisten tai muiden vaihtareiden kanssa.",
+        "asuminen_expressed": "None",
         "number_of_paragraphs": 4
     },
     {
-        "asuminen_expressed": "root;nmod",
         "textid": 306,
         "sentence": "Asuin OeAD:n soluasunnossa kiinalaisen kämppikseni kanssa koko vaihdon ajan.",
+        "asuminen_expressed": "root;nmod",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "None",
         "textid": 308,
         "sentence": "Wien on jaettu yli kahteenkymmeneen asuinalueeseen( Bezirk) , joista osa on vähän parempia ja osa taas vähän huonompia kuin toiset.",
+        "asuminen_expressed": "None",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nmod:gobj",
         "textid": 310,
         "sentence": "Asunnon hankkiminen kannattaa aloittaa suhteellisen aikaisin.",
+        "asuminen_expressed": "nmod:gobj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nmod:gobj",
         "textid": 312,
         "sentence": "Asunnon järjestäminen etukäteen olikin hieman haastavampi operaatio kuin mitä odotin.",
+        "asuminen_expressed": "nmod:gobj",
         "number_of_paragraphs": 3
     },
     {
-        "asuminen_expressed": "root",
         "textid": 313,
         "sentence": "Asuin kevään aikana kahdessa eri WG-asunnossa( Wohngemeinschaft) , joista molemmat löysin jobwohnen .at -sivuston kautta.",
+        "asuminen_expressed": "root",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "dobj",
         "textid": 314,
         "sentence": "Itse hankin asunnon jo etukäteen, ja paikallinen kaverini kävi sitä katsomassa ja hakemassa avaimen jo etukäteen.",
+        "asuminen_expressed": "dobj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nmod",
         "textid": 317,
         "sentence": "Lensin Wieniin sunnuntaina ja lento-kentältä suuntasin suoraan asunnolleni.",
+        "asuminen_expressed": "nmod",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nmod:poss",
         "textid": 318,
         "sentence": "Asunnon etsintä Wienissä vaatii jonkin verran aikaa ja vaivaa, mutta mikään mahdoton tehtävä se ei ole.",
+        "asuminen_expressed": "nmod:poss",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "xcomp",
         "textid": 319,
         "sentence": "Koska minulla on jo ennestään kavereita Wienissä, pystyin asumaan kaverini kanssa alivuokralaisena, mikä teki hinnasta naurettavan.",
+        "asuminen_expressed": "xcomp;nmod",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "dobj",
         "textid": 322,
         "sentence": "Asumisen hoidin vaihtareille tarkoitetun OeAD-järjestön kautta.",
+        "asuminen_expressed": "dobj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "None",
         "textid": 323,
         "sentence": "Saavuin Jamaikalle elokuun 23. päivä myöhään yöllä, joten otin taksin lentokentältä kampukselle.",
+        "asuminen_expressed": "None",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nmod:poss;dobj",
         "textid": 329,
         "sentence": "AIU on myös asumisen kannalta helppo kohde, koska huoneen saa automaattisesti kampukselta, joten asuntoa ei tarvitse metsästää, eikä japanilaisen pankkitilin avaaminen ole välttämätöntä.",
+        "asuminen_expressed": "nmod:poss;nsubj;dobj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nsubj:cop",
         "textid": 334,
         "sentence": "Mielestäni asuntolassa asuminen oli ihan viihtyisää.",
+        "asuminen_expressed": "nmod;nsubj:cop",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "dobj",
         "textid": 336,
         "sentence": "Saapuessani Japaniin yliopisto järjesti bussikyydin lentokentältä majoituspaikkaani muiden vaihto-opiskelijoiden kanssa.",
+        "asuminen_expressed": "dobj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nsubj",
         "textid": 337,
         "sentence": "Asuntoni sijaitsi lähellä Takasakan juna-asemaa ja parin kilometrin päässä yliopistolta.",
+        "asuminen_expressed": "nsubj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nmod:poss",
         "textid": 339,
         "sentence": "Asumisen hinta ja laatu puolestaan riippui paljon siitä, minne sijoittui.",
+        "asuminen_expressed": "nmod:poss",
         "number_of_paragraphs": 2
     },
     {
-        "asuminen_expressed": "nsubj:cop",
         "textid": 340,
         "sentence": "Minun asuntoni oli Green Housissa, joka on kaksi kerroksinen asuntola, jossa kummassakin kerroksessa on jaettu keittiö, vessa ja maksimissaan 8 henkeä, kaikki naisia.",
+        "asuminen_expressed": "nsubj:cop;acl:relcl",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nsubj:cop",
         "textid": 341,
         "sentence": "Asuminen Tokiossa on aika kallista.",
+        "asuminen_expressed": "nsubj:cop",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "dobj",
         "textid": 344,
         "sentence": "Yliopiston asuntolaan minua ei hyväksytty, joten jouduin hankkimaan oman asunnon.",
+        "asuminen_expressed": "nmod;dobj",
         "number_of_paragraphs": 3
     },
     {
-        "asuminen_expressed": "None",
         "textid": 345,
         "sentence": "Asuntola on 3 asemaa Ikebukurosta, yhdestä Tokion isoimmista keskustoista, ja yliopisto vielä 2 asemaa Ikebukurosta.",
+        "asuminen_expressed": "nsubj:cop",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "None",
         "textid": 346,
         "sentence": "Japaniin saapuminen sujui mukavasti, sillä yliopistolta lähetettiin kuvalliset ohjeet matkasta Naritan lentokentältä asuntolalle asti.",
+        "asuminen_expressed": "nmod",
         "number_of_paragraphs": 2
     },
     {
-        "asuminen_expressed": "None",
         "textid": 347,
         "sentence": "Asuntolan henkilökunta ei osannut puhua kuin japania, joten tietotulvan yliannostus oli taattu ja tuntuikin, että paljon jäi ymmärtämättä.",
+        "asuminen_expressed": "nmod:poss",
         "number_of_paragraphs": 2
     },
     {
-        "asuminen_expressed": "nmod:gobj",
         "textid": 348,
         "sentence": "Ammanin päästä kansainvälinen toimisto avusti asunnon etsimisessä.",
+        "asuminen_expressed": "nmod:gobj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "None",
         "textid": 353,
         "sentence": "Loppu hyvin, kaikki hyvin onneksi ja pääsin kuin pääsinkin viimein Kanadaan noin viikon kurssien alkamisen jälkeen.",
+        "asuminen_expressed": "None",
         "number_of_paragraphs": 2
     },
     {
-        "asuminen_expressed": "None",
         "textid": 354,
         "sentence": "Montrealiin saavuttuani yövyin aluksi muutaman yön hotellissa ja sen jälkeen siirryin hostelliin.",
+        "asuminen_expressed": "None",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "xcomp;nmod",
         "textid": 358,
         "sentence": "Päädyin lopulta asumaan vastarakennettuun yksityiseen opiskelija-asuntolaan nimeltä Envie.",
+        "asuminen_expressed": "xcomp;nmod",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nmod:gobj",
         "textid": 360,
         "sentence": "Asunnon saamisen Ottawasta koin hieman hankalaksi.",
+        "asuminen_expressed": "nmod:gobj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "dobj",
         "textid": 361,
         "sentence": "Asuntoa oli hyvin vaikea saada vapailta markkinoilta etänä, sillä kukaan ei halunnut vuokrata minulle huonetta ainoastaan neljäksi kuukaudeksi tapaamatta kasvotusten.",
+        "asuminen_expressed": "dobj;xcomp;dobj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "dobj",
         "textid": 362,
         "sentence": "Hain myös heti hyväksymiskirjeen saatuani asuntoa Carletonin kampukselta, mutta jäin odotuslistalle.",
+        "asuminen_expressed": "dobj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "advcl",
         "textid": 363,
         "sentence": "Itse valitsin muualla kuin kampuksella asumisen, ja tein mielestäni siinä itselleni oikean päätöksen.",
+        "asuminen_expressed": "advcl",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "dobj",
         "textid": 364,
         "sentence": "Bishop ’ sin sivujen kautta löysin asunto- ja kämppisilmoituksia, ja päädyin kolmanneksi asukkaaksi kahden toisen vuoden opiskelijan kanssa.",
+        "asuminen_expressed": "dobj;nmod",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nsubj;nsubj:cop",
         "textid": 369,
         "sentence": "ISEP:n sopimuksen mukaan vaihtomaksuun kuuluu asunto sekä Meal Plan, joten asunto oli valmiina kun saavuin paikalle.",
+        "asuminen_expressed": "nsubj;nsubj:cop",
         "number_of_paragraphs": 2
     },
     {
-        "asuminen_expressed": "dobj;nmod",
         "textid": 372,
         "sentence": "Päädyin hakemaan asuntoa paikallisen koordinaattorin suosittelemana kampuksen asuntoloista.",
+        "asuminen_expressed": "dobj;nmod",
         "number_of_paragraphs": 2
     },
     {
-        "asuminen_expressed": "None",
         "textid": 374,
         "sentence": "Asuntolaa ei tarvinnut erikseen hakea etukäteen, vaan kaikille vaihto-oppilaille oli varattu paikka yliopiston asuntolasta kahden hengen huoneesta.",
+        "asuminen_expressed": "dobj;nmod;nmod",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nmod",
         "textid": 375,
         "sentence": "Oli tehnyt varauksen opiskelija-asuntolaan saatuani varmistuksen vaihtopaikasta.",
+        "asuminen_expressed": "nmod",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "dobj",
         "textid": 377,
         "sentence": "Asuntoa voi hakea BNU nettijärjestelmän kautta, johon saa ohjeet hyväksymispaketin kanssa.",
+        "asuminen_expressed": "dobj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "root",
         "textid": 378,
         "sentence": "Asuin kansainvälisten opiskelijoiden asuntolassa, joka oli vain parin sadan metrin päässä omasta koulurakennuksestani.",
+        "asuminen_expressed": "root;nmod",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "xcomp",
         "textid": 385,
         "sentence": "Luettuani edelliset matkakertomukset kuvittelin, että tulen asumaan pienessä huoneessa monien muiden kanssa, keittiö olisi aina likainen, jääkaapista varastettaisiin aina ruokaa, jne.",
+        "asuminen_expressed": "xcomp;nmod",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "root",
         "textid": 387,
         "sentence": "Asuin yliopiston asuntolassa, Shaw collegessa.",
+        "asuminen_expressed": "root;nmod",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nsubj",
         "textid": 390,
         "sentence": "Asuminen tapahtuu pienessä huoneessa yhdessä kämppiksen tai kahden kanssa.",
+        "asuminen_expressed": "nsubj;nmod",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nmod",
         "textid": 391,
         "sentence": "Valitsin kolmesta hakuprosessin aikana tarjotuista asumisvaihtoehdosta I-Housen.",
+        "asuminen_expressed": "nmod",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "None",
         "textid": 393,
         "sentence": "Kaikki undergraduatet oli ennen saapumista sijoitettu jonkin collegen asuntolaan tai international houseen.",
+        "asuminen_expressed": "nmod",
         "number_of_paragraphs": 3
     },
     {
-        "asuminen_expressed": "dobj",
         "textid": 395,
         "sentence": "CUHKin hakuvaiheessa tulee laittaa järjestykseen asumisvaihtoehdot, jotka ovat international house, collegen asuntola tai collegen asuntola johon kuuluu \"communal dinner\"tiistaista torstaihin.",
+        "asuminen_expressed": "dobj;conj;conj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "None",
         "textid": 397,
         "sentence": "Hakuprosessin aikana minun tuli valita ensisijainen asuintaloni kampukselta.",
+        "asuminen_expressed": "None",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "None",
         "textid": 399,
         "sentence": "Orientation weekin lopussa muutettiin lopulliseen asuntolaan.",
+        "asuminen_expressed": "nmod",
         "number_of_paragraphs": 2
     },
     {
-        "asuminen_expressed": "None",
         "textid": 401,
         "sentence": "CUHK tarjoaa vaihto-opiskelijoille huoneen yliopiston kampukselta.",
+        "asuminen_expressed": "nmod:poss",
         "number_of_paragraphs": 2
     },
     {
-        "asuminen_expressed": "nmod",
         "textid": 405,
         "sentence": "Asuntolakseni määräytyi JC, eli kampuksen perimmäisessä nurkassa oleva 7-10 hengen asunnoista koostuvat rakennus.",
+        "asuminen_expressed": "nmod;nmod",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "root",
         "textid": 409,
         "sentence": "Sairastelun lisäksi vaihtovuoden negatiivisin asia oli ehdottomasti asuminen.",
+        "asuminen_expressed": "root",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "None",
         "textid": 412,
         "sentence": "Fudanin yliopisto tarjoaa tietääkseni kaikille vaihto-opiskelijoille oman Buddyn, eli tuutorin eli paikallisen opiskelijan.",
+        "asuminen_expressed": "None",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nsubj:cop",
         "textid": 420,
         "sentence": "Varasin hotellin koko kahdeksi viikoksi sillä opiskelija-asuntola TOHEE:n kanssa oli hieman kommunikointiongelmia.",
+        "asuminen_expressed": "nsubj:cop",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "dobj",
         "textid": 421,
         "sentence": "Me olimme päättäneet olla ottamatta Fudanin tarjoamaa dormi-majoitusta.",
+        "asuminen_expressed": "dobj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "None",
         "textid": 422,
         "sentence": "Fudanin asuntola vaihto-opiskelijoille sijaitsee pohjoiskampuksen luoteisimmassa nurkassa, noin kilometrin( ehkä? ) päässä tärkeimmästä hallinto- ja opetusrakennuksesta, Guanghua Lousta.",
+        "asuminen_expressed": "nsubj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "None",
         "textid": 423,
         "sentence": "Yliopisto sijaitsee kaupungin pohjoisosassa University Townissa aidatulla alueella, josta löytyy kolme yliopistoa, Peking University, Tsinghua University ja Harbin Institute of Technology.",
+        "asuminen_expressed": "None",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "root",
         "textid": 427,
         "sentence": "Itse asuin yliopiston kampuksen asuntolassa omassa huoneessa.",
+        "asuminen_expressed": "root;nmod;nmod",
         "number_of_paragraphs": 3
     },
     {
-        "asuminen_expressed": "nsubj",
         "textid": 430,
         "sentence": "Asunnot olivat vaihtareille valmiina, mutta saimme muuttaa niihin sisään vasta juuri ennen lukukauden alkua ja jouduimme lähtemään niistä heti seuraavana päivänä lukukauden päättymisestä.",
+        "asuminen_expressed": "nsubj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "root;nmod",
         "textid": 431,
         "sentence": "Paikan päällä Koreassa asuin itse yksityisellä asunnontarjoajalla.",
+        "asuminen_expressed": "root;nmod",
         "number_of_paragraphs": 2
     },
     {
-        "asuminen_expressed": "None",
         "textid": 432,
         "sentence": "Kuten aiemmin jo mainitsin, yliopiston alueella oli asuntola, joka oli todella edullinen ja johon oli vaihto-opiskelijoille varattu optio, jos asuntolan hallintoon ilmoitti ajoissa.",
+        "asuminen_expressed": "nsubj;nmod:poss",
         "number_of_paragraphs": 3
     },
     {
-        "asuminen_expressed": "root",
         "textid": 434,
         "sentence": "Asuin suomalaisen ystäväni kanssa kampuksella yliopiston asuntolassa eli dormissa.",
+        "asuminen_expressed": "root;nmod",
         "number_of_paragraphs": 2
     },
     {
-        "asuminen_expressed": "xcomp",
         "textid": 435,
         "sentence": "Kuten jo aiemmin mainitsin, päätin asua yliopiston asuntolassa, joka on kampuksen sisäpuolella.",
+        "asuminen_expressed": "xcomp;nmod",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "dobj",
         "textid": 438,
         "sentence": "Opiskelijoille asuminen oli organisoitu dormiin nimeltä Gonzaga hall. Sijainniltaan asuntola oli kampuksen sisäreunalla ja hyvällä sijainnilla monellakin tapaa.",
+        "asuminen_expressed": "dobj;nsubj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nmod",
         "textid": 439,
         "sentence": "Asuntonani oli kahden hengen kesken jaettu huone Sogangin asuntolassa Gonzaga Hallissa.",
+        "asuminen_expressed": "nmod;nsubj;nmod",
         "number_of_paragraphs": 2
     },
     {
-        "asuminen_expressed": "root",
         "textid": 440,
         "sentence": "Asuin yliopiston asuntolassa, jossa jaoin huoneen saksalaisen vaihtarin kanssa.",
+        "asuminen_expressed": "root;nmod;dobj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nsubj",
         "textid": 441,
         "sentence": "Asuminen järjestyy varsin kivuttomasti ja suhteellisen edullisesti kampuksella sijaitsevasta asuntolasta.",
+        "asuminen_expressed": "nsubj;nmod",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nmod:poss",
         "textid": 448,
         "sentence": "Edellä mainitun lisäksi hoidin jo Suomessa ollessani itselleni asunnon Ateenasta.",
+        "asuminen_expressed": "nmod:poss",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nmod:gobj",
         "textid": 449,
         "sentence": "Asunnon hankkiminen oli helppoa vaihtareille tarkoitetun StayInAthens -järjestön kautta.",
+        "asuminen_expressed": "nmod:gobj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "None",
         "textid": 450,
         "sentence": "Saapuminen Kreikkaan sujui myös hyvin.",
+        "asuminen_expressed": "None",
         "number_of_paragraphs": 2
     },
     {
-        "asuminen_expressed": "None",
         "textid": 453,
         "sentence": "Lähtövalmisteluihini kuului matkavakuutuksen hankkiminen pidennetylle ajalle, sillä jatkuva matkavakuutus kattoi vain kolmen kuukauden yhtäjaksoisen matkan.",
+        "asuminen_expressed": "None",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "None",
         "textid": 454,
         "sentence": "Muutto Vilnaan oli todella vaivaton, koska minulla on kaupungissa ystäviä.",
+        "asuminen_expressed": "None",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nmod:gobj",
         "textid": 455,
         "sentence": "Asunnon hakeminen oli naurettavan helppoa parin rasti ruutuun – sivun täyttämisen ansiosta.",
+        "asuminen_expressed": "nmod:gobj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "dobj;compound:nn",
         "textid": 459,
         "sentence": "Rupesin hyvissä ajoin kyselemään asuntoa asunnonvälittäjä Wendyltä.",
+        "asuminen_expressed": "dobj;compound:nn",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nmod:poss;nmod",
         "textid": 463,
         "sentence": "ASUMINEN:Olin valinnut yliopiston kautta perhemajoituksen paikallisessa perheessä, mutta loppujen lopuksi \"asuin \"puolet ajasta opiskelija-asuntolassa kavereideni takia.",
+        "asuminen_expressed": "nmod:poss;nmod",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "None",
         "textid": 465,
         "sentence": "Vaihto-oppilaille oli luotu oma Facebook-ryhmä, jossa olin aloittanut jo keskustelun monen kanssa.",
+        "asuminen_expressed": "None",
         "number_of_paragraphs": 2
     },
     {
-        "asuminen_expressed": "root",
         "textid": 468,
         "sentence": "Suurin helpotus saapuessa oli perillä odottava kämppä, jonka Andrea oli ystävällisesti järkännyt valmiiksi.",
+        "asuminen_expressed": "root",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "root;acl:relcl",
         "textid": 469,
         "sentence": "Asuin paikallisessa perheessä alueella, jossa ei ollut aikaisemmin asunut ulkomaalaisia.",
+        "asuminen_expressed": "root;acl:relcl",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "None",
         "textid": 471,
         "sentence": "Itselleni oli tärkeää jonkinasteinen yksityisyys sekä sijainti, joka mahdollistaisi kaupunkiin tutustumisen hyvin.",
+        "asuminen_expressed": "None",
         "number_of_paragraphs": 2
     },
     {
-        "asuminen_expressed": "None",
         "textid": 472,
         "sentence": "Opiskelijoille suunnatut palvelut hoitaa Oslossa keskitetysti SiO-niminen organisaatio.",
+        "asuminen_expressed": "None",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "dobj",
         "textid": 473,
         "sentence": "Löysin asunnon SiO:n eli Oslon opiskelijasäätiön kautta.",
+        "asuminen_expressed": "dobj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nmod:gobj;nmod",
         "textid": 474,
         "sentence": "Asunnon saamisen hankaluudesta Trondheimissa oli jo etukäteen varoiteltu, joten en sinänsä yllättynyt, kun sain heinäkuussa kielteisen päätöksen hakemuksestani paikallisen opiskelijajärjestön SiT:n asuntoihin.",
+        "asuminen_expressed": "nmod:gobj;nmod",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "root;nmod",
         "textid": 475,
         "sentence": "Asuin erään järjestön työntekijän omistamassa asunnossa vuokralla Mirafloresin kaupunginosassa.",
+        "asuminen_expressed": "root;nmod;nmod",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "dobj",
         "textid": 476,
         "sentence": "Ensimmäiseksi neljäksi yöksi olin hankkinut huoneen Airbnb:stä, mutta pysyvän asunnon hommasin vasta saavuttuani paikan päälle.",
+        "asuminen_expressed": "nmod:poss;dobj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "None",
         "textid": 478,
         "sentence": "Ennen vaihtoon lähtöä luin aikaisempien vaihto-oppilaiden arvosteluita kohdemaan yliopistosta( www.stexx.eu on tähän loistava sivusto) sekä liityin moniin Lissabonin vaihto-opiskelijoille suunnattuihin Facebook-ryhmiin, jotta pystyisin vähän kartoittamaan käytännön tilannetta paikanpäällä vaihto-opiskelijan näkökulmasta.",
+        "asuminen_expressed": "None",
         "number_of_paragraphs": 2
     },
     {
-        "asuminen_expressed": "root;nmod;nmod",
         "textid": 479,
         "sentence": "Asuin kahden kämppäkaverin kanssa netistä vuokraamassa asunnossa.",
+        "asuminen_expressed": "root;nmod;advcl;nmod",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "None",
         "textid": 484,
         "sentence": "Portoon saapuminen sujui hyvin vaivatta.",
+        "asuminen_expressed": "None",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "None",
         "textid": 486,
         "sentence": "Olin vaihdossa lukuvuoden 2015-2016 Pohjois-Portugalissa sijaitsevassa Porton kaupungissa.",
+        "asuminen_expressed": "None",
         "number_of_paragraphs": 4
     },
     {
-        "asuminen_expressed": "None",
         "textid": 488,
         "sentence": "Varmasti yksi isoimmista tekijöistä Portossa viihtymiseeni oli asuinpaikka, jonka onnistuin saamaan aiemmin Portossa opiskelleen vinkin perusteella.",
+        "asuminen_expressed": "root",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "None",
         "textid": 489,
         "sentence": "Saapuminen Portoon sujui kivuitta, lennot tosin ovat hieman kalliita.",
+        "asuminen_expressed": "None",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "dobj",
         "textid": 490,
         "sentence": "Yritin ennen lähtöäni katsoa netistä asuntoasiat kuntoon, mutta mielestäni nettisivut oli melko sekavia.",
+        "asuminen_expressed": "dobj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nsubj:cop",
         "textid": 491,
         "sentence": "Asuntoja on tarjolla niin paljon, ettei ole vaaraa jäädä ilman ja vuokrat ovat noin 180-250 euroa kuussa.",
+        "asuminen_expressed": "nsubj:cop;nsubj:cop",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "dobj",
         "textid": 492,
         "sentence": "Asunnon sain tutun tutun kautta, kuulin että eräällä omanikäiselläni varsovalaisella feministi-kasvissyöjä-tyypillä oli kaksiossaan juuri toinen huone vapaana.",
+        "asuminen_expressed": "dobj;nsubj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "dobj",
         "textid": 493,
         "sentence": "Asunnon olin hommannut jo etukateen Suomesta kasin eraan valitysfirman kautta.",
+        "asuminen_expressed": "dobj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nmod:gobj",
         "textid": 494,
         "sentence": "Asunnon saaminen Krakovasta syyslukukaudeksi osoittautui erittäin helpoksi.",
+        "asuminen_expressed": "nmod:gobj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "None",
         "textid": 497,
         "sentence": "Muutin Łódźiin helmikuun toisella viikolla.",
+        "asuminen_expressed": "None",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nsubj",
         "textid": 498,
         "sentence": "Saapuessani Varsovaan minulla oli onneksi jo asunto tiedossa.",
+        "asuminen_expressed": "nsubj",
         "number_of_paragraphs": 2
     },
     {
-        "asuminen_expressed": "dobj;conj",
         "textid": 499,
         "sentence": "Etsin asuntoa laittamalla hakuilmoituksen Pariisin suomalaisten Facebook-ryhmään sekä Pariisin Suomi-instituutin asuntofoorumille.",
+        "asuminen_expressed": "dobj;conj",
         "number_of_paragraphs": 2
     },
     {
-        "asuminen_expressed": "acl:relcl",
         "textid": 504,
         "sentence": "Bordeaux on Suomen mittakaavassa iso kaupunki, joten sillä missä asuu on hieman väliä.",
+        "asuminen_expressed": "acl:relcl",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nmod:poss",
         "textid": 506,
         "sentence": "Asunnon etsintä ei ollut helppoa ja se kannattaa aloittaa todella hyvissä ajoin.",
+        "asuminen_expressed": "nmod:poss",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "dobj",
         "textid": 511,
         "sentence": "Asumisen järjestin itselleni jo Suomesta käsin.",
+        "asuminen_expressed": "dobj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nmod:gobj",
         "textid": 517,
         "sentence": "Asunnon löytämisessä oli itselläni hieman ongelmia.",
+        "asuminen_expressed": "nmod:gobj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "dobj;acl:relcl",
         "textid": 519,
         "sentence": "Olin hyvin onnekas ja löysin pitkän etsinnän jälkeen itselleni kimppakämpän Caenin keskustasta, missä asuin kahden ranskalaisen lääkisopiskelijan kanssa.",
+        "asuminen_expressed": "dobj;acl:relcl",
         "number_of_paragraphs": 2
     },
     {
-        "asuminen_expressed": "dobj;nmod;nmod:gobj",
         "textid": 520,
         "sentence": "Hain suosiolla asuntoa CROUSin opiskelija-asuntolasta, koska minua varoitettiin, että asunnon löytäminen omin päin on hankalaa ja hintataso kallis.",
+        "asuminen_expressed": "dobj;nmod;nmod:gobj",
         "number_of_paragraphs": 2
     },
     {
-        "asuminen_expressed": "None",
         "textid": 522,
         "sentence": "Saavuttuani Clermont-Ferrandiin vietin muutaman yön hotellissa, koska vuokrasopimukseni alkoi vasta muutaman päivän kuluttua saapumisestani.",
+        "asuminen_expressed": "nsubj",
         "number_of_paragraphs": 3
     },
     {
-        "asuminen_expressed": "None",
         "textid": 523,
         "sentence": "Koen olevani onnekas että sain asuntolapaikan juuri Résidence d'Amboisesta.",
+        "asuminen_expressed": "dobj",
         "number_of_paragraphs": 2
     },
     {
-        "asuminen_expressed": "nmod;dobj;nmod",
         "textid": 525,
         "sentence": "Olisin saanut paikalliselta opiskelija-asuntosäätiöltä asunnon, mutta sain siitä tiedon niin myöhään, että olin jo ehtinyt hankkia huoneen kimppakämpästä yksityisiltä vuokramarkkinoilta.",
+        "asuminen_expressed": "nmod;dobj;nmod:poss;nmod;nmod",
         "number_of_paragraphs": 2
     },
     {
-        "asuminen_expressed": "None",
         "textid": 526,
         "sentence": "Hain yliopiston asuntolapaikkaa ja onnistuin saamaan 9 neliön suuruisen huoneen.",
+        "asuminen_expressed": "dobj;dobj",
         "number_of_paragraphs": 2
     },
     {
-        "asuminen_expressed": "nmod:poss",
         "textid": 527,
         "sentence": "Kuten sanottu, asunnon etsintä kannattaa aloittaa todella hyvissä ajoin!",
+        "asuminen_expressed": "nmod:poss",
         "number_of_paragraphs": 2
     },
     {
-        "asuminen_expressed": "nmod",
         "textid": 532,
         "sentence": "Yliopisto ei juurikaan auta asumisjärjestelyissä eikä siellä muutenkaan vaihtareita avustettu samalla tavalla kuin Suomessa( tuutorin nimen sai 2 viikkoa vaihdon alun jälkeen, ja siihen sai ottaa yhteyttä itse, jos halusi) .",
+        "asuminen_expressed": "nmod",
         "number_of_paragraphs": 4
     },
     {
-        "asuminen_expressed": "nsubj:cop",
         "textid": 534,
         "sentence": "Se oli kuitenkin erittäin hankalaa, sillä monet olivat jo syksyllä muuttaneet yhteen ja enää oli jäljellä vain kalliimmat opiskelija-asuntolat.",
+        "asuminen_expressed": "nsubj:cop",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nmod:gobj",
         "textid": 535,
         "sentence": "Asunnon hankkiminen oli ainoa vähänkään hankala tai työläs tehtävä ennen lähtöä tapahtuneista etukäteisjärjestelyistä, kaikki muu oli hyvin helppoa.",
+        "asuminen_expressed": "nmod:gobj",
         "number_of_paragraphs": 4
     },
     {
-        "asuminen_expressed": "dobj",
         "textid": 536,
         "sentence": "Jälkiviisaana sanoisin, että asunto kannattaa hankkia ennen.",
+        "asuminen_expressed": "dobj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nmod:poss",
         "textid": 537,
         "sentence": "Suurinta stressiä aiheutti kuitenkin asunnon metsästys.",
+        "asuminen_expressed": "nmod:poss",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nsubj:cop",
         "textid": 541,
         "sentence": "Kun saavuin Montpellieriin, asuntoni ei ollut vielä saatavilla.",
+        "asuminen_expressed": "nsubj:cop",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "dobj;nmod",
         "textid": 544,
         "sentence": "Asunnon hankin paikalliselta opiskelija-asuntosäätiöltä( CROUS) yliopiston ilmoittautumisen yhteydessä.",
+        "asuminen_expressed": "dobj;nmod",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "dobj;nmod:gobj",
         "textid": 549,
         "sentence": "Asunnon sain tosiaan kaksi viikkoa ennen opintojeni alkua koska minulla kävi hyvä tuuri, mutta jälkikateen mietittynä, asunnon löytäminen ei pitäisi olla niin vaikeata, kunhan vain osaa käyttää olemassa olevia verkostoja.",
+        "asuminen_expressed": "dobj;nmod:gobj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "None",
         "textid": 553,
         "sentence": "Toimivat ja tarpeeksi yksinkertaiset käytännön puitteet luovat perustan siedettävälle elämälle, miellyttävälle opiskelulle ja hyvillä mielin muisteltavalle kokemukselle.",
+        "asuminen_expressed": "None",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "None",
         "textid": 554,
         "sentence": "Saavuin Pariisiin syyskuun alussa tasan viikkoa ennen vaihto-oppilaiden tervetuloluennon alkamista.",
+        "asuminen_expressed": "None",
         "number_of_paragraphs": 2
     },
     {
-        "asuminen_expressed": "root;nmod",
         "textid": 555,
         "sentence": "Asuin vuoden – tai siis 9 kuukauden – aikana kolmessa eri asunnossa.",
+        "asuminen_expressed": "root;nmod",
         "number_of_paragraphs": 5
     },
     {
-        "asuminen_expressed": "nmod:gobj",
         "textid": 556,
         "sentence": "Asunnon etsiminen osoittautui haasteeksi.",
+        "asuminen_expressed": "nmod:gobj",
         "number_of_paragraphs": 2
     },
     {
-        "asuminen_expressed": "root",
         "textid": 557,
         "sentence": "Vaihtoni aikana asuin Grandmontin asuntolassa.",
+        "asuminen_expressed": "root;nmod",
         "number_of_paragraphs": 2
     },
     {
-        "asuminen_expressed": "dobj",
         "textid": 558,
         "sentence": "Kv. koordinaattori Maggy oli suuri apu asuntoa etsittäessä.",
+        "asuminen_expressed": "dobj",
         "number_of_paragraphs": 4
     },
     {
-        "asuminen_expressed": "nsubj",
         "textid": 559,
         "sentence": "CROUS:lla on Rennesissä kaksi opiskelija-asuntolaa, Sévigné ja Patton, joista yleensä vaihtareille tarjotaan paikkoja.",
+        "asuminen_expressed": "nsubj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nmod",
         "textid": 560,
         "sentence": "Rennesissä toimii opiskelijajärjestö CROUS, jonka kautta on mahdollista saada huone opiskelija-asuntolasta.",
+        "asuminen_expressed": "dobj;nmod",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "None",
         "textid": 562,
         "sentence": "Vuokrani oli 350€ Troyes Habitatilla omasta rähjäisestä vajaa 20 neliön huoneestani, jossa toimimattoman lieden päällä oli uusi huonosti toimiva, kalteva liesi ja sängyssä kuoppa keskellä.",
+        "asuminen_expressed": "nsubj:cop;nmod",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "None",
         "textid": 564,
         "sentence": "Koska Erasmus-harjoitteluni hyväksiluetaan pohjoismaisten kielten kieliharjoitteluna, niin kieliharjoittelusta vastaava opettaja toimii yhdyshenkilönäni yliopiston puolelta.",
+        "asuminen_expressed": "None",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "dobj",
         "textid": 565,
         "sentence": "Asunnon varasin paikallista vuokramarkkinaa hoitavan Kopparstaden-palvelun kautta.",
+        "asuminen_expressed": "dobj;dobj",
         "number_of_paragraphs": 3
     },
     {
-        "asuminen_expressed": "root;nsubj",
         "textid": 569,
         "sentence": "Suurin osa opiskelijoista asuu Ryd-nimisellä alueella, jossa on opiskelija-asuntoja.",
+        "asuminen_expressed": "root;nsubj",
         "number_of_paragraphs": 3
     },
     {
-        "asuminen_expressed": "xcomp;nmod",
         "textid": 570,
         "sentence": "Saapuessani Linköpingiin olin kuitenkin harmissani muiden vaihto-opiskelijakavereideni kanssa tilanteessa, jossa jouduimme asumaan erilaisissa hostelleissa ja hotelleissa ensimmäiset kaksi viikkoa opiskeluajastamme, koska kansainvälinen toimisto ja paikallinen TOAS eivät luovuttaneet avaimiamme asuntoihimme ennen helmikuun alkua.",
+        "asuminen_expressed": "xcomp;nmod",
         "number_of_paragraphs": 2
     },
     {
-        "asuminen_expressed": "nmod:gobj",
         "textid": 571,
         "sentence": "Asunnon saaminen oli ennen lähtöä varmaankin suurin huolenaiheeni.",
+        "asuminen_expressed": "nmod:gobj",
         "number_of_paragraphs": 2
     },
     {
-        "asuminen_expressed": "None",
         "textid": 572,
         "sentence": "Lundissa on erittäin hyvä tuutortoiminta.",
+        "asuminen_expressed": "None",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "dobj;nsubj:cop",
         "textid": 575,
         "sentence": "Tukholmaan lähtiessä kannattaa pyrkiä hankkimaan asunto mahdollisimman ajoissa, sillä kaupungin asuntotilanne on todella huono.",
+        "asuminen_expressed": "dobj;nsubj:cop",
         "number_of_paragraphs": 2
     },
     {
-        "asuminen_expressed": "nmod:gobj",
         "textid": 577,
         "sentence": "Eniten jännitin asunnon saamista.",
+        "asuminen_expressed": "nmod:gobj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "root",
         "textid": 579,
         "sentence": "Ennen lähtöä suurin stressin aihe oli asunto ja sen hankkiminen.",
+        "asuminen_expressed": "root",
         "number_of_paragraphs": 2
     },
     {
-        "asuminen_expressed": "dobj",
         "textid": 590,
         "sentence": "Yliopisto takaa asunnot kaikille vaihto-opiskelijoille.",
+        "asuminen_expressed": "dobj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nmod:gobj;dobj",
         "textid": 595,
         "sentence": "Asunnon saaminen Uppsalassa ei ole itsestäänselvyys, joten kannattaa ottaa asunto, jota yliopisto tarjoaa.",
+        "asuminen_expressed": "nmod:gobj;dobj",
         "number_of_paragraphs": 2
     },
     {
-        "asuminen_expressed": "dobj",
         "textid": 596,
         "sentence": "Asuntoa hain myös jo keväällä Uppsalasta tulleiden ohjeiden mukaisesti.",
+        "asuminen_expressed": "dobj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nsubj",
         "textid": 597,
         "sentence": "Olin etukäteen kuullut, että Växjössä on huono asuntotilanne.",
+        "asuminen_expressed": "nsubj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nmod:gobj",
         "textid": 598,
         "sentence": "Minulla ei ollut verkostoja Berliinissä eikä työnantaja auttanut asunnon löytämisessä.",
+        "asuminen_expressed": "nmod:gobj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nsubj",
         "textid": 606,
         "sentence": "Lähtiessäni Berliiniä kohti, minulla ei ollut pysyvää asuntoa tiedossa, mutta kuitenkin huone seuraavaksi kahdeksi viikoksi.",
+        "asuminen_expressed": "nsubj;remnant",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "root",
         "textid": 609,
         "sentence": "Berliiniin lähtevän kannattaa liittyä Suomalaiset Berliinissä - ja Berliinin suomalainen asuntokanava -Facebook-ryhmiin, jos Facebookia käyttää.",
+        "asuminen_expressed": "root",
         "number_of_paragraphs": 2
     },
     {
-        "asuminen_expressed": "dobj;dobj",
         "textid": 616,
         "sentence": "Kyselimme vaihtoyliopistosta asumismahdollisuuksia, mutta yliopisto ei voinut tarjota minkäänlaisia asuntoja pariskunnille.",
+        "asuminen_expressed": "dobj;dobj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nmod:poss",
         "textid": 618,
         "sentence": "Soluasunnon itselleni hain Saksasta wg-gesuchtin nettisivujen kautta.",
+        "asuminen_expressed": "nmod:poss",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nmod:poss",
         "textid": 619,
         "sentence": "Asunnon Augsburgista etsin itse.",
+        "asuminen_expressed": "nmod:poss",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "root",
         "textid": 620,
         "sentence": "Vaihtoni ajan en asunut yliopiston asuntoloissa, vaan vuokrasin huoneen Augsburgin yliopiston opiskelijalta, joka lähti suorittamaan omaa vaihtolukukauttaan ja täten hyödyimme kumpikin vuokrajärjestelyistä.",
+        "asuminen_expressed": "root;nmod;conj;dobj;nmod",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "None",
         "textid": 622,
         "sentence": "Muuten matkajärjestelyt sujuivat ihan hyvin.",
+        "asuminen_expressed": "None",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "root;nmod",
         "textid": 623,
         "sentence": "Asuin kahdessa asunnossa vaihtoni aikana.",
+        "asuminen_expressed": "root;nmod",
         "number_of_paragraphs": 2
     },
     {
-        "asuminen_expressed": "nmod",
         "textid": 624,
         "sentence": "Asunnon ja erityisesti vuokranantajan suhteen minulla kävi tuuri.",
+        "asuminen_expressed": "nmod;conj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "dobj",
         "textid": 625,
         "sentence": "Asunnon löysin sattuman kautta Facebookista.",
+        "asuminen_expressed": "dobj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nmod;dobj",
         "textid": 626,
         "sentence": "Minulla kävi tuuri asunnon kanssa, sillä eräs tuttuni omistaa asunnon Berliinissä.",
+        "asuminen_expressed": "nmod;dobj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "dobj;dobj",
         "textid": 627,
         "sentence": "Asuntoa hain Studentendorfilta, joka tarjoaa Humboldtin opiskelijoille soluasuntoja sekä yksiöitä.",
+        "asuminen_expressed": "dobj;dobj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "dobj;nmod",
         "textid": 629,
         "sentence": "Asunnon sain kätevästi yliopiston kautta opiskelija-asuntolasta.",
+        "asuminen_expressed": "dobj;nmod",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "dobj",
         "textid": 631,
         "sentence": "Alivuokrasimme puolisoni kanssa asuntomme Berliinissä oleskelun ajaksi.",
+        "asuminen_expressed": "root;dobj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nmod:gobj;dobj",
         "textid": 632,
         "sentence": "Myös asunnon hankkiminen sujui minun kohdallani kivuttomasti, sillä eräällä tuttavallani on yksiö Berliinissä, ja hän vuokrasi asuntonsa minulle.",
+        "asuminen_expressed": "nmod:gobj;conj;dobj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nmod:poss;dobj",
         "textid": 638,
         "sentence": "Hankin asunnon ns. kimppa-asuntopalvelun kautta( wg-gesucht.de) , jota suosittelen lämpimästi kaikille Saksaan menijöille.",
+        "asuminen_expressed": "nmod:poss;dobj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "dobj",
         "textid": 639,
         "sentence": "Yliopisto lähetti minulle hyvissä ajoin asuntotarjouksen.",
+        "asuminen_expressed": "dobj",
         "number_of_paragraphs": 3
     },
     {
-        "asuminen_expressed": "nmod:poss",
         "textid": 640,
         "sentence": "Asumisen taso on usein räikeästi huonompi kuin Suomessa, siihen kannattaa varautua jo alunperin.",
+        "asuminen_expressed": "nmod:poss",
         "number_of_paragraphs": 2
     },
     {
-        "asuminen_expressed": "nsubj",
         "textid": 642,
         "sentence": "Asuminen maksaa vähemmän kuin Suomessa.",
+        "asuminen_expressed": "nsubj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nmod:poss;dobj",
         "textid": 645,
         "sentence": "Jos halusi saada paikallisen opiskelija-asuntosäätiön asunnon, piti tehdä online-hakemus suoraan kyseiselle taholle( Studentenwerk) .",
+        "asuminen_expressed": "nmod:poss;dobj",
         "number_of_paragraphs": 3
     },
     {
-        "asuminen_expressed": "dobj;dobj",
         "textid": 647,
         "sentence": "Ennen vaihtoon lähtöä koitimme saada yksityisiltä markkinoilta asuntoa, koska aluksi haimme kyllä opiskelija-asuntoa, mutta sieltä meille tarjottiin ainoastaan omia huoneita, kaksioita ei vaihtareille tarjota.",
+        "asuminen_expressed": "dobj;dobj;dobj",
         "number_of_paragraphs": 2
     },
     {
-        "asuminen_expressed": "nsubj:cop",
         "textid": 648,
         "sentence": "Yleisesti ottaen Frankfurtin asuntotilanne on huono.",
+        "asuminen_expressed": "nsubj:cop",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nsubj:cop",
         "textid": 649,
         "sentence": "Asuminen on suunnilleen saman hintaista kuin Suomessakin.",
+        "asuminen_expressed": "nsubj:cop",
         "number_of_paragraphs": 2
     },
     {
-        "asuminen_expressed": "nmod:gobj",
         "textid": 650,
         "sentence": "Muiden lomakkeiden lisäksi lähetin kesäkuussa vaihtoyliopistolta saamieni ohjeiden mukaisesti myös hakemuksen opiskelija-asuntolahuoneen saamiseksi.",
+        "asuminen_expressed": "nmod:gobj",
         "number_of_paragraphs": 2
     },
     {
-        "asuminen_expressed": "nmod:gobj;nmod",
         "textid": 657,
         "sentence": "Asunnon hankkiminen oli helppoa; lähetin hakemuksen yksiöstä opiskelija-asuntolassa ja sen sain.",
+        "asuminen_expressed": "nmod:gobj;nmod",
         "number_of_paragraphs": 2
     },
     {
-        "asuminen_expressed": "dobj",
         "textid": 662,
         "sentence": "Otin itse asunnon paikalliselta ” TOAS:lta ”, Seezeitilta.",
+        "asuminen_expressed": "dobj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nmod;nsubj",
         "textid": 663,
         "sentence": "Vaikka olin aluksi huolissani asunnonsaannista, järjestyivät asuntoasiat helposti.",
+        "asuminen_expressed": "nmod;nsubj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "xcomp;dobj",
         "textid": 665,
         "sentence": "Halusin ensisijaisesti asumaan paikallisten kanssa, joten hain asuntoa paikallisten käyttämän asunnonvälitysnettisivun wg-gesucht.de:n kautta.",
+        "asuminen_expressed": "xcomp;dobj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nmod:poss",
         "textid": 666,
         "sentence": "Löysin itselleni asunnon internetistä sivustolta http: / / www.wg-gesucht.de.",
+        "asuminen_expressed": "nmod:poss",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nmod",
         "textid": 667,
         "sentence": "Ensimmäiset pari yötä vietin hostellissa Eisenbahnstraßen lähistöllä, jonka kuulin myöhemmin olevan kaupungin ”hämärämpää aluetta ”, kunnes sain avaimet varsinaiseen asuntooni.",
+        "asuminen_expressed": "nmod",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "dobj",
         "textid": 670,
         "sentence": "Asunnon hankin yksityiseltä vuokranantajalta, ja se oli valmiina saapuessani.",
+        "asuminen_expressed": "dobj;nmod",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "xcomp;nmod",
         "textid": 674,
         "sentence": "Halusin asua Mainzissa jaetussa kämpässä, ja hain soluhuonetta sekä Studierendenwerkiltä että yksityiseltä.",
+        "asuminen_expressed": "xcomp;nmod;dobj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "dobj;dobj",
         "textid": 676,
         "sentence": "Itse en saanut asuntoa Studierendenwerkiltä, joten jouduin etsimään sitä yksityisiltä markkinoilta, ja eniten tuli etsittyä asuntoa wg-gesucht –sivustolta.",
+        "asuminen_expressed": "dobj;dobj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "dobj",
         "textid": 677,
         "sentence": "Yliopiston kautta on mahdollista saada asunto.",
+        "asuminen_expressed": "dobj",
         "number_of_paragraphs": 4
     },
     {
-        "asuminen_expressed": "dobj;nmod",
         "textid": 678,
         "sentence": "Asunnon sain Hafenstraße-taloista paikalliselta opiskelija-asuntojärjestöltä.",
+        "asuminen_expressed": "dobj;nmod",
         "number_of_paragraphs": 2
     },
     {
-        "asuminen_expressed": "root",
         "textid": 679,
         "sentence": "Asuin vaihdon ajan kaksiossa myöskin Tampereelta tulleen Nikon kanssa.",
+        "asuminen_expressed": "root",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nmod;dobj;dobj",
         "textid": 680,
         "sentence": "Asunnon kanssa minulla oli onnea, sillä ylioppilaskunnan( Studentenwerk) asuntojen täytyttyä noin minuutissa haun auettua, löysin yliopiston omilta sivuilta ilmoitustaulun jossa paikalliset opiskelijat alivuokrasivat vaihdon ajaksi yksityisiä asuntojaan.",
+        "asuminen_expressed": "nmod;dobj;acl:relcl;dobj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "None",
         "textid": 681,
         "sentence": "Hyvissä ajoin ennen vaihtoa Mannheimin yliopistolta lähetettiin tunnukset myUniMa-sivustolle, josta löytyi todella paljon infoa käytännön elämään liittyen.",
+        "asuminen_expressed": "None",
         "number_of_paragraphs": 3
     },
     {
-        "asuminen_expressed": "None",
         "textid": 682,
         "sentence": "Matkustin Mannheimiin tammikuun lopussa.",
+        "asuminen_expressed": "None",
         "number_of_paragraphs": 3
     },
     {
-        "asuminen_expressed": "dobj",
         "textid": 685,
         "sentence": "Aloitin asunnonhaun heti kesäkuun alussa sen jälkeen, kun olin saanut vahvistuksen vaihtopaikastani.",
+        "asuminen_expressed": "dobj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nsubj",
         "textid": 686,
         "sentence": "Asunto järjestyi paikallisen Toas:in, Studentwerkin kautta.",
+        "asuminen_expressed": "nsubj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "None",
         "textid": 687,
         "sentence": "Noin kuukausi ennen vaihdon alkua paikallinen ”buddy” otti minuun yhteyttä.",
+        "asuminen_expressed": "None",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "root;nmod",
         "textid": 688,
         "sentence": "Asuin kymmenen neliömetrin asunnossa, jossa oli oma vessa.",
+        "asuminen_expressed": "root;nmod",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nsubj",
         "textid": 691,
         "sentence": "Asuntoni oli valmiina heti saavuttuani paikalle.",
+        "asuminen_expressed": "nsubj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nmod;dobj",
         "textid": 692,
         "sentence": "Jos asunnonhausta haluaa päästä helpolla, voi asuntoa hakea Studentenwerk Potsdamin kautta.",
+        "asuminen_expressed": "nmod;dobj",
         "number_of_paragraphs": 3
     },
     {
-        "asuminen_expressed": "nmod:poss",
         "textid": 693,
         "sentence": "Olin hakupapereita ja muita lappuja täyttäessäni laittanut rastin ruutuun ja ilmoittanut haluavani asunnon yliopiston kautta.",
+        "asuminen_expressed": "nmod:poss",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "None",
         "textid": 694,
         "sentence": "Olin saanut huoneen yliopiston kampuksen asuntolasta Egilolfstraßelta neljän hengen solusta.",
+        "asuminen_expressed": "nmod:poss;nmod",
         "number_of_paragraphs": 2
     },
     {
-        "asuminen_expressed": "dobj",
         "textid": 697,
         "sentence": "Saavuin Belgradiin hyvissä ajoin ennen harjoittelun alkua, jotta ehdin löytää asunnon.",
+        "asuminen_expressed": "dobj",
         "number_of_paragraphs": 2
     },
     {
-        "asuminen_expressed": "root",
         "textid": 699,
         "sentence": "Lähes kaikki Bratislavan kauppakorkeakoulun vaihto-opiskelijat asuivat Ekonom-nimisessä dormitoryssa.",
+        "asuminen_expressed": "root",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "None",
         "textid": 701,
         "sentence": "Rekistöröityminen paikalliseksi asukkaaksi sujui helposti, hallinnollisiin kuluihin meni noin 40 euroa: lisäksi minun tuli osoittaa että opiskeln Tampereen yliopistossa, että minulla on apuraha harjoittelujaksolle ja harjoittelusopimus.",
+        "asuminen_expressed": "nmod",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nmod:poss",
         "textid": 702,
         "sentence": "Asunnon hankinta sujui ongelmitta, vaikka se olikin ennen lähtöä yksi stressaava asia.",
+        "asuminen_expressed": "nmod:poss",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nmod:poss",
         "textid": 703,
         "sentence": "Asuntoni Sloveniassa oli lottovoitto.",
+        "asuminen_expressed": "nmod:poss",
         "number_of_paragraphs": 2
     },
     {
-        "asuminen_expressed": "root;nmod",
         "textid": 706,
         "sentence": "Asuin koko vaihtoaikani samassa asunnossa, jonka jaoin kolmen slovenialaisen kanssa.",
+        "asuminen_expressed": "root;nmod",
         "number_of_paragraphs": 2
     },
     {
-        "asuminen_expressed": "dobj",
         "textid": 710,
         "sentence": "Asunnon sain jo ennen joulua, kun slovenialainen tyttö ilmoitti Facebookin Erasmus Ljubljana -ryhmässä lähtevänsä kevääksi vaihtoon ja vuokraavansa huoneensa täksi ajaksi.",
+        "asuminen_expressed": "dobj;conj;dobj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "dobj",
         "textid": 711,
         "sentence": "Asunnon olin hankkinut jo aiemmin Facebookin avulla yksityiseltä vuokranantajalta, mutta tarpeellista se ei ole.",
+        "asuminen_expressed": "dobj;nmod",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "None",
         "textid": 713,
         "sentence": "Kuten edeltä käy ilmi asuin yliopiston asuntoloissa.",
+        "asuminen_expressed": "nmod",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nmod:gobj;xcomp",
         "textid": 717,
         "sentence": "Yksi ainoista päänvaivaa tuottaneista asioista vaihdon aikana oli vaihdon alussa tammikuussa asunnon löytäminen, sillä se vei minulta aikaa melkein kaksi viikkoa ja jouduinkin asumaan hostellissa tuon ajan.",
+        "asuminen_expressed": "nmod:gobj;xcomp",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "root;nmod",
         "textid": 718,
         "sentence": "Asuin vuoden kahdeksan kuukauden aikana yhteensä neljässä eri asunnossa.",
+        "asuminen_expressed": "root;nmod",
         "number_of_paragraphs": 2
     },
     {
-        "asuminen_expressed": "None",
         "textid": 720,
         "sentence": "Hain jo syksyllä asuntolapaikkaa ja sainkin paikan vaihtareille osoitetusta asuntolasta.",
+        "asuminen_expressed": "dobj;nmod",
         "number_of_paragraphs": 3
     },
     {
-        "asuminen_expressed": "None",
         "textid": 722,
         "sentence": "Saavuin Ljubljanaan kielikurssin alkua edeltävällä viikolla, joten pääsin suoraan muuttamaan asuntolaan.",
+        "asuminen_expressed": "nmod",
         "number_of_paragraphs": 2
     },
     {
-        "asuminen_expressed": "None",
         "textid": 727,
         "sentence": "Saavuin Berniin sunnuntai-iltana.",
+        "asuminen_expressed": "None",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "None",
         "textid": 728,
         "sentence": "Kalustettu soluhuone järjestyi Apartiksen kautta ja kämppikseni olivat sveitsiläisiä.",
+        "asuminen_expressed": "nsubj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "dobj",
         "textid": 729,
         "sentence": "Asunnon sain paikallisen Toasin Apartiksen kautta.",
+        "asuminen_expressed": "dobj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "None",
         "textid": 730,
         "sentence": "Sen jälkeen kun sain päätöksen SES-tiedekunnasta, Fribourgin kansainvälisten asioiden keskus otti yhteyttä minuun ja tarjosi huonetta Apartis-opiskelijataloissa ja ranskan intensiivisen jatkokurssin.",
+        "asuminen_expressed": "dobj",
         "number_of_paragraphs": 2
     },
     {
-        "asuminen_expressed": "nmod",
         "textid": 731,
         "sentence": "Asunnonhaussa olin hyvissä ajoin liikkeellä( laitoin paperit eteenpäin ehkä päivä pari sen jälkeen, kun ne täytettäviksi sain) ja sain soluhuoneen Apartiksen kautta.",
+        "asuminen_expressed": "nmod;dobj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "dobj",
         "textid": 732,
         "sentence": "Asuntoni sain vuokrattua Apartiksen( paikallinen TOAS) kautta.",
+        "asuminen_expressed": "dobj;xcomp",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "None",
         "textid": 733,
         "sentence": "ETH:lla on paljon kansainvälistä tuutoritoimintaa( ESN) , mutta koska itse opiskelin Zürichin sijaan pienemmällä biosysteemien laitoksella Baselissa, en päässyt tästä osalliseksi.",
+        "asuminen_expressed": "None",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "root;nmod",
         "textid": 736,
         "sentence": "Asuin Taipein keskustassa yksityiseltä vuokratussa asunnossa, mikä ei ollut ehkä sikäli järkevää että NCCU sijaitsi kaupungin toisella puolella.",
+        "asuminen_expressed": "root;nmod;nmod",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "None",
         "textid": 738,
         "sentence": "Lavoire oli mukava ja kätevästi kampuksella sijaitseva asuinpaikka.",
+        "asuminen_expressed": "conj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nmod:gobj",
         "textid": 743,
         "sentence": "Asunnon hankkiminen Kööpenhaminassa on erittäin hankalaa ja vuokrataso on hyvin korkea.",
+        "asuminen_expressed": "nmod:gobj;nsubj:cop",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nmod:gobj",
         "textid": 744,
         "sentence": "Käytin lähes koko kesän ennen vaihtoon lähtöä stressaten asunnon saamisesta, joka on Kööpenhaminassa todella vaikeaa!",
+        "asuminen_expressed": "nmod:gobj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "dobj",
         "textid": 748,
         "sentence": "Kuten mainittua, asunnon hankin itse.",
+        "asuminen_expressed": "dobj",
         "number_of_paragraphs": 2
     },
     {
-        "asuminen_expressed": "root;nmod",
         "textid": 752,
         "sentence": "Asuin omassa asunnossa asuntolan sijaan, koska menin vaihtoon vaimoni kanssa.",
+        "asuminen_expressed": "root;nmod;nmod",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "root;nmod",
         "textid": 754,
         "sentence": "Asuin omassa asunnossa asuntolan sijaan, koska menin vaihtoon vaimoni kanssa.",
+        "asuminen_expressed": "root;nmod;nmod",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "root;nmod",
         "textid": 755,
         "sentence": "Asuin omassa asunnossa asuntolan sijaan, koska menin vaihtoon aviomieheni kanssa.",
+        "asuminen_expressed": "root;nmod;nmod",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "None",
         "textid": 757,
         "sentence": "Kohdemaahan saapuminen sujui hyvin.",
+        "asuminen_expressed": "None",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nmod:poss",
         "textid": 760,
         "sentence": "Ainoa negatiiviseksi kokemani asia vastaanottavan yliopiston hakemusjärjestelyissä oli se, että vaihtopaikasta tuleva lopullinen varmistus venyy ilmeisesti aina niin pitkälle, että asunnon hankinnassa on tehtävä paljon kompromisseja.",
+        "asuminen_expressed": "nmod:poss",
         "number_of_paragraphs": 2
     },
     {
-        "asuminen_expressed": "nsubj",
         "textid": 761,
         "sentence": "Minulla oli valmiiksi asunto, kun saavuin Prahaan.",
+        "asuminen_expressed": "nsubj",
         "number_of_paragraphs": 3
     },
     {
-        "asuminen_expressed": "None",
         "textid": 763,
         "sentence": "Virallinen hyväksymiskirje Kaarlen Yliopistosta tuli myöhään, muistaakseni heinä-elokuun vaihteessa.",
+        "asuminen_expressed": "None",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "dobj",
         "textid": 764,
         "sentence": "Aloin jo loppukeväästä katsella asuntomahdollisuuksia Prahasta.",
+        "asuminen_expressed": "dobj",
         "number_of_paragraphs": 5
     },
     {
-        "asuminen_expressed": "None",
         "textid": 766,
         "sentence": "Tsekki on suomalaiselle todella halpa maa ainakin kulutushyödykkeiden kannalta.",
+        "asuminen_expressed": "None",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "dobj;dobj",
         "textid": 767,
         "sentence": "Päätimme vaihtoon lähtiessämme, ettemme halua asuntolamajoitusta, vaan hoidamme itsenäisesti välittäjäfirman kautta itsellemme asunnon.",
+        "asuminen_expressed": "dobj;dobj",
         "number_of_paragraphs": 2
     },
     {
-        "asuminen_expressed": "None",
         "textid": 768,
         "sentence": "Olin vaihdossa Prahassa sosiaalitieteiden tiedekunnassa kahden lukukauden ajan( syksy 2013 ja kevät 2014) .",
+        "asuminen_expressed": "None",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "dobj",
         "textid": 769,
         "sentence": "Ennen Prahaan lähtöä etsimme ystäväni kanssa netistä vuokra-asuntoja.",
+        "asuminen_expressed": "dobj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "None",
         "textid": 771,
         "sentence": "Tsekissä vuokrataso on hyvin edullinen suhteessa Suomeen.",
+        "asuminen_expressed": "nsubj:cop",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "None",
         "textid": 774,
         "sentence": "Yliopisto tarjosi kaikille vaihto-oppilaille paikan asuntolasta, joka oli aika kaukana keskusta.",
+        "asuminen_expressed": "nmod",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "root",
         "textid": 779,
         "sentence": "Yliopiston asuntola on mielestäni ihan toimiva asumisvaihtoehto vaihdon ajaksi.",
+        "asuminen_expressed": "nsubj:cop;root",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "dobj;dobj",
         "textid": 785,
         "sentence": "Istanbulin teknillinen yliopisto ei pysty tarjoamaan asuntoa vaihto-opiskelijoille, eikä Istanbulissa ole yksittäistä organisaatiota, joka välittäisi asuntoja vaihtareille.",
+        "asuminen_expressed": "dobj;dobj",
         "number_of_paragraphs": 7
     },
     {
-        "asuminen_expressed": "advcl;dobj",
         "textid": 788,
         "sentence": "Koska Kocin yliopisto ei tarjoa kandivaiheen opiskelijoille muuta kuin asuntolamajoitusta turkkilaisen kämppiksen kanssa, minun ja mieheni täytyi etsiä asunto vapailta markkinoilta.",
+        "asuminen_expressed": "advcl;dobj",
         "number_of_paragraphs": 2
     },
     {
-        "asuminen_expressed": "None",
         "textid": 790,
         "sentence": "Minimaalisesta vaihtoon valmistautumisesta huolimatta olin kuitenkin hankkinut lentolipun ja pääsin matkalle.",
+        "asuminen_expressed": "None",
         "number_of_paragraphs": 3
     },
     {
-        "asuminen_expressed": "dobj",
         "textid": 791,
         "sentence": "Ennen lähtöä rekisteröidyin www.erasmusu.com -sivulle, jolla voi etsiä asuntoja kaikkialta maailmasta.",
+        "asuminen_expressed": "dobj",
         "number_of_paragraphs": 2
     },
     {
-        "asuminen_expressed": "dobj",
         "textid": 792,
         "sentence": "Saavuin Istanbuliin sateisena keskiviikkoiltana muutama päivä ennen orientaatioviikon alkua etsiäkseni asunnon ja asettautuakseni kaupunkiin.",
+        "asuminen_expressed": "dobj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "None",
         "textid": 799,
         "sentence": "Tein vuokrasopimuksen jo etukäteen Suomessa ja sainkin mukavan yksiön sopuhintaan läheltä yliopistoa ja kaupungin keskustaa SRS- Budapestin kautta.",
+        "asuminen_expressed": "dobj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "None",
         "textid": 801,
         "sentence": "Saavuin Unkariin kaksi viikkoa ennen lukukauden alkua.",
+        "asuminen_expressed": "None",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nmod:poss",
         "textid": 802,
         "sentence": "Sain vuokrattua asunnon tuttavani kautta ennen kuin muutin Unkariin.",
+        "asuminen_expressed": "xcomp;nmod:poss",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "None",
         "textid": 806,
         "sentence": "Asuntolamme on uusi, rakennettu 2013 vuonna.",
+        "asuminen_expressed": "nsubj:cop",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "None",
         "textid": 807,
         "sentence": "Ulkomaisille opiskelijoille tarkoitettu asuntola on vain kolme vuotta vanha ja täten melko moderni.",
+        "asuminen_expressed": "nsubj:cop",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nmod:poss",
         "textid": 808,
         "sentence": "Paikallisten opiskelija-asuntoloiden vuokrataso oli melkoisen naurettava 5 € kuukaudessa, mutta valitettavasti sitä sai, mistä maksoi( 12 neliömetrin huone kolmelle hengelle) , joten siirryin melko pian saamani venäläisen kaverin luokse.",
+        "asuminen_expressed": "nmod:poss;nsubj:cop;parataxis",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "xcomp;conj;nmod:gobj",
         "textid": 810,
         "sentence": "Yliopisto tarjosi majoitusvaihtoehdoiksi asuntolaa, perhemajoitusta sekä apua oman vuokra-asunnon etsimisessä.",
+        "asuminen_expressed": "xcomp;dobj;conj;nmod:gobj",
         "number_of_paragraphs": 3
     },
     {
-        "asuminen_expressed": "None",
         "textid": 811,
         "sentence": "Viisikerroksinen asuntolani( dormitory 5; https :// www.hse .ru /en/ dormitory/ kib) sijaitsi paraatipaikalla VDNH:n metroasemalla, Kibaltšitšan kadulla.",
+        "asuminen_expressed": "nsubj",
         "number_of_paragraphs": 2
     },
     {
-        "asuminen_expressed": "root",
         "textid": 812,
         "sentence": "Asuin yliopiston legendaarisen päärakennuksen V-siivessä, kansainvälisille opiskelijoille tarkoitetussa asuntolassa.",
+        "asuminen_expressed": "root;nmod",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nsubj:cop",
         "textid": 817,
         "sentence": "Asuminen pääkampuksen asuntolassa oli edullista, ja Kelan opintotuki ulkomaille riitti muutenkin mainiosti kattamaan käytännössä kaikki kuluni Moskovassa.",
+        "asuminen_expressed": "nsubj:cop;nmod",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "advcl",
         "textid": 818,
         "sentence": "Asuntola oli tarkoitettu nimenomaan vaihto-opiskelijoille, joten siellä asui ihmisiä useista eri maista.",
+        "asuminen_expressed": "dobj;advcl",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "None",
         "textid": 819,
         "sentence": "Pääsimme ystäväni kanssa samaan huoneeseen, mikä oli helpotus.",
+        "asuminen_expressed": "nmod",
         "number_of_paragraphs": 4
     },
     {
-        "asuminen_expressed": "None",
         "textid": 820,
         "sentence": "Perille Moskovaan saavuin elokuun lopussa.",
+        "asuminen_expressed": "None",
         "number_of_paragraphs": 2
     },
     {
-        "asuminen_expressed": "None",
         "textid": 822,
         "sentence": "Yliopiston vieressä oli asuntola opiskelijoille.",
+        "asuminen_expressed": "nsubj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "None",
         "textid": 828,
         "sentence": "Oli asuntolassa toki muukin miinuspuoli kuin asteittain neuvostoaikainen ulkomuoto – se sijaitsee varsin kaukana kaikesta.",
+        "asuminen_expressed": "nmod",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "root",
         "textid": 829,
         "sentence": "Asuin yliopiston asuntolassa, kuten lähes kaikki muutkin vaihtarit.",
+        "asuminen_expressed": "root;nmod",
         "number_of_paragraphs": 2
     },
     {
-        "asuminen_expressed": "None",
         "textid": 830,
         "sentence": "Keväällä 2014 meidän asuntolalla aloitettiin remontti, jonka tarkoituksena oli muuttaa asuntolan sisääntulovalvonta elektroniseksi porttijärjestelmäksi, joten omat kokemukseni saattavat olla vanhentunutta tietoa jo syksyllä 2014.",
+        "asuminen_expressed": "nmod;nmod:poss",
         "number_of_paragraphs": 4
     },
     {
-        "asuminen_expressed": "root",
         "textid": 831,
         "sentence": "Suurin osa Pietarin vaihtareista majoittuu samaan asuntolaan, legendaariseen ” kapitanskayaan ”, joka siis sijaitsee sen nimisellä kadulla, Vasilin saarella.",
+        "asuminen_expressed": "root;nmod",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "root;nmod:poss",
         "textid": 835,
         "sentence": "Asuin koko vaihtoni ajan Raatuse 22 opiskelijasuntolan solussa.",
+        "asuminen_expressed": "root;nmod:poss",
         "number_of_paragraphs": 2
     },
     {
-        "asuminen_expressed": "root",
         "textid": 836,
         "sentence": "Asuin vaihdon ajan Tartu ûlikoolin ja Tartu ûliõpilaskûlan asuntolassa( Narva mnt 25 osoitteessa) joka oli erittäin hyvä vaihtoehto.",
+        "asuminen_expressed": "root;nmod",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nsubj:cop",
         "textid": 837,
         "sentence": "Asunto oli siis valmiina, kun saavuin Tarton linja-autoasemalle rinkkani kanssa.",
+        "asuminen_expressed": "nsubj:cop",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "None",
         "textid": 838,
         "sentence": "Kielikurssin ajan asuin Maaülikoolin asuntolassa, joka on hieman kauempana keskustasta( kävelyetäisyydellä silti) .",
+        "asuminen_expressed": "remnant",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nmod",
         "textid": 839,
         "sentence": "Itselläni kävi tuuri asunnon suhteen löytäessäni edullisen huoneen Chelseasta aivan Manhattanin keskeltä.",
+        "asuminen_expressed": "nmod;dobj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nmod:gobj",
         "textid": 841,
         "sentence": "Asunnon löytäminen on harjoittelijan omalla vastuulla, mutta lähetystöltä voi kysellä vinkkejä.",
+        "asuminen_expressed": "nmod:gobj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "root",
         "textid": 843,
         "sentence": "Asuin kampuksella kahden hengen huoneessa ja jaoin kylpyhuoneen kolmen muun tytön kanssa.",
+        "asuminen_expressed": "root;nmod;dobj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nmod",
         "textid": 844,
         "sentence": "Olimme jo Suomessa päättäneet olevamme hieman liian mukavuudenhaluisia ja suoraan sanottuna vanhoja jenkkien opiskelija-asuntoloihin.",
+        "asuminen_expressed": "nmod",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "dobj",
         "textid": 846,
         "sentence": "Asunnon sain järjestettyä Austinista jo paria kuukautta ennen vaihdon alkamista, ja sen hankkiminen oli myös hyvin helppoa ainakin omalla kohdallani.",
+        "asuminen_expressed": "dobj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "None",
         "textid": 848,
         "sentence": "Montana State University sijaitsee Bozeman -nimisessä noin 30 000 asukkaan pikkukaupungissa Montanan upeassa pohjoisessa osavaltiossa.",
+        "asuminen_expressed": "nmod:poss",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "root;nmod",
         "textid": 850,
         "sentence": "Asuin vaihtoni ajan North Park Universityn kampuksella, Ohlson-asuntolassa.",
+        "asuminen_expressed": "root;nmod",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "None",
         "textid": 852,
         "sentence": "Saavuin itse Chicagoon elokuun loppupuolella ja ensimmäinen viikko meni orientaatioissa pyöriessä ja kampuselämään totuttelussa.",
+        "asuminen_expressed": "None",
         "number_of_paragraphs": 2
     },
     {
-        "asuminen_expressed": "root",
         "textid": 853,
         "sentence": "Asuin kampusalueella asuntolassa.",
+        "asuminen_expressed": "root;nmod",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nsubj:cop;nmod:poss",
         "textid": 854,
         "sentence": "Asumistilanteeni sekä asunnon hakemusprosessi oli minulla hieman erilainen kuin suuremmalla osalla muista vaihto-oppilaista.",
+        "asuminen_expressed": "nsubj:cop;nmod:poss",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "None",
         "textid": 856,
         "sentence": "Kaikki vaihtarit majoitettiin ensin muutamaksi päiväksi paikallisten host-perheiden luokse, sillä asuntolat eivät olleet vielä auki.",
+        "asuminen_expressed": "root;nsubj:cop",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "None",
         "textid": 858,
         "sentence": "Ensinnäkin vuokrataso Eugenessa on melko korkea.",
+        "asuminen_expressed": "nsubj:cop",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "root;nmod:poss",
         "textid": 859,
         "sentence": "Asuin aluksi isäntäperheeni luona muutaman viikon, jonka aikana etsin asunnon paikan päältä.",
+        "asuminen_expressed": "root;nmod:poss",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nmod:gobj",
         "textid": 860,
         "sentence": "Sitten asunnon hankkiminen.",
+        "asuminen_expressed": "nmod:gobj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nmod",
         "textid": 861,
         "sentence": "Vaihto-opiskelijoiden on myös mahdollista hakea Friendship Foundation for International Students -ohjelman kautta paikallisten vapaaehtoisten järjestämää perhemajoitusta alkuajalle Eugenessa.",
+        "asuminen_expressed": "nmod",
         "number_of_paragraphs": 5
     },
     {
-        "asuminen_expressed": "nsubj",
         "textid": 863,
         "sentence": "Asuminen tapahtui kampuksella asuntoloissa kahden henkilön huoneissa.",
+        "asuminen_expressed": "nsubj;nmod;nmod",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "nsubj",
         "textid": 864,
         "sentence": "ISEP –vaihto-ohjelman maksuun sisältyi asuminen kampuksella, joten luonnollisesti valitsin myös itse tämän vaihtoehdon.",
+        "asuminen_expressed": "nsubj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "dobj",
         "textid": 867,
         "sentence": "Asunto oli onneksi hoidettu ISEP:n puolesta, kuten myös ruokailu.",
+        "asuminen_expressed": "dobj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "dobj",
         "textid": 868,
         "sentence": "Asuminen vaihtareille oli järjestetty kampukselle.",
+        "asuminen_expressed": "dobj",
         "number_of_paragraphs": 1
     },
     {
-        "asuminen_expressed": "None",
         "textid": 871,
         "sentence": "Ostin mahdollisimman halvat lennot, joten jouduin vaihtamaan konetta kahdesti ja matkustuspäivät olivat pitkiä.",
+        "asuminen_expressed": "None",
         "number_of_paragraphs": 1
     }
 ]
