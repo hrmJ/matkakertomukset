@@ -1,0 +1,5 @@
+t: html
+include-in-header: github-pandoc.css
+bibliography: bibliography.bib
+smart: 
+number-sections:

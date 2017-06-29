@@ -95,6 +95,8 @@ class FirstSentenceStats(Analysis):
                               "number_of_paragraphs":p.ptotal,
                               "paragraph":p.content,
                               "head_of_indicator":s.iwhead,
+                              "head_of_indicator_loc":s.iwheadloc.strip(";"),
+                              "indicatorloc":s.indicatorloc.strip(";"),
                               "sentence": BuildString(s.tokens), "textid":p.textid})
 
 

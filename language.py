@@ -25,22 +25,24 @@ class Sentence():
                     return w
 
     def CheckIfAsuminen(self):
-        self.asuminen_expressed_in = ""
-        self.asuminen_expressed_by = ""
-        self.iwhead = ""
+        self.asuminen_expressed_in=self.asuminen_expressed_by=self.iwhead=self.iwheadloc=self.indicatorloc= ""
         for w in self.words: 
             w.GetHeadWord(self.words)
             if re.search("(" + "|".join(constants.asuminen) + ")", w.lemma):
                 if self.asuminen_expressed_in:
                     self.asuminen_expressed_in += ";" + w.deprel
-                    self.asuminen_expressed_by = ";" + w.lemma
+                    self.asuminen_expressed_by += ";" + w.lemma
+                    self.indicatorloc += ";" + str(w.GetRealLocation(self.words))
                     if w.headword:
-                        self.iwhead = ";" + w.headword.lemma
+                        self.iwhead += ";" + w.headword.lemma
+                        self.iwheadloc += ";" + str(w.headword.GetRealLocation(self.words))
                 else:
                     self.asuminen_expressed_in = w.deprel
                     self.asuminen_expressed_by = w.lemma
+                    self.indicatorloc = str(w.GetRealLocation(self.words))
                     if w.headword:
                         self.iwhead = w.headword.lemma
+                        self.iwheadloc = str(w.headword.GetRealLocation(self.words))
         if not self.asuminen_expressed_in:
             self.asuminen_expressed_in = "None"
             self.asuminen_expressed_by = "None"
@@ -72,3 +74,13 @@ class Word():
             if w.tokenid == self.head:
                 self.headword = w
                 return self.headword
+
+    def GetRealLocation(self, words):
+        """Määritä sanan sijainti niin, ettei välimerkkejä oteta huomioon"""
+        self.loc = 0
+        for w in words:
+            if w.deprel.lower() not in ["punc","punct"]:
+                self.loc += 1
+            if w == self:
+                break
+        return self.loc

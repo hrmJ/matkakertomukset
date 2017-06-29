@@ -6,7 +6,7 @@ About the data
 
 * Paragraphs discussing *accommodation*
 
-This theme was one of the topics suggested in the writing instruction for
+This theme was one of the topics suggested in the writing instructions for
 the report. The part of the report that concerns accommodation is as follows:
 
     Asuminen: Oliko asunto valmiina saavuttuasi paikalle? Vuokrataso? Onko sinulla
@@ -54,13 +54,16 @@ going to tell (or telling / has been telling) the reader about accommodation. We
 will be referring to these words as *topic indicators*.
 
 
-asua, asunto, asuminen, asumis#järjestely, kämppä, majoittua, majoittaa, majoittuminen, majoitus, asuntola, asun#tola, vuokrataso, vuokra#taso, vuora#sopimus, vuorasopimus, huone, asuin#paikka, solu#huone, asukas, asu#kas, vuokra 
+
+     asua,      asunto,      asuminen,      asumis#järjestely,      kämppä,      majoittua,      majoittaa,      majoittuminen,      majoitus,      asuntola,      asun#tola,      vuokrataso,      vuokra#taso,      vuora#sopimus,      vuorasopimus,      huone,      asuin#paikka,      solu#huone,      asukas,      asu#kas,      vuokra 
+
 
 Interestingly enough, our data shows that out of the total 417
 texts that discuss accommodation 360
 (86,33 %)
-use one of the aforementioned words in the first sentence of the first paragraph that discusses 
-accommodation.
+use one of the aforementioned words in the **first sentence of the first paragraph that discusses 
+accommodation.**
+
 
 Let us now look at what these occurrences reveal about the paragraphs studied and the
 writing strategies used by the authors.
@@ -71,25 +74,19 @@ Introducing strategies indicated by dependency roles
 One way to get an idea about what kind of a strategy a writer is using to 
 introduce the topic of accommodation is to look at the *dependency role*
 given to the indicator word by the parser. The distribution of different dependency roles
-of the topic indicators is given in table 1 :[^distexpl]
+of the topic indicators is given in table 1:[^distexpl]
 
 
 |Dependency role | Frequency|
 |:---------------|---------:|
-|dobj            |        54|
-|nmod:gobj       |        27|
-|nsubj           |        24|
-|nmod            |        22|
-|root;nmod       |        22|
-|nmod:poss       |        21|
-|root            |        19|
-|nsubj:cop       |        14|
-|dobj;nmod       |        12|
-|dobj;dobj       |         8|
-|nmod;dobj       |         8|
-|xcomp;nmod      |         7|
-|root;dobj       |         6|
-|root;nmod;nmod  |         6|
+|dobj            |        97|
+|root            |        71|
+|nmod            |        45|
+|nmod:gobj       |        36|
+|nsubj           |        35|
+|nmod:poss       |        32|
+|nsubj:cop       |        25|
+|xcomp           |        11|
 
 Table 1: Dependency roles of topic indicators 
 
@@ -99,24 +96,36 @@ word is used in the *first* sentence of the first paragraph
 According to table 1 the most common dependency role is
 the direct object. If we take a closer look at the cases which use a topic
 indicator as the object of the first sentence, we can see that the majority
-them (68,52 %) use the word *asunto* ('apartment').
+them (69,07 %) use the word *asunto* ('apartment').
 Further, if we look at the head verbs of these cases, the most frequent ones are 
 the following:
 
 
 ----------------------------------------------------
-  hankkia   etsiä   löytää   saada   hakea   hommata
---------- ------- -------- ------- ------- ---------
-       11       7        4       3       2         2
+  hankkia   saada   etsiä   hakea   löytää   hommata
+--------- ------- ------- ------- -------- ---------
+       16      11       9       7        6         3
 ----------------------------------------------------
 
 Table 2: Head verbs of the topic indicator 'asunto' 
 
 This statistical information gives us a clear pattern of one popular strategy for 
-starting a paragraph about accommodation.
+starting a paragraph about accommodation. This strategy is exemplified by sentences
+@ee_yliopistonkautta and @ee_yksityisilta:
 
+(@ee_yliopistonkautta) Asunnon hankin yliopiston kautta.
+(@ee_yksityisilta) Hankin asunnon yksityisiltä markkinoilta.
 
+Example @ee_yliopistonkautta presents a variant with the topic indicator as the
+first word; example @ee_yksityisilta uses the canonical verb-initial order.
+Of all the 97 sentences where the topic indicator is a direct object, 
+37 (38,14 %) are cases where 
+the topic indicator is the first word like in example @ee_yliopistonkautta. 
 
+As demonstrated in table 1, direct objects are by far the most common
+dependency role of topic indicators. The second dependency role with a
+frequency well above all others is *root* -- that is, cases, where the topic is indicated
+by the main verb of the sentence.
 
-
-
+Literature
+==========

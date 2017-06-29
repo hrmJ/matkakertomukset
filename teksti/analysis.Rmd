@@ -12,6 +12,14 @@ fsstats1 <- as.data.frame(fromJSON("../data/firstsentence.json"))
 
 panderOptions('table.alignment.default', function(df) ifelse(sapply(df, is.numeric), 'right', 'left'))
 panderOptions('table.split.table',400)
+#..pandoc("analysis.md",config="r/conf.txt")
+
+#...Note: Taking only the first indicator into account:
+
+fsstats1$asuminen_expressed <- gsub(";.*","",fsstats1$asuminen_expressed)
+fsstats1$indicatorword <- gsub(";.*","",fsstats1$indicatorword)
+fsstats1$head_of_indicator <- gsub(";.*","",fsstats1$head_of_indicator)
+fsstats1$indicatorloc <- gsub(";.*","",fsstats1$indicatorloc)
 
 ```
 
@@ -20,7 +28,7 @@ About the data
 
 * Paragraphs discussing *accommodation*
 
-This theme was one of the topics suggested in the writing instruction for
+This theme was one of the topics suggested in the writing instructions for
 the report. The part of the report that concerns accommodation is as follows:
 
     Asuminen: Oliko asunto valmiina saavuttuasi paikalle? Vuokrataso? Onko sinulla
@@ -68,18 +76,21 @@ going to tell (or telling / has been telling) the reader about accommodation. We
 will be referring to these words as *topic indicators*.
 
 
+
 ```{r accommodationwords, echo=FALSE, results="asis"}
 
 awords <- read_lines("../data/asumissanat.txt")
-cat(paste(awords,collapse=", "),"\n")
+cat(paste("    ",awords,collapse=", "),"\n")
 
 ```
+
 
 Interestingly enough, our data shows that out of the total `r nrow(fsstats1)`
 texts that discuss accommodation `r nrow(fsstats1) - table(fsstats1$asuminen_expressed)["None"]`
 (`r fn((nrow(fsstats1) - table(fsstats1$asuminen_expressed)["None"])/nrow(fsstats1)*100)` %)
-use one of the aforementioned words in the first sentence of the first paragraph that discusses 
-accommodation.
+use one of the aforementioned words in the **first sentence of the first paragraph that discusses 
+accommodation.**
+
 
 Let us now look at what these occurrences reveal about the paragraphs studied and the
 writing strategies used by the authors.
@@ -90,7 +101,7 @@ Introducing strategies indicated by dependency roles
 One way to get an idea about what kind of a strategy a writer is using to 
 introduce the topic of accommodation is to look at the *dependency role*
 given to the indicator word by the parser. The distribution of different dependency roles
-of the topic indicators is given in table `r tabRef('tt_deproles')` :[^distexpl]
+of the topic indicators is given in table `r tabRef('tt_deproles')`:[^distexpl]
 
 ```{r accommodationwordstats, echo=FALSE, results="asis"}
 
@@ -119,10 +130,16 @@ the following:
 
 ```{r asuntoheads, echo=FALSE, results="asis"}
 asunto<-subset(fsstats1,indicatorword=="asunto"&asuminen_expressed=="dobj")
-asunto.heads <- sort(table(asunto$head_of_indicator),decreasing=T)[1:6]
-pander(asunto.heads)
-asunto_hankkia<-subset(asunto,head_of_indicator=="hankkia")
 
+asunto.heads <- sort(table(asunto$head_of_indicator),decreasing=T)[1:6]
+asunto_hankkia<-subset(asunto,head_of_indicator=="hankkia")
+asunto_hankkiaetc<-subset(asunto,head_of_indicator %in% names(asunto.heads))
+indicator.placement.table <- sort(table(asunto_hankkiaetc$indicatorloc),decreasing=T)
+
+do.indicator.placement.table <- sort(table(fsstats1[fsstats1$asuminen_expressed=="dobj","indicatorloc"]),decreasing=T)
+do.indicator.placement.prob <- prop.table(do.indicator.placement.table)
+
+pander(asunto.heads)
 cat(tabRef("tt_asuntoheads","Head verbs of the topic indicator 'asunto'"),"\n")
 ```
 
@@ -133,4 +150,16 @@ starting a paragraph about accommodation. This strategy is exemplified by senten
 (@ee_yliopistonkautta) Asunnon hankin yliopiston kautta.
 (@ee_yksityisilta) Hankin asunnon yksityisiltä markkinoilta.
 
+Example @ee_yliopistonkautta presents a variant with the topic indicator as the
+first word; example @ee_yksityisilta uses the canonical verb-initial order.
+Of all the `r sum(do.indicator.placement.table)` sentences where the topic indicator is a direct object, 
+`r do.indicator.placement.table["1"]` (`r fn(100*do.indicator.placement.prob["1"])` %) are cases where 
+the topic indicator is the first word like in example @ee_yliopistonkautta. 
 
+As demonstrated in table `r tabRef('tt_deproles')`, direct objects are by far the most common
+dependency role of topic indicators. The second dependency role with a
+frequency well above all others is *root* -- that is, cases, where the topic is indicated
+by the main verb of the sentence.
+
+Literature
+==========
