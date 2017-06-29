@@ -38,7 +38,7 @@ Tässä jotain siitä, mitä itselleni on tullut mieleen.
 ## Ensimmäisen (ja viimeisen?) virkkeen tutkiminen
 
 Sanotaan, ettei suomessa ole tarkkaa konventiota sille, että kappaleen alussa 
-tai ylipäätään jossain kohden kappaletta pitäisi olla *topic sentence* (topiikkivirke?).
+tai ylipäätään jossain kohden kappaletta pitäisi olla *topic sentence*.
 Mitä eri tapoja sitten ihmiset käyttävät aloittaessaan asumisesta kertovaa kappaletta?
 
 ###  Asumisen mainitseminen
@@ -66,6 +66,8 @@ kable(dftab)
 
 ```
 
+Yksi vaihtoehto olisi myös tutkia, *missä kohtaa lausetta* asumisaiheen
+esittelevä sana mainitaan -- alussa vai lopussa?
 
 
 

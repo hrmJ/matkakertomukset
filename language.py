@@ -26,14 +26,24 @@ class Sentence():
 
     def CheckIfAsuminen(self):
         self.asuminen_expressed_in = ""
+        self.asuminen_expressed_by = ""
+        self.iwhead = ""
         for w in self.words: 
+            w.GetHeadWord(self.words)
             if re.search("(" + "|".join(constants.asuminen) + ")", w.lemma):
                 if self.asuminen_expressed_in:
                     self.asuminen_expressed_in += ";" + w.deprel
+                    self.asuminen_expressed_by = ";" + w.lemma
+                    if w.headword:
+                        self.iwhead = ";" + w.headword.lemma
                 else:
                     self.asuminen_expressed_in = w.deprel
+                    self.asuminen_expressed_by = w.lemma
+                    if w.headword:
+                        self.iwhead = w.headword.lemma
         if not self.asuminen_expressed_in:
             self.asuminen_expressed_in = "None"
+            self.asuminen_expressed_by = "None"
 
 
 class Word():
@@ -46,6 +56,7 @@ class Word():
         self.pos = props[3]
         self.feat = props[5]
         self.deprel = props[7]
+        self.headword = ""
 
     def GetDependents(self, words):
         """Listaa kaikki sanan dependentit"""
@@ -54,3 +65,10 @@ class Word():
             if w.head == self.tokenid:
                 self.dependents.append(w)
         return self.dependents
+
+    def GetHeadWord(self, words):
+        """Etsi sanan pääsana ja palauta word-olio"""
+        for w in words:
+            if w.tokenid == self.head:
+                self.headword = w
+                return self.headword

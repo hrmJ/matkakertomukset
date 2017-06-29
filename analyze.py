@@ -91,7 +91,10 @@ class FirstSentenceStats(Analysis):
             s = language.Sentence(sentences[0])
             s.CheckIfAsuminen()
             self.data.append({"asuminen_expressed": s.asuminen_expressed_in,
+                              "indicatorword": s.asuminen_expressed_by,
                               "number_of_paragraphs":p.ptotal,
+                              "paragraph":p.content,
+                              "head_of_indicator":s.iwhead,
                               "sentence": BuildString(s.tokens), "textid":p.textid})
 
 
