@@ -161,5 +161,23 @@ dependency role of topic indicators. The second dependency role with a
 frequency well above all others is *root* -- that is, cases, where the topic is indicated
 by the main verb of the sentence.
 
+```{r, echo=FALSE}
+
+deprels <- list(nmgobj=subset(fsstats1,asuminen_expressed=="nmod:gobj"),
+                root=subset(fsstats1,asuminen_expressed=="root"),
+                nsubj=subset(fsstats1,asuminen_expressed=="nsubj"),
+                nmposs=subset(fsstats1,asuminen_expressed=="nmod:poss"),
+                nscop=subset(fsstats1,asuminen_expressed=="nsubj:cop"),
+                xcomp=subset(fsstats1,asuminen_expressed=="xcomp"),
+                nmod=subset(fsstats1,asuminen_expressed=="nmod")
+                )
+
+```
+
+
+Nmod:
+
+[44] "Olimme jo Suomessa päättäneet olevamme hieman liian mukavuudenhaluisia ja suoraan sanottuna vanhoja jenkkien opiskelija-asuntoloihin."
+
 Literature
 ==========

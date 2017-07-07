@@ -74,7 +74,7 @@ Introducing strategies indicated by dependency roles
 One way to get an idea about what kind of a strategy a writer is using to 
 introduce the topic of accommodation is to look at the *dependency role*
 given to the indicator word by the parser. The distribution of different dependency roles
-of the topic indicators is given in table 1:[^distexpl]
+of the topic indicators is given in table NA:[^distexpl]
 
 
 |Dependency role | Frequency|
