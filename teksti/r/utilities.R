@@ -37,3 +37,8 @@ if(!exists("tabRef")){
 
 options(tabcap.prefix = "Table", tabcap.sep = ":", tabcap.prefix.highlight = "")
 
+
+GetFractionForAnalysis <- function(deprole, d){
+
+}
+
