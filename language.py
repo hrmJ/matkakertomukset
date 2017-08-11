@@ -9,7 +9,6 @@ class Sentence():
             self.words.append(Word(line))
             self.tokens.append(self.words[-1].token)
 
-
     def GetVerbalHead(self):
         """
         Hae virkkeestä sen juuri. Jos juuri ei ole verbi (esim. ), hae juuren dependenteistä 
@@ -20,8 +19,10 @@ class Sentence():
                 if w.pos != "VERB":
                     for dep in w.GetDependents(self.words):
                         if dep.pos == "VERB":
+                            self.headverb = w
                             return dep
                 else:
+                    self.headverb = w
                     return w
 
     def CheckIfAsuminen(self):

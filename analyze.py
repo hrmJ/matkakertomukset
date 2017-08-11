@@ -90,7 +90,24 @@ class FirstSentenceStats(Analysis):
             sentences = p.parsed.strip().split("\n\n")
             s = language.Sentence(sentences[0])
             s.CheckIfAsuminen()
+            s.GetVerbalHead()
+
+            hvlemma=hvperson=hvfeat=""
+            if hasattr(s, "headverb"):
+                hvlemma= s.headverb.lemma
+                hvfeat= s.headverb.feat
+                try:
+                    pers = re.search(r"Number=(\w+).*Person=(\d+)",s.headverb.feat,re.I)
+                    hvperson = "{}.{}".format(pers.group(1),pers.group(2))
+                except AttributeError:
+                    hvperson = "--"
+
             self.data.append({"asuminen_expressed": s.asuminen_expressed_in,
+                              "headverb_lemma":hvlemma,
+                              "headverb_person":hvperson,
+                              "headverb_feat":hvfeat,
+                              "first_word_of_sentence_token": s.words[0].token if "pun" not in s.words[0].pos.lower() else s.words[1].token,
+                              "first_word_of_sentence_lemma": s.words[0].lemma if "pun" not in s.words[0].pos.lower() else s.words[1].lemma,
                               "indicatorword": s.asuminen_expressed_by,
                               "number_of_paragraphs":p.ptotal,
                               "paragraph":p.content,

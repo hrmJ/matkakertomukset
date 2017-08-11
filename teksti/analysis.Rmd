@@ -19,6 +19,7 @@ panderOptions('table.split.table',400)
 fsstats1$asuminen_expressed <- gsub(";.*","",fsstats1$asuminen_expressed)
 fsstats1$indicatorword <- gsub(";.*","",fsstats1$indicatorword)
 fsstats1$head_of_indicator <- gsub(";.*","",fsstats1$head_of_indicator)
+fsstats1$head_of_indicator_loc <- gsub(";.*","",fsstats1$head_of_indicator_loc)
 fsstats1$indicatorloc <- gsub(";.*","",fsstats1$indicatorloc)
 
 ```
@@ -252,6 +253,22 @@ Attempts at grouping the various ways of indicating the topic
 [check out this online whiteboard](https://app.ziteboard.com/?code=d977eb10-376e-4c84-a17a-ad7fac399ef0)
 
 
+Notes
+=====
+
+
+
+Kappaleen rajan käsittely
+=========================
+
+- Tsekkaa edellinen kappale, ja miten siinä johdateltu tulevaan aiheenvaihdokseen?
+- Parempi: tsekataan tarpeen tullen -- tsekataan tietyiltä ryhmiltä
+
+
+
+
 Literature
 ==========
+
+
 
