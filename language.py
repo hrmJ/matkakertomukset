@@ -29,7 +29,7 @@ class Sentence():
         self.asuminen_expressed_in=self.asuminen_expressed_by=self.iwhead=self.iwheadloc=self.indicatorloc= ""
         for w in self.words: 
             w.GetHeadWord(self.words)
-            if re.search("(" + "|".join(constants.asuminen) + ")", w.lemma):
+            if re.search("(" + "|".join(constants.asuminen) + ")", w.lemma) and re.search(constants.asuminen_strict, w.lemma):
                 if self.asuminen_expressed_in:
                     self.asuminen_expressed_in += ";" + w.deprel
                     self.asuminen_expressed_by += ";" + w.lemma
@@ -47,6 +47,14 @@ class Sentence():
         if not self.asuminen_expressed_in:
             self.asuminen_expressed_in = "None"
             self.asuminen_expressed_by = "None"
+
+    def CountAsuminenWords(self, p):
+        """@param Paragraph p kappale, jossa lause esiintyy"""
+        for w in self.words:
+            if w.deprel.lower() not in ["punc","punct"]:
+                p.wordnumber += 1
+                if w.lemma in constants.asuminen and re.search(constants.asuminen_strict, w.lemma):
+                    p.aswordsnumber += 1
 
 
 class Word():

@@ -22,6 +22,19 @@ fsstats1$head_of_indicator <- gsub(";.*","",fsstats1$head_of_indicator)
 fsstats1$head_of_indicator_loc <- gsub(";.*","",fsstats1$head_of_indicator_loc)
 fsstats1$indicatorloc <- gsub(";.*","",fsstats1$indicatorloc)
 
+
+fsstats1$indicator_ratio  <- round(fsstats1$indicatorwords / fsstats1$words_total * 100,2)
+
+fsstats1$headverb_person_simple <- "--"
+fsstats1$headverb_person_simple[grepl("1",fsstats1$headverb_person)] <- "1p"
+fsstats1$headverb_person_simple[grepl("3",fsstats1$headverb_person)] <- "3p"
+fsstats1$headverb_person_simple[which(fsstats1$headverb_person=="")] <- "--"
+
+write.csv(fsstats1,"updated_data.csv")
+
+#fsstats1$paragraph[fsstats1$indicator_ratio==13.11]
+#fsstats1$paragraph[fsstats1$indicator_ratio==2.90]
+
 ```
 
 About the data
@@ -71,24 +84,24 @@ BTW, from [@smith2008braddock]:
 
 
 However, even when there is no topic sentence *per se*, the reader must at some
-point begin to have an idea about what the paragraph he is reading is about. We
-used the following Finnish words as indicators of the fact that the writer is
-going to tell (or telling / has been telling) the reader about accommodation. We 
-will be referring to these words as *topic indicators*.
-
+point begin to have an idea about what the paragraph he is reading is about. 
+When talking about accommodation, the most obvious way to indicate the topic
+is, arguably, to use a word derived from the verb *asua*. Thus, we used the
+asua-derivatives as *topic indicators* -- clues that indicate the reader
+that the topic of the paragraph is accommodation. The data included
+the following asua-derivatives:
 
 
 ```{r accommodationwords, echo=FALSE, results="asis"}
 
-awords <- read_lines("../data/asumissanat.txt")
-cat(paste("    ",awords,collapse=", "),"\n")
+cat(paste("    ",paste(unique(fsstats1$indicatorword),sep=","),collapse=", "),"\n")
 
 ```
 
 
 Interestingly enough, our data shows that out of the total `r nrow(fsstats1)`
-texts that discuss accommodation `r nrow(fsstats1) - table(fsstats1$asuminen_expressed)["None"]`
-(`r fn((nrow(fsstats1) - table(fsstats1$asuminen_expressed)["None"])/nrow(fsstats1)*100)` %)
+texts that discuss accommodation `r table(fsstats1$sentence_number)["1"]`
+(`r fn(table(fsstats1$sentence_number)["1"]/nrow(fsstats1)*100)` %)
 use one of the aforementioned words in the **first sentence of the first paragraph that discusses 
 accommodation.**
 
@@ -119,8 +132,8 @@ cat (tabRef('tt_deproles','Dependency roles of topic indicators'), "\n")
 
 ```
 
-[^distexpl]: The data in the table covers only the cases where the indicator
-word is used in the *first* sentence of the first paragraph
+[^distexpl]: The data in the table covers  the cases where the indicator
+word is used in the first paragraph (in any sentence)
 
 
 ### Object

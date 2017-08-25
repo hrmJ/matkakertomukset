@@ -48,19 +48,20 @@ BTW, from [@smith2008braddock]:
 
 
 However, even when there is no topic sentence *per se*, the reader must at some
-point begin to have an idea about what the paragraph he is reading is about. We
-used the following Finnish words as indicators of the fact that the writer is
-going to tell (or telling / has been telling) the reader about accommodation. We 
-will be referring to these words as *topic indicators*.
+point begin to have an idea about what the paragraph he is reading is about. 
+When talking about accommodation, the most obvious way to indicate the topic
+is, arguably, to use a word derived from the verb *asua*. Thus, we used the
+asua-derivatives as *topic indicators* -- clues that indicate the reader
+that the topic of the paragraph is accommodation. The data included
+the following asua-derivatives:
 
 
+     asunto,      asua,      asua#kokemus,      asua#ratkaisu,      opiskelija-asuntola,      asun#tola,      Kotmerckx-asuntolasta,      asunto#etsintä,      opiskelija-asunto,      asua#järjestely,      rivi#talo#asunto,      asunto#palvelu,      asunto#politiikka,      asun#tola#paikka,      asuin#paikka,      opiskelija-asunto#säätiö,      asunto#ilmoitus,      opiskelija-asunto#tila,      asunto#loka,      asunto#asia,      asunto#tarjoaja,      asua#vaihto#ehto,      asukas,      kimppa#kämppä#asua,      asua#asia,      asunto#tila,      asunto#kanava,      asua#mahdollisuus,      solu#asunto,      asunto#tarjous,      opiskelija-asuntola#huone,      asunto#saanti,      asunto#haku,      asunto#toimisto,      perhe#asunto,      asunto#mahdollisuus,      asun#tola#majoitus,      vuokra-asunto,      asunto#tarjonta,      asua#tilanne 
 
-     asua,      asunto,      asuminen,      asumis#järjestely,      kämppä,      majoittua,      majoittaa,      majoittuminen,      majoitus,      asuntola,      asun#tola,      vuokrataso,      vuokra#taso,      vuora#sopimus,      vuorasopimus,      huone,      asuin#paikka,      solu#huone,      asukas,      asu#kas,      vuokra 
 
-
-Interestingly enough, our data shows that out of the total 417
-texts that discuss accommodation 360
-(86,33 %)
+Interestingly enough, our data shows that out of the total 415
+texts that discuss accommodation 338
+(81,45 %)
 use one of the aforementioned words in the **first sentence of the first paragraph that discusses 
 accommodation.**
 
@@ -79,19 +80,20 @@ of the topic indicators is given in table 1:[^distexpl]
 
 |Dependency role | Frequency|
 |:---------------|---------:|
-|dobj            |        97|
-|root            |        71|
-|nmod            |        45|
-|nmod:gobj       |        36|
-|nsubj           |        35|
-|nmod:poss       |        32|
-|nsubj:cop       |        25|
-|xcomp           |        11|
+|dobj            |       116|
+|nmod            |        71|
+|root            |        65|
+|nsubj           |        41|
+|nmod:gobj       |        40|
+|nmod:poss       |        34|
+|nsubj:cop       |        22|
+|xcomp           |         9|
+|conj            |         6|
 
 Table 1: Dependency roles of topic indicators 
 
-[^distexpl]: The data in the table covers only the cases where the indicator
-word is used in the *first* sentence of the first paragraph
+[^distexpl]: The data in the table covers  the cases where the indicator
+word is used in the first paragraph (in any sentence)
 
 
 ### Object
@@ -99,15 +101,15 @@ word is used in the *first* sentence of the first paragraph
 According to table 1 the most common dependency role is
 the direct object. If we take a closer look at the cases which use a topic
 indicator as the object of the first sentence, we can see that the majority of
-them (69,07 %) use the word *asunto* ('apartment').
+them (75,86 %) use the word *asunto* ('apartment').
 Further, if we look at the head verbs of these cases, the most frequent ones are 
 the following:
 
 
 ----------------------------------------------------
-  hankkia   saada   etsiä   hakea   löytää   hommata
---------- ------- ------- ------- -------- ---------
-       16      11       9       7        6         3
+  hankkia   etsiä   saada   löytää   hakea   hommata
+--------- ------- ------- -------- ------- ---------
+       20      13      12       11       7         3
 ----------------------------------------------------
 
 Table 2: Head verbs of the topic indicator 'asunto' as object 
@@ -121,8 +123,8 @@ starting a paragraph about accommodation. This strategy is exemplified by senten
 
 Example @ee_yliopistonkautta presents a variant with the topic indicator as the
 first word; example @ee_yksityisilta uses the canonical verb-initial order.
-Of all the 97 sentences where the topic indicator is a direct object, 
-37 (38,14 %) are cases where 
+Of all the 116 sentences where the topic indicator is a direct object, 
+40 (34,48 %) are cases where 
 the topic indicator is the first word like in example @ee_yliopistonkautta. 
 
 ### Root
@@ -136,13 +138,13 @@ by the main verb of the sentence.
 
 If we take a closer look at these cases, we can see, first of all, that
 besides the most obvious option (the verb *asua*) the verbs that were
-used included *majoittua* (4 occurences)
-*majoittaa* (2 occurences)
-*vuokrata* (3 occurences)
-and *alivuokrata* (1 occurences).
+used included *majoittua* ( occurences)
+*majoittaa* ( occurences)
+*vuokrata* ( occurences)
+and *alivuokrata* ( occurences).
 
-Further, the data reveals that of the 55
-cases with *asua*, 42 start with the verb.
+Further, the data reveals that of the 59
+cases with *asua*, 45 start with the verb.
 The vast majority of these cases resemble example @ee_ulkopuolella in that they represent
 the structure *asua* + time span + place of accommodation (the order of the
 temporal and spatial arguments varies somewhat):
@@ -160,8 +162,8 @@ Here's how it turned out to be: (positive / negative experiences)".
 
 ### Nsubj
 
-Let us now look at the total 35 cases which used a nominative subject to introduce the
-topic. The most common subject was, unsurprisingly, *asunto* (17 occurences). Others included 
+Let us now look at the total 41 cases which used a nominative subject to introduce the
+topic. The most common subject was, unsurprisingly, *asunto* (21 occurences). Others included 
 *asuminen* (7 occurences), asuntola (4 occurences) and some unique cases such as 
 *vuokrasopimus*.
 
@@ -176,11 +178,11 @@ If we look at the head verbs of these cases, we get the following table:
 
 |Var1      | Freq|
 |:---------|----:|
-|olla      |   12|
+|olla      |   15|
 |järjestyä |    2|
+|sijaita   |    2|
 |kannattaa |    1|
 |kuulua    |    1|
-|sijaita   |    1|
 
 Table 2: Head verbs of the topic indicator 'asunto' as subject 
 
@@ -208,6 +210,22 @@ Attempts at grouping the various ways of indicating the topic
 [check out this online whiteboard](https://app.ziteboard.com/?code=d977eb10-376e-4c84-a17a-ad7fac399ef0)
 
 
+Notes
+=====
+
+
+
+Kappaleen rajan käsittely
+=========================
+
+- Tsekkaa edellinen kappale, ja miten siinä johdateltu tulevaan aiheenvaihdokseen?
+- Parempi: tsekataan tarpeen tullen -- tsekataan tietyiltä ryhmiltä
+
+
+
+
 Literature
 ==========
+
+
 

@@ -3,6 +3,7 @@ import language
 from language import re
 import json
 from utils import BuildString
+import sys
 
 
 class Analysis():
@@ -87,34 +88,41 @@ class FirstSentenceStats(Analysis):
 
     def ProcessParagraph(self, p):
         if p.pnumber == 1:
-            sentences = p.parsed.strip().split("\n\n")
-            s = language.Sentence(sentences[0])
-            s.CheckIfAsuminen()
-            s.GetVerbalHead()
+            p.wordnumber=p.aswordsnumber = 0
+            indicator_has_been_found = False
+            for sentence_number, sentence_string in enumerate(p.parsed.strip().split("\n\n")):
+                s = language.Sentence(sentence_string)
+                s.CheckIfAsuminen()
+                s.GetVerbalHead()
+                s.CountAsuminenWords(p)
+                if s.asuminen_expressed_in != "None" and not indicator_has_been_found:
+                    indicator_has_been_found = True
+                    hvlemma=hvperson=hvfeat=""
+                    if hasattr(s, "headverb"):
+                        hvlemma= s.headverb.lemma
+                        hvfeat= s.headverb.feat
+                        try:
+                            pers = re.search(r"Number=(\w+).*Person=(\d+)",s.headverb.feat,re.I)
+                            hvperson = "{}.{}".format(pers.group(1),pers.group(2))
+                        except AttributeError:
+                            hvperson = "--"
 
-            hvlemma=hvperson=hvfeat=""
-            if hasattr(s, "headverb"):
-                hvlemma= s.headverb.lemma
-                hvfeat= s.headverb.feat
-                try:
-                    pers = re.search(r"Number=(\w+).*Person=(\d+)",s.headverb.feat,re.I)
-                    hvperson = "{}.{}".format(pers.group(1),pers.group(2))
-                except AttributeError:
-                    hvperson = "--"
+                    self.data.append({"asuminen_expressed": s.asuminen_expressed_in,
+                                      "headverb_lemma":hvlemma,
+                                      "sentence_number":sentence_number+1,
+                                      "headverb_person":hvperson,
+                                      "headverb_feat":hvfeat,
+                                      "first_word_of_sentence_token": s.words[0].token if "pun" not in s.words[0].pos.lower() else s.words[1].token,
+                                      "first_word_of_sentence_lemma": s.words[0].lemma if "pun" not in s.words[0].pos.lower() else s.words[1].lemma,
+                                      "indicatorword": s.asuminen_expressed_by,
+                                      "number_of_paragraphs":p.ptotal,
+                                      "paragraph":p.content,
+                                      "head_of_indicator":s.iwhead,
+                                      "head_of_indicator_loc":s.iwheadloc.strip(";"),
+                                      "indicatorloc":s.indicatorloc.strip(";"),
+                                      "sentence": BuildString(s.tokens), "textid":p.textid})
 
-            self.data.append({"asuminen_expressed": s.asuminen_expressed_in,
-                              "headverb_lemma":hvlemma,
-                              "headverb_person":hvperson,
-                              "headverb_feat":hvfeat,
-                              "first_word_of_sentence_token": s.words[0].token if "pun" not in s.words[0].pos.lower() else s.words[1].token,
-                              "first_word_of_sentence_lemma": s.words[0].lemma if "pun" not in s.words[0].pos.lower() else s.words[1].lemma,
-                              "indicatorword": s.asuminen_expressed_by,
-                              "number_of_paragraphs":p.ptotal,
-                              "paragraph":p.content,
-                              "head_of_indicator":s.iwhead,
-                              "head_of_indicator_loc":s.iwheadloc.strip(";"),
-                              "indicatorloc":s.indicatorloc.strip(";"),
-                              "sentence": BuildString(s.tokens), "textid":p.textid})
+                self.data[-1].update({"words_total":p.wordnumber, "indicatorwords":p.aswordsnumber})
 
 
 #hv = HeadverbStats()
