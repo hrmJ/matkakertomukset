@@ -90,11 +90,13 @@ class FirstSentenceStats(Analysis):
         if p.pnumber == 1:
             p.wordnumber=p.aswordsnumber = 0
             indicator_has_been_found = False
+            p.numberoffeats=0
             for sentence_number, sentence_string in enumerate(p.parsed.strip().split("\n\n")):
                 s = language.Sentence(sentence_string)
                 s.CheckIfAsuminen()
                 s.GetVerbalHead()
                 s.CountAsuminenWords(p)
+                p.numberoffeats+=s.numberoffeats
                 if s.asuminen_expressed_in != "None" and not indicator_has_been_found:
                     indicator_has_been_found = True
                     hvlemma=hvperson=hvfeat=""
@@ -106,15 +108,20 @@ class FirstSentenceStats(Analysis):
                             hvperson = "{}.{}".format(pers.group(1),pers.group(2))
                         except AttributeError:
                             hvperson = "--"
-
+                    try:
+                        feats = p.numberoffeats/p.wordnumber
+                    except ZeroDivisionError:
+                        feats = 0
                     self.data.append({"asuminen_expressed": s.asuminen_expressed_in,
                                       "headverb_lemma":hvlemma,
                                       "sentence_number":sentence_number+1,
                                       "headverb_person":hvperson,
                                       "headverb_feat":hvfeat,
+                                      "featmean":feats,
                                       "first_word_of_sentence_token": s.words[0].token if "pun" not in s.words[0].pos.lower() else s.words[1].token,
                                       "first_word_of_sentence_lemma": s.words[0].lemma if "pun" not in s.words[0].pos.lower() else s.words[1].lemma,
                                       "indicatorword": s.asuminen_expressed_by,
+                                      "indicatorword_token": s.asuminen_expressed_by_token,
                                       "number_of_paragraphs":p.ptotal,
                                       "paragraph":p.content,
                                       "head_of_indicator":s.iwhead,

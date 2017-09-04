@@ -1,4 +1,4 @@
-t: html
+t: odt
 include-in-header: github-pandoc.css
 bibliography: bibliography.bib
 smart: 

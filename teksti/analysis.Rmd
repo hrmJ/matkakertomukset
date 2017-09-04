@@ -1,6 +1,7 @@
 
 ```{r load, echo=FALSE}
 library(pander)
+library(stringr)
 library(knitr)
 library(jsonlite)
 library(ggplot2)
@@ -29,6 +30,7 @@ fsstats1$headverb_person_simple <- "--"
 fsstats1$headverb_person_simple[grepl("1",fsstats1$headverb_person)] <- "1p"
 fsstats1$headverb_person_simple[grepl("3",fsstats1$headverb_person)] <- "3p"
 fsstats1$headverb_person_simple[which(fsstats1$headverb_person=="")] <- "--"
+fsstats1$indicatorword_length <-  str_length(fsstats1$indicatorword_token) 
 
 write.csv(fsstats1,"updated_data.csv")
 

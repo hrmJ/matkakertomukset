@@ -163,12 +163,15 @@ for idx, link in enumerate(links):
     href = link.get("href")
     try:
         thistext = Text(urlopen(href).read(), href)
-        thistext.InsertToDb(con)
+        #thistext.InsertToDb(con)
+        print (thistext.prettified);
     except:
         if href not in Text.errors:
             Text.errors += href + "\n"
             print(href + "FAILED!")
     print("{}/{}".format(idx,len(links)),end="\r")
+    if idx % 100 == 0:
+        break
 
 print("\n\nDone. Errors with the following hrefs:\n {}.".format(Text.errors))
 
