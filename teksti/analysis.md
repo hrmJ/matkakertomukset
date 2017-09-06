@@ -91,6 +91,7 @@ of the topic indicators is given in table 1:[^distexpl]
 |conj            |         6|
 
 Table 1: Dependency roles of topic indicators 
+![plot of chunk accommodationwordstats](figure/accommodationwordstats-1.png)
 
 [^distexpl]: The data in the table covers  the cases where the indicator
 word is used in the first paragraph (in any sentence)
@@ -210,8 +211,216 @@ Attempts at grouping the various ways of indicating the topic
 [check out this online whiteboard](https://app.ziteboard.com/?code=d977eb10-376e-4c84-a17a-ad7fac399ef0)
 
 
-Notes
+DOBJ
 =====
+
+
+
+------------------------------ ------------------------------ ------------------------------ ------------------------------
+Aloin etsimään asuntoa heti    Itse löysin asunnon jo ennen   Ensimmäiseksi neljäksi yöksi   Otin itse asunnon             
+harjoittelupaikan              vaihtoon lähtöä yliopiston     olin hankkinut huoneen         paikalliselta ” TOAS:lta ”,   
+varmistuttua, joka ei          sivujen vuokrailmoituksista,   Airbnb:stä, mutta pysyvän      Seezeitilta.                  
+Hollannissa niin helppoa       ja päätin luottaa siihen että  asunnon hommasin vasta                                       
+ulkomaalaiselle ole.           perille päästyäni kaikki on    saavuttuani paikan päälle.                                   
+                               niin kuin pitää.                                                                            
+
+Emme olleet hankkineet asuntoa Asuntoni hommasin etukäteen,   Alkuperäisenä ajatuksenani oli Asunnon hankin yksityiseltä   
+etukäteen, vain luotimme       mutta käsittääkseni suurin osa hankkia asunto vasta           vuokranantajalta, ja se oli   
+siihen, että löytäisimme       löysi asunnon helposti paikan  kohteeseen saavuttuani, mutta  valmiina saapuessani.         
+kimppakämpän sopuhintaan.      päältä Santiagon vaihtareiden  Facebook-ryhmien keskusteluita                               
+                               Facebook-ryhmästä, joka on     seuratessani ja                                              
+                               täynnä kämppäilmoituksia.      tarkastellessani joitain                                     
+                                                              asuntoja välittäviä                                          
+                                                              palveluita, alkoi jo elokuun                                 
+                                                              aikana tuntumaan siltä, että                                 
+                                                              hyvät asuntovaihtoehdot käyvät                               
+                                                              nopeasti vähiin Lissabonin                                   
+                                                              keskustan alueella.                                          
+
+Saavuttuamme asuntolaamme,     Asuntoa minulla ei ollut       Itse olin varannut hostellin   Itse en saanut asuntoa        
+Avant-Garden:iin, huomasimme   valmiina Sevillaan             neljäksi yöksi( 18 e /yö) ,    Studierendenwerkiltä, joten   
+nopeasti mihin paholaisen      saapuessani.                   sillä tarkoituksena oli löytää jouduin etsimään sitä         
+loukkuun olimme päätyneet.                                    asunto näiden päivien aikana.  yksityisiltä markkinoilta, ja 
+                                                                                             eniten tuli etsittyä asuntoa  
+                                                                                             wg-gesucht –sivustolta.       
+
+Yliopistoon hakiessa voi       Asuntoa minulla ei ollut       Vietin ensimmäisen viikon      Yliopiston kautta on          
+samalla hakea myös asuntoa     valmiiksi, mutta kämppäkaverit hostellissa( PILOT Hostel,     mahdollista saada asunto.     
+paikalliselta                  olivat.                        voin suositella) , josta käsin                               
+opiskelija-asuntosäätiöltä                                    yritin löytää asunnon                                        
+SSHN:lta.                                                     itselleni.                                                   
+
+Aloin etsiä asuntoa heti       Asunnon hankin vasta           Yritin ennen lähtöäni katsoa   Asunnon sain                  
+saavuttuani                    saavuttuani paikan päälle.     netistä asuntoasiat kuntoon,   Hafenstraße-taloista          
+pisocompartido.com-sivuston                                   mutta mielestäni nettisivut    paikalliselta                 
+                                                              oli melko sekavia.             opiskelija-asuntojärjestöltä. 
+
+Asuntoa minulla ei vielä ennen Asunnon olin katsonut jo       Asunnon sain tutun tutun       Aloitin asunnonhaun heti      
+Brysseliin saapumista ollut,   etukäteen ja asuin kahden muun kautta, kuulin että eräällä    kesäkuun alussa sen jälkeen,  
+mutta olin sopinut muutamia    vaihtaritytön kanssa Sevillan  omanikäiselläni                kun olin saanut vahvistuksen  
+näyttöjä jo etukäteen.         keskustassa.                   varsovalaisella                vaihtopaikastani.             
+                                                              feministi-kasvissyöjä-tyypillä                               
+                                                              oli kaksiossaan juuri toinen                                 
+                                                              huone vapaana.                                               
+
+Yritin etsiä asuntoa jo        Varasin itselleni asunnon      Asunnon olin hommannut jo      Olin ottanut asuntoni         
+Suomesta käsin, mutta se       Roommates Sevilla –nimisen     etukateen Suomesta kasin eraan paikallisen                   
+osoittautui vaikeaksi.         välitysfirman kautta netistä   valitysfirman kautta.          opiskelija-asuntosäätiön ”    
+                               jo ennen vaihtoon lähtöäni.                                   Studentenwerkin ” kautta.     
+
+Haimme alun perin asuntoa      Majoituksen suhteen päätin,    Asunnon löysin Krakovassa      Saavuin Belgradiin hyvissä    
+yliopiston asuntotoimiston     että hankin pysyvän asunnon    ollessani facebookin           ajoin ennen harjoittelun      
+kautta, mutta heillä ei ollut  vasta paikan päällä.           Łódź-ryhmän avulla, jossa      alkua, jotta ehdin löytää     
+tarjota meille sopivaa                                        ihmiset etsivät                asunnon.                      
+asuntoa, koska emme halunneet                                 vuokra-asuntoja/ kämppiksiä.                                 
+soluun.                                                                                                                    
+
+Aloitin asunnonetsinnän noin   Asunto jokaisen on hankittava  Etsin asuntoa laittamalla      Asunnon sain jo ennen joulua, 
+kaksi kuukautta ennen vaihdon  itse.                          hakuilmoituksen Pariisin       kun slovenialainen tyttö      
+alkua.                                                        suomalaisten Facebook-ryhmään  ilmoitti Facebookin Erasmus   
+                                                              sekä Pariisin                  Ljubljana -ryhmässä lähtevänsä
+                                                              Suomi-instituutin              kevääksi vaihtoon ja          
+                                                              asuntofoorumille.              vuokraavansa huoneensa täksi  
+                                                                                             ajaksi.                       
+
+Asunnon hankin yliopiston      Itse hankin asunnon jo         Asumisen järjestin itselleni   Asunnon olin hankkinut jo     
+kautta.                        Suomesta käsin, asuin College  jo Suomesta käsin.             aiemmin Facebookin avulla     
+                               Courtissa joka sijaitsee aivan                                yksityiseltä vuokranantajalta,
+                               kampuksen kyljessä.                                           mutta tarpeellista se ei ole. 
+
+Sain häneltä avaimet           Asuntoa minun ei tarvinnut     Hain suosiolla asuntoa CROUSin Hain jo syksyllä              
+asuntolaani, johon olin        hankkia.                       opiskelija-asuntolasta, koska  asuntolapaikkaa ja sainkin    
+hakenut kätevästi samalla                                     minua varoitettiin, että       paikan vaihtareille           
+hakulomakkeella kuin itse                                     asunnon löytäminen omin päin   osoitetusta asuntolasta.      
+yliopistoonkin ja hän ohjasi                                  on hankalaa ja hintataso                                     
+minut oikeaan paikkaan.                                       kallis.                                                      
+
+Kuulin vasta vähän ennen       Olin löytänyt asunnon          Koen olevani onnekas että sain Asunnon sain paikallisen      
+lähtöä, että asunto olisi      ensimmäiseksi kuukaudeksi      asuntolapaikan juuri Résidence Toasin Apartiksen kautta.     
+hommattava itse.               Airbnb:n kautta ennen Italiaan d'Amboisesta.                                                
+                               saapumista.                                                                                 
+
+Parkwood sisältää pääosin      Asunnon olin hankkinut jo      Hain yliopiston                Asuntoni sain vuokrattua      
+rivitaloasuntoja ja muutaman   ennen Roomaan saapumista, mikä asuntolapaikkaa ja onnistuin   Apartiksen( paikallinen TOAS) 
+kerrostalon.                   hieman hirvitti, mutta kaikki  saamaan 9 neliön suuruisen     kautta.                       
+                               meni lopulta hyvin.            huoneen.                                                     
+
+Hankin asunnon yksityisiltä    Oman asuntoni hankin           Jälkiviisaana sanoisin, että   Kuten mainittua, asunnon      
+markkinoilta.                  wggesucht.de –sivustolta, ja   asunto kannattaa hankkia       hankin itse.                  
+                               samaa voin suositella          ennen.                                                       
+                               jokaiselle Wieniin lähtevälle.                                                              
+
+Asuminen Kentissä on           Itse hankin asunnon jo         Asunnon hankin paikalliselta   Aloin jo loppukeväästä        
+järjestetty niin että          etukäteen, ja paikallinen      opiskelija-asuntosäätiöltä(    katsella asuntomahdollisuuksia
+paikalliset ekavuotiset ja     kaverini kävi sitä katsomassa  CROUS) yliopiston              Prahasta.                     
+vaihtarit asuvat kampuksen     ja hakemassa avaimen jo        ilmoittautumisen yhteydessä.                                 
+opiskelijakylässä tai          etukäteen.                                                                                  
+collegeissa ja vanhemmat                                                                                                   
+opiskelijat muuttavat                                                                                                      
+lähemmäksi n. 5 kilometrin                                                                                                 
+päässä sijaitsevaa Canterburyn                                                                                             
+kylää.                                                                                                                     
+
+Saapuessani ensimmäinen        Asumisen hoidin vaihtareille   Asunnon sain tosiaan kaksi     Päätimme vaihtoon             
+tehtävä oli löytää oma         tarkoitetun OeAD-järjestön     viikkoa ennen opintojeni alkua lähtiessämme, ettemme halua   
+asuntolani.                    kautta.                        koska minulla kävi hyvä tuuri, asuntolamajoitusta, vaan      
+                                                              mutta jälkikateen mietittynä,  hoidamme itsenäisesti         
+                                                              asunnon löytäminen ei pitäisi  välittäjäfirman kautta        
+                                                              olla niin vaikeata, kunhan     itsellemme asunnon.           
+                                                              vain osaa käyttää olemassa                                   
+                                                              olevia verkostoja.                                           
+
+Sain siis asuntolapaikan       Minua varten oli varattu       Pariisi saattaa olla monelle   Ennen Prahaan lähtöä etsimme  
+automaattisesti, koska olin    asunto valmiiksi.              ulkomaalaiselle opiskelijalle  ystäväni kanssa netistä       
+vaihdossa vain yhden                                          vaikea kaupunki, sillä         vuokra-asuntoja.              
+lukukauden.                                                   ensimmäiseksi jokaisen                                       
+                                                              tarvitsee löytää asunto.                                     
+
+Vaihtoon haettaessa hain myös  Asuntoa oli hyvin vaikea saada Kv. koordinaattori Maggy oli   Istanbulin teknillinen        
+asuntolapaikkaa, ja sain       vapailta markkinoilta etänä,   suuri apu asuntoa etsittäessä. yliopisto ei pysty tarjoamaan 
+valita itse mieluisimman       sillä kukaan ei halunnut                                      asuntoa vaihto-opiskelijoille,
+asuntolan( tästä myöhemmin     vuokrata minulle huonetta                                     eikä Istanbulissa ole         
+lisää) .                       ainoastaan neljäksi                                           yksittäistä organisaatiota,   
+                               kuukaudeksi tapaamatta                                        joka välittäisi asuntoja      
+                               kasvotusten.                                                  vaihtareille.                 
+
+Hain asuntoa yliopistolta,     Hain myös heti                 Asunnon varasin paikallista    Saavuin Istanbuliin muutamaa  
+mutta koska huomasin           hyväksymiskirjeen saatuani     vuokramarkkinaa hoitavan       viikkoa ennen opiskeluiden    
+tarjouskirjeen vasta niin      asuntoa Carletonin             Kopparstaden-palvelun kautta.  alkua, koska halusin löytää   
+myöhään, myöhästyin yliopiston kampukselta, mutta jäin                                       asunnon hyvissä ajoin.        
+asuntolahakemusten             odotuslistalle.                                                                             
+deadlinesta.                                                                                                               
+
+Asunnon hankin vasta paikan    Bishop ’ sin sivujen kautta    Tukholmaan lähtiessä kannattaa Ennen lähtöä rekisteröidyin   
+päältä.                        löysin asunto- ja              pyrkiä hankkimaan asunto       www.erasmusu.com -sivulle,    
+                               kämppisilmoituksia, ja päädyin mahdollisimman ajoissa, sillä  jolla voi etsiä asuntoja      
+                               kolmanneksi asukkaaksi kahden  kaupungin asuntotilanne on     kaikkialta maailmasta.        
+                               toisen vuoden opiskelijan      todella huono.                                               
+                               kanssa.                                                                                     
+
+Asun kaksiossa avopuolisoni    Päädyin hakemaan asuntoa       Yliopisto takaa asunnot        Saavuin Istanbuliin sateisena 
+kanssa, joten minun ei         paikallisen koordinaattorin    kaikille                       keskiviikkoiltana muutama     
+tarvinnut miettiä asumista     suosittelemana kampuksen       vaihto-opiskelijoille.         päivä ennen orientaatioviikon 
+Suomessa.                      asuntoloista.                                                 alkua etsiäkseni asunnon ja   
+                                                                                             asettautuakseni kaupunkiin.   
+
+Asuntomme oli täysin           Asuntolaa ei tarvinnut         Asuntoa hain myös jo keväällä  Aluksi majoituin hostelliin ja
+kalustettu ja vuokra piti      erikseen hakea etukäteen, vaan Uppsalasta tulleiden ohjeiden  etsin samalla asuntoa.        
+sisällään wifin, sähkön ja     kaikille vaihto-oppilaille oli mukaisesti.                                                  
+veden.                         varattu paikka yliopiston                                                                   
+                               asuntolasta kahden hengen                                                                   
+                               huoneesta.                                                                                  
+
+Aloin katsella                 Asuntoa voi hakea BNU          Kyselimme vaihtoyliopistosta   Yliopisto tarjosi             
+asuntoilmoituksia Suomessa     nettijärjestelmän kautta,      asumismahdollisuuksia, mutta   majoitusvaihtoehdoiksi        
+vähän ennen lähtöäni, mutten   johon saa ohjeet               yliopisto ei voinut tarjota    asuntolaa, perhemajoitusta    
+varannut vielä mitään.         hyväksymispaketin kanssa.      minkäänlaisia asuntoja         sekä apua oman vuokra-asunnon 
+                                                              pariskunnille.                 etsimisessä.                  
+
+Asunnon olin tosin etsinyt jo  CUHKin hakuvaiheessa tulee     Asunnon löysin sattuman kautta Asuntola oli tarkoitettu      
+Suomesta käsin, mikä onnistui  laittaa järjestykseen          Facebookista.                  nimenomaan                    
+kohdallani erityisen hyvin,    asumisvaihtoehdot, jotka ovat                                 vaihto-opiskelijoille, joten  
+koska poikaystäväni asui       international house, collegen                                 siellä asui ihmisiä useista   
+Barcelonassa, joten hän pystyi asuntola tai collegen asuntola                                eri maista.                   
+käymään tarkistamassa asunnon. johon kuuluu "communal                                                                      
+                               dinner"tiistaista torstaihin.                                                               
+
+Etsin asunnon vasta paikan     Varasimme halvan hotellin      Asuntoa hain                   Asunnon sain järjestettyä     
+päällä, sillä minulla oli      yliopiston läheltä vajaaksi    Studentendorfilta, joka        Austinista jo paria kuukautta 
+kaupungissa kavereita, joiden  viikoksi ja toisena päivänä    tarjoaa Humboldtin             ennen vaihdon alkamista, ja   
+luona sain viettää ensimmäiset aloimme etsimään vuokrattavaa  opiskelijoille soluasuntoja    sen hankkiminen oli myös hyvin
+pari viikkoa.                  asuntoa yleisiltä              sekä yksiöitä.                 helppoa ainakin omalla        
+                               markkinoilta.                                                 kohdallani.                   
+
+Hankin asunnon ennen kuin      Opiskelijoille asuminen oli    Asunnon sain kätevästi         Totesin itse, että alle 500$  
+saavuin kaupunkiin.            organisoitu dormiin nimeltä    yliopiston kautta              ei asuntoa oikein saa, ellei  
+                               Gonzaga hall. Sijainniltaan    opiskelija-asuntolasta.        halua asua kamalassa luukussa 
+                               asuntola oli kampuksen                                        tai kaukana kampuksesta.      
+                               sisäreunalla ja hyvällä                                                                     
+                               sijainnilla monellakin tapaa.                                                               
+
+Asuntoa hankkiessa kannattaa   Sain alivuokrattua asuntoni,   Alivuokrasimme puolisoni       Asunto oli onneksi hoidettu   
+miettiä, haluaako asunnon      mutta Kyprokselta en hankkinut kanssa asuntomme Berliinissä   ISEP:n puolesta, kuten myös   
+läheltä yliopistoa vai läheltä asuntoa ennen sinne            oleskelun ajaksi.              ruokailu.                     
+keskustaa.                     saapumistani.                                                                               
+
+Olin etsinyt asunnon etukäteen Rupesin hyvissä ajoin          Yliopisto lähetti minulle      Asuminen vaihtareille oli     
+Facebookin avulla.             kyselemään asuntoa             hyvissä ajoin                  järjestetty kampukselle.      
+                               asunnonvälittäjä Wendyltä.     asuntotarjouksen.                                            
+
+Olin katsonut Couch Surfing    Löysin asunnon SiO:n eli Oslon Ennen vaihtoon lähtöä koitimme Sama nainen auttoi minua      
+palvelut Renting rooms in      opiskelijasäätiön kautta.      saada yksityisiltä             muutenkin kertomalla          
+Madrid( tai jokin vastaavan                                   markkinoilta asuntoa, koska    kontaktin, jonka avulla voisin
+niminen) -palstalta sopivan                                   aluksi haimme kyllä            etsiä asuntoa.                
+asunnon etukäteen ja jutellut                                 opiskelija-asuntoa, mutta                                    
+omistajan kanssa netissä.                                     sieltä meille tarjottiin                                     
+                                                              ainoastaan omia huoneita,                                    
+                                                              kaksioita ei vaihtareille                                    
+                                                              tarjota.                                                     
+------------------------------ ------------------------------ ------------------------------ ------------------------------
+
+
+
 
 
 
@@ -220,6 +429,9 @@ Kappaleen rajan käsittely
 
 - Tsekkaa edellinen kappale, ja miten siinä johdateltu tulevaan aiheenvaihdokseen?
 - Parempi: tsekataan tarpeen tullen -- tsekataan tietyiltä ryhmiltä
+
+
+
 
 
 

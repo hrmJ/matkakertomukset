@@ -7,6 +7,7 @@ library(jsonlite)
 library(ggplot2)
 library(readr)
 source("r/utilities.R")
+source("r/functions.R")
 headverbs <- as.data.frame(fromJSON("../data/headverbs.json"))
 genstats <- as.data.frame(fromJSON("../data/genstats.json"))
 fsstats1 <- as.data.frame(fromJSON("../data/firstsentence.json"))
@@ -131,6 +132,11 @@ colnames(dftab) <- c("Dependency role","Frequency")
 kable(dftab)
 
 cat (tabRef('tt_deproles','Dependency roles of topic indicators'), "\n")
+
+withindicator <- subset(fsstats1,asuminen_expressed!="None")
+withindicator$indicator.deprel <- factor(withindicator$asuminen_expressed,levels=unique(names(sort(table(withindicator$asuminen_expressed),d=T))))
+
+ggplot(withindicator,aes(x=indicator.deprel)) + geom_bar() + coord_flip() + theme_minimal()
 
 ```
 
@@ -268,8 +274,37 @@ Attempts at grouping the various ways of indicating the topic
 [check out this online whiteboard](https://app.ziteboard.com/?code=d977eb10-376e-4c84-a17a-ad7fac399ef0)
 
 
-Notes
+DOBJ
 =====
+
+
+```{r, echo=FALSE, results="asis"}
+
+x <- withindicator$sentence[withindicator$indicator.deprel == "dobj"]
+
+
+panderOptions('table.alignment.default', 'left')
+panderOptions('table.alignment.rownames', 'left')
+panderOptions('table.split.table', Inf)
+panderOptions('table.emphasize.rownames', F)
+#emphasize.italics.cols(1)
+#pandoc.table(matrix(x,ncol=4))
+
+dobj <- subset(withindicator,indicator.deprel=="dobj")
+dobj <- ClassifyVerbs(dobj)
+dobj$headverb_person[grepl("olin ",dobj$sentence, ignore.case=T) & dobj$headverb_person=="--"] <- "Sing.1"
+sort(table(dobj$verbtype))
+xtabs(~verbtype + headverb_person, data=dobj)
+
+    
+
+
+```
+
+
+
+
+
 
 
 
@@ -278,6 +313,9 @@ Kappaleen rajan käsittely
 
 - Tsekkaa edellinen kappale, ja miten siinä johdateltu tulevaan aiheenvaihdokseen?
 - Parempi: tsekataan tarpeen tullen -- tsekataan tietyiltä ryhmiltä
+
+
+
 
 
 
