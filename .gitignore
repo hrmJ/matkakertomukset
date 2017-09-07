@@ -5,3 +5,7 @@ __pycache__/
 teksti/TEMPmodel.txt
 *.aux
 *.log
+*Rplots.pdf
+teksti/figure/*
+*framed.sty
+*analysis.html
