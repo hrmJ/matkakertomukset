@@ -25,9 +25,9 @@ deprels$nmod$locatives <- deprels$nmod$df$sentence[deprels$nmod$df$headverb_pers
 
 #..Root
 
-deprels$root$where <- deprels$root$df$sentence[grepl("asu[a-ö]+ [a-ö]+ssa",deprels$root$df$sentence, ignore.case=T)]
+deprels$root$where <- deprels$root$df[grepl("(asui[a-ö]+|asuu|asuvat|en asunut|emme asuneet) .*(luona|[a-ö]+(ss|ll)[aä])[ \\.\\?\\!,\\(]",deprels$root$df$sentence, ignore.case=T),]
 
-deprels$root$df$sentence[!(deprels$root$df$sentence %in% deprels$root$where)]
+deprels$root$df$sentence[!(deprels$root$df$sentence %in% deprels$root$where$sentence)]
 
 @
 
@@ -86,11 +86,15 @@ deprels$root$df$sentence[!(deprels$root$df$sentence %in% deprels$root$where)]
         ]
     ]
     [root (\Sexpr{deprels$props["root"]} \%)
-        [First person (\Sexpr{deprels$root$pers$prop["1"]} \%)
-            [asua + locative adjunct (\Sexpr{round(length(deprels$root$where) / nrow(deprels$root$df[deprels$root$df$headverb_person=="1",])*100)}\%)
+        [asua + locative adjunct (\Sexpr{round(nrow(deprels$root$where) / nrow(deprels$root$df)*100)}\%)
+            [First person (\Sexpr{round(prop.table(table(deprels$root$where$headverb_person))*100)["1"]} \%)
                 [\emph{Asuin vaihtoni ajan North Park Universityn kampuksella, Ohlson-asuntolassa.}, text width=8cm]
             ]
+            [other (\Sexpr{round(prop.table(table(deprels$root$where$headverb_person))*100)["3"]} \%)
+                [\emph{Lähes kaikki Bratislavan kauppakorkeakoulun vaihto-opiskelijat asuivat Ekonom-nimisessä dormitoryssa.}, text width=8cm]
+            ]
         ]
+        [other: parsing errors]
     ]
     [nsubj (\Sexpr{deprels$props["nsubj"]} \%)
     ]
