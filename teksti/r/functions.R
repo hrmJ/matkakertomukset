@@ -10,3 +10,24 @@ ClassifyVerbs <- function(mydf){
     mydf$verbtype <- sapply(mydf$headverb_lemma,function(x,vt) return(ifelse(x %in% vt$lemma,vt$verbtype[which(vt$lemma==x)],"other")),vt=vtypes.df)
     return(mydf)
 }
+
+
+VerbInfo <- function(mylist){
+    mylist$df <- ClassifyVerbs(mylist$df)
+    mylist$df$headverb_person[grepl("(olin|pääsin|aloin) ",mylist$df$sentence, ignore.case=T) & mylist$df$headverb_person=="--"] <- "Sing.1"
+
+    mylist$df$headverb_person  <- gsub("(Plur|Sing)\\.","",mylist$df$headverb_person)
+    mylist$df$headverb_person[mylist$df$headverb_person==""] <- "--"
+    mylist$df$verbtype[grepl("(etsimään|etsiä|etsimisessä|etsin)",mylist$df$sentence)] <- "searching"
+    mylist$df$verbtype[mylist$df$verbtype=="coming"] <- "other"
+    mylist$df$verbtype[mylist$df$verbtype=="searching"] <- "aquiring"
+
+    mylist$verbs <- list(count=sort(table(mylist$df$verbtype)))
+    mylist$verbs$prop <- round(prop.table(mylist$verbs$count)*100,0)
+    mylist$pers.bytype <- list(count=xtabs(~verbtype + headverb_person, data=mylist$df))
+    mylist$pers.bytype$prop  <- round(prop.table(mylist$pers.bytype$count,1)*100,0)
+    mylist$pers <- list(count=xtabs(~headverb_person, data=mylist$df))
+    mylist$pers$prop  <- round(prop.table(mylist$pers$count)*100,0)
+    return(mylist)
+}
+

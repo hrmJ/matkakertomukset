@@ -15,45 +15,19 @@ library(ggplot2)
 library(readr)
 source("r/utilities.R")
 source("r/functions.R")
-headverbs <- as.data.frame(fromJSON("../data/headverbs.json"))
-genstats <- as.data.frame(fromJSON("../data/genstats.json"))
-fsstats1 <- as.data.frame(fromJSON("../data/firstsentence.json"))
+source("r/loader.R")
 
-panderOptions('table.alignment.default', function(df) ifelse(sapply(df, is.numeric), 'right', 'left'))
-panderOptions('table.split.table',400)
-#..pandoc("analysis.md",config="r/conf.txt")
+#..Nmod
+deprels$nmod$kanssa <- deprels$nmod$df$sentence[grepl("(asunnon|asumisen|vuokranantajan) (kanssa|suhteen|osalta)",deprels$nmod$df$sentence,ignore.case=T)
+                                                | grepl("mitä.*asumiseen.*tulee",deprels$nmod$df$sentence,ignore.case=T)
+                                                ]
+deprels$nmod$locatives <- deprels$nmod$df$sentence[deprels$nmod$df$headverb_person != "1" & deprels$nmod$df$indicatorword_case %in%c("Ade","All","Abl","Ela","Ill","Ine") & !(deprels$nmod$df$sentence %in% deprels$nmod$kanssa)]
 
-#...Note: Taking only the first indicator into account:
+#..Root
 
-fsstats1$asuminen_expressed <- gsub(";.*","",fsstats1$asuminen_expressed)
-fsstats1$indicatorword <- gsub(";.*","",fsstats1$indicatorword)
-fsstats1$head_of_indicator <- gsub(";.*","",fsstats1$head_of_indicator)
-fsstats1$head_of_indicator_loc <- gsub(";.*","",fsstats1$head_of_indicator_loc)
-fsstats1$indicatorloc <- gsub(";.*","",fsstats1$indicatorloc)
+deprels$root$where <- deprels$root$df$sentence[grepl("asu[a-ö]+ [a-ö]+ssa",deprels$root$df$sentence, ignore.case=T)]
 
-
-fsstats1$indicator_ratio  <- round(fsstats1$indicatorwords / fsstats1$words_total * 100,1)
-
-fsstats1$headverb_person_simple <- "--"
-fsstats1$headverb_person_simple[grepl("1",fsstats1$headverb_person)] <- "1p"
-fsstats1$headverb_person_simple[grepl("3",fsstats1$headverb_person)] <- "3p"
-fsstats1$headverb_person_simple[which(fsstats1$headverb_person=="")] <- "--"
-fsstats1$indicatorword_length <-  str_length(fsstats1$indicatorword_token) 
-
-write.csv(fsstats1,"updated_data.csv")
-
-withindicator <- subset(fsstats1,asuminen_expressed!="None")
-withindicator$indicator.deprel <- factor(withindicator$asuminen_expressed,levels=unique(names(sort(table(withindicator$asuminen_expressed),d=T))))
-dobj <- subset(withindicator,indicator.deprel=="dobj")
-dobj <- ClassifyVerbs(dobj)
-dobj$headverb_person[grepl("olin ",dobj$sentence, ignore.case=T) & dobj$headverb_person=="--"] <- "Sing.1"
-
-dobj$headverb_person  <- gsub("(Plur|Sing)\\.","",dobj$headverb_person)
-do.verbs <- list(count=sort(table(dobj$verbtype)))
-do.verbs$prop <- round(prop.table(do.verbs$count)*100,1)
-do.pers <- list(count=xtabs(~verbtype + headverb_person, data=dobj))
-do.pers$prop  <- round(prop.table(do.pers$count,1)*100,1)
-
+deprels$root$df$sentence[!(deprels$root$df$sentence %in% deprels$root$where)]
 
 @
 
@@ -73,27 +47,61 @@ do.pers$prop  <- round(prop.table(do.pers$count,1)*100,1)
     %},
   }
 [Topic indicators
-    [dobj
-        [Verbs of aquiring: \Sexpr{do.verbs$prop["aquiring"]} \%
+    [dobj (\Sexpr{deprels$props["dobj"]} \%)
+        [Verbs of aquiring / searching: \Sexpr{deprels$dobj$verbs$prop["aquiring"]} \%
             [first person
-                [\Sexpr{do.pers$prop["aquiring","1"]} \%
-                    [Asunnon hankin yksityiseltä vuokranantajalta\, ja se oli valmiina saapuessani., text width=4cm]
-                    [Asumisen järjestin itselleni jo Suomesta käsin., text width=4cm]
+                [\Sexpr{deprels$dobj$pers.bytype$prop["aquiring","1"]} \%
+                    [\emph{Asunnon hankin yksityiseltä vuokranantajalta\, ja se oli valmiina saapuessani.}, text width=7cm]
+                    [\emph{Asumisen järjestin itselleni jo Suomesta käsin.}, text width=7.6cm]
                 ]
             ]
-            [third person / passive \Sexpr{sum(do.pers$prop["aquiring",c(1,3)])} \% ]
+            [third person / passive \Sexpr{sum(deprels$dobj$pers.bytype$prop["aquiring",c(1,3)])} \% ]
         ]
-        [Verbs of searching: \Sexpr{do.verbs$prop["searching"]} \%
-            [first person
-                [\Sexpr{do.pers$prop["searching","1"]} \%
-                ]
-            ]
-            [third person / passive \Sexpr{sum(do.pers$prop["searching",c(1,3)])} \% ]
+        [other: \Sexpr{deprels$dobj$verbs$prop["other"]} \%
+            [\emph{Yliopisto takaa asunnot kaikille vaihto-opiskelijoille.}, text width=7cm]
         ]
-        [Verbs of coming: \Sexpr{do.verbs$prop["coming"]} \%]
-        [other: \Sexpr{do.verbs$prop["other"]} \%]
     ]
-    [nmod]
+    [nmod (\Sexpr{deprels$props["nmod"]} \%)
+        [first person (\Sexpr{deprels$nmod$pers$prop["1"]} \%)
+            [\emph{Kuljin rautatieasemalta metrolla yliopiston asuntolalle\, missä...}, text width=7.5cm]
+        ]
+        [other (\Sexpr{sum(deprels$nmod$pers$prop[c("--","3")])} \%)
+            [locative cases (\Sexpr{round(length(deprels$nmod$locatives)/nrow(deprels$nmod$df[deprels$nmod$df$headverb_person!="1",])*100)} \%)
+                [Elative
+                    [\emph{Asunnosta muodostui kriittisin osa koko vaihtoa.}, text width=7cm]
+                ]
+                [Illative
+                    [\emph{Suurin osa Pietarin vaihtareista majoittuu samaan asuntolaan}, text width=7cm]
+                ]
+                [Inessive
+                    [\emph{Meidän lisäksi samassa asunnossa asui italialainen tyttö, jonka kanssa jaoimme vessan, suihkun ja jääkaapin.}, text width=7cm]
+                ]
+            ]
+            [Asunnon suhteen / kanssa (\Sexpr{round(length(deprels$nmod$kanssa)/nrow(deprels$nmod$df[deprels$nmod$df$headverb_person!="1",])*100)} \%)
+                [\emph{Minulla kävi tuuri asunnon kanssa\, sillä eräs tuttuni omistaa asunnon Berliinissä.}, text width=7.5cm]
+            ]
+            [other (\Sexpr{round((nrow(deprels$nmod$df[deprels$nmod$df$headverb_person!="1",]) - sum(length(deprels$nmod$locatives),length(deprels$nmod$kanssa))) /nrow(deprels$nmod$df[deprels$nmod$df$headverb_person!="1",])*100)} \%)
+                [\emph{Rekistöröityminen paikalliseksi asukkaaksi sujui helposti}, text width=7cm] 
+            ]
+        ]
+    ]
+    [root (\Sexpr{deprels$props["root"]} \%)
+        [First person (\Sexpr{deprels$root$pers$prop["1"]} \%)
+            [asua + locative adjunct (\Sexpr{round(length(deprels$root$where) / nrow(deprels$root$df[deprels$root$df$headverb_person=="1",])*100)}\%)
+                [\emph{Asuin vaihtoni ajan North Park Universityn kampuksella, Ohlson-asuntolassa.}, text width=8cm]
+            ]
+        ]
+    ]
+    [nsubj (\Sexpr{deprels$props["nsubj"]} \%)
+    ]
+    [nmod:gobj (\Sexpr{deprels$props["nmod:gobj"]} \%)
+    ]
+    [nmod:poss (\Sexpr{deprels$props["nmod:poss"]} \%)
+    ]
+    [nsubj:cop (\Sexpr{deprels$props["nsubj:cop"]} \%)
+    ]
+    [other (\Sexpr{sum(deprels$props[8:length(deprels$props)])} \%)
+    ]
 ]
 \end{forest}
 

@@ -122,6 +122,7 @@ class FirstSentenceStats(Analysis):
                                       "first_word_of_sentence_lemma": s.words[0].lemma if "pun" not in s.words[0].pos.lower() else s.words[1].lemma,
                                       "indicatorword": s.asuminen_expressed_by,
                                       "indicatorword_token": s.asuminen_expressed_by_token,
+                                      "indicatorword_feat": s.iw.feat,
                                       "number_of_paragraphs":p.ptotal,
                                       "paragraph":p.content,
                                       "head_of_indicator":s.iwhead,

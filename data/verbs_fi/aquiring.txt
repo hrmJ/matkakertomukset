@@ -6,3 +6,4 @@ yrittää
 hoitaa
 hommata
 varata
+koittaa

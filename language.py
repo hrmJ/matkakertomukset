@@ -26,16 +26,19 @@ class Sentence():
                     return w
 
     def CheckIfAsuminen(self):
-        self.asuminen_expressed_in=self.indfeat=self.asuminen_expressed_by_token=self.asuminen_expressed_by=self.iwhead=self.iwheadloc=self.indicatorloc= ""
+        self.asuminen_expressed_in=self.asuminen_expressed_by_feat=self.indfeat=self.asuminen_expressed_by_token=self.asuminen_expressed_by=self.iwhead=self.iwheadloc=self.indicatorloc= ""
         feats = 0
+        self.iw = Word("0\t"*8)
         for w in self.words: 
             w.GetHeadWord(self.words)
             iwords = 0
             if w.deprel.lower() not in ["punc","punct"]:
                 feats += w.feat.count("|") +1  # plus 1 koska nolla ei oikeasti mahd.
             if re.search("(" + "|".join(constants.asuminen) + ")", w.lemma) and re.search(constants.asuminen_strict, w.lemma):
+                #Jos sana on asua-verbin johdos
+                iwords += 1
                 if self.asuminen_expressed_in:
-                    iwords += 1
+                    #jos ei virkkeen eka asua-johdos
                     self.asuminen_expressed_in += ";" + w.deprel
                     self.asuminen_expressed_by += ";" + w.lemma
                     self.asuminen_expressed_by_token += ";" + w.token
@@ -44,6 +47,7 @@ class Sentence():
                         self.iwhead += ";" + w.headword.lemma
                         self.iwheadloc += ";" + str(w.headword.GetRealLocation(self.words))
                 else:
+                    self.iw = w
                     self.asuminen_expressed_in = w.deprel
                     self.asuminen_expressed_by = w.lemma
                     self.indicatorloc = str(w.GetRealLocation(self.words))
@@ -54,6 +58,7 @@ class Sentence():
             self.asuminen_expressed_in = "None"
             self.asuminen_expressed_by = "None"
             self.asuminen_expressed_by_token = "None"
+            self.asuminen_expressed_by_feat = "None"
         self.numberoffeats = feats
 
     def CountAsuminenWords(self, p):

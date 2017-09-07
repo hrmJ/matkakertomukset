@@ -9,3 +9,5 @@ teksti/TEMPmodel.txt
 teksti/figure/*
 *framed.sty
 *analysis.html
+*concor*tex
+*.tmp.R
