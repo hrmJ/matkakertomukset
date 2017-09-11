@@ -38,11 +38,13 @@ deprels <- list(dobj = list(df=subset(withindicator,asuminen_expressed=="dobj"))
                 nscop  = list(df=subset(withindicator,asuminen_expressed=="nsubj:cop")),
                 xcomp  = list(df=subset(withindicator,asuminen_expressed=="xcomp")),
                 nmod   = list(df=subset(withindicator,asuminen_expressed=="nmod")),
+                gobj   = list(df=subset(withindicator,asuminen_expressed=="nmod:gobj")),
                 props  = round(100*prop.table(sort(table(withindicator$indicator.deprel),d=T)))
                 )
 for(deprel in names(deprels)){
     if(deprel != "props"){
         deprels[[deprel]] <- VerbInfo(deprels[[deprel]])
+        deprels[[deprel]]$indicatorprops <- round(100*prop.table(table(deprels[[deprel]]$df$indicatorword)))
     }
 }
 

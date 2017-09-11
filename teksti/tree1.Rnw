@@ -17,17 +17,33 @@ source("r/utilities.R")
 source("r/functions.R")
 source("r/loader.R")
 
+
+
 #..Nmod
 deprels$nmod$kanssa <- deprels$nmod$df$sentence[grepl("(asunnon|asumisen|vuokranantajan) (kanssa|suhteen|osalta)",deprels$nmod$df$sentence,ignore.case=T)
-                                                | grepl("mitä.*asumiseen.*tulee",deprels$nmod$df$sentence,ignore.case=T)
-                                                ]
+                                                | grepl("mitä.*asumiseen.*tulee",deprels$nmod$df$sentence,ignore.case=T)]
 deprels$nmod$locatives <- deprels$nmod$df$sentence[deprels$nmod$df$headverb_person != "1" & deprels$nmod$df$indicatorword_case %in%c("Ade","All","Abl","Ela","Ill","Ine") & !(deprels$nmod$df$sentence %in% deprels$nmod$kanssa)]
-
 #..Root
-
 deprels$root$where <- deprels$root$df[grepl("(asui[a-ö]+|asuu|asuvat|en asunut|emme asuneet) .*(luona|[a-ö]+(ss|ll)[aä])[ \\.\\?\\!,\\(]",deprels$root$df$sentence, ignore.case=T),]
+#..Nsubj
+deprels$nsubj$asunto.verbs <- round(100*prop.table(table(deprels$nsubj$df$headverb_lemma[deprels$nsubj$df$indicatorword=="asunto"])))
+deprels$nsubj$asunto.olla.poss.share <- round(length(which(deprels$nsubj$df$indicatorword=="asunto"&deprels$nsubj$df$headverb_lemma=="olla" & grepl("(meillä|minulla)",deprels$nsubj$df$sentence, ignore.case=T))) / length(which(deprels$nsubj$df$indicatorword=="asunto"&deprels$nsubj$df$headverb_lemma=="olla"))*100)
+#..gobj
+deprels$gobj$df$hascopula <- "no"
+deprels$gobj$df$hascopula[grepl("(minen ([a-öA-Ö]+ )?(oli|ei ole)| (oli|on) [a-öA-Ö]+ [a-öA-Ö]+minen|minen ([a-öA-Ö]+ )?on| on [a-öA-Ö]+minen| on haastavaa)",deprels$gobj$df$sentence,ignore.case=T)]  <- "yes"
+deprels$gobj$copulaprops <- round(100*prop.table(xtabs(~hascopula, deprels$gobj$df,subset=headverb_person!=1)))
+deprels$gobj$df$auttaminen <- "no"
+deprels$gobj$df$auttaminen[grepl("ohjeita|apua|auttoi|tarjosi|avusti|auttanut",deprels$gobj$df$sentence)] <- "yes"
+deprels$gobj$auttaminenprops <- round(100*prop.table(xtabs(~auttaminen, deprels$gobj$df,subset=headverb_person!=1 & hascopula=="no")))
+#..nmod:poss
 
-deprels$root$df$sentence[!(deprels$root$df$sentence %in% deprels$root$where$sentence)]
+#deprels$nmposs$df$sentence[!grepl("non [a-ö]+int[aä]",deprels$nmposs$df$sentence,ignore.case=T)]  
+#deprels$nmposs$df$sentence[grepl("(asumisen|asuntoloiden)",deprels$nmposs$df$sentence,ignore.case=T)]  
+
+#...nsubj:cop
+deprels$nscop$df$sentence
+deprels$nscop$indicatorprops
+table(deprels$nscop$df$indicatorword)
 
 @
 
@@ -97,12 +113,65 @@ deprels$root$df$sentence[!(deprels$root$df$sentence %in% deprels$root$where$sent
         [other: parsing errors]
     ]
     [nsubj (\Sexpr{deprels$props["nsubj"]} \%)
+        [subject: asunto/asuntola (\Sexpr{sum(deprels$nsubj$indicatorprops[c("asunto","asun#tola","opiskelija-asunto","opiskelija-asuntola")])}\%) 
+            [with copula (\Sexpr{deprels$nsubj$asunto.verbs["olla"]} \%)
+                [Possessive  (1st pers.)(\Sexpr{deprels$nsubj$asunto.olla.poss.share}\%)
+                    [\emph{Minulla oli valmiiksi asunto, kun saavuin Prahaan.}, text width =5cm]
+                ]
+                [Other (\Sexpr{100-deprels$nsubj$asunto.olla.poss.share}\%)
+                    [\emph{Asunto oli välittömästi valmiina käyttöön kun saavuin paikalle.}, text width = 5cm]
+                ]
+            ]
+            [other (\Sexpr{100-deprels$nsubj$asunto.verbs["olla"]} \%)
+                [\emph{Asunto järjestyi erittäin helposti jo etukäteen yliopiston tarjoamassa asuntolassa.}, text width=8cm]
+                [\emph{Asuntoni sijaitsi lähellä Takasakan juna-asemaa ja parin kilometrin päässä yliopistolta.}, text width=8cm]
+            ]
+        ]
+        [subject: asuminen/asumisjärjestely/asuntoasia (\Sexpr{sum(deprels$nsubj$indicatorprops[c("asua","asua#asia","asunto#asia")])}\%) 
+            [\emph{Asuminen tapahtui kampuksella asuntoloissa kahden henkilön huoneissa.}, text width=7cm]
+            [\emph{Asuminen maksaa vähemmän kuin Suomessa.}, text width=8cm]
+        ]
+        [other subjects (\Sexpr{sum(deprels$nsubj$indicatorprops[which(!names(deprels$nsubj$indicatorprops) %in% c("asunto","asun#tola","opiskelija-asunto","opiskelija-asuntola","asua","asua#asia","asunto#asia"))])} \%)]
     ]
     [nmod:gobj (\Sexpr{deprels$props["nmod:gobj"]} \%)
+        [verbs of aquiring / searching (100\%), text width=2cm
+            [first person (\Sexpr{deprels$gobj$pers$prop["1"]} \%)
+                [\emph{Eniten jännitin asunnon saamista.}]
+            ]
+            [third person / passive (\Sexpr{100 - deprels$gobj$pers$prop["1"]} \%)
+                [with copula (\Sexpr{deprels$gobj$copulaprops["yes"]} \%)
+                    [\emph{Asunnon hankkiminen Kööpenhaminassa on erittäin hankalaa ja vuokrataso on hyvin korkea.}, text width=8cm]
+                    [\emph{Asunnon hakeminen oli todella helppoa.}, text width=7cm]
+                    [\emph{Kaikkein vaikein asia oli asunnon löytäminen.}, text width=7cm]
+                ]
+                [other (\Sexpr{deprels$gobj$copulaprops["no"]} \%)
+                    [helping (\Sexpr{deprels$gobj$auttaminenprops["yes"]} \%)
+                        [\emph{Ammanin päästä kansainvälinen toimisto avusti asunnon etsimisessä.}, text width=4cm]
+                    ]
+                    [other (\Sexpr{deprels$gobj$auttaminenprops["no"]} \%)
+                        [\emph{Asunnon hankkiminen kannattaa aloittaa suhteellisen aikaisin.}, text width=4cm]
+                        [\emph{Myös asunnon hankkiminen sujui minun kohdallani kivuttomasti.}, text width=4cm]
+                    ]
+                ]
+            ]
+        ]
     ]
     [nmod:poss (\Sexpr{deprels$props["nmod:poss"]} \%)
+        [\emph{Asumisen taso on usein räikeästi huonompi kuin Suomessa, siihen kannattaa varautua jo alunperin.}, text width=8cm]
+        [\emph{Jos halusi saada paikallisen opiskelija-asuntosäätiön asunnon, piti tehdä online-hakemus suoraan kyseiselle taholle.}, text width=8cm]
+        [lot of parsing errors / similar to gmod]
     ]
     [nsubj:cop (\Sexpr{deprels$props["nsubj:cop"]} \%)
+        [subject: asuminen/asumisjärjestely/asumisratkaisu (\Sexpr{sum(deprels$nscop$indicatorprops[c("asua","asua#järjestely","asua#ratkaisu")])}\%) 
+            [\emph{Asuminen Tokiossa on aika kallista.}, text width=7cm]
+        ]
+        [subject:asunto/asuntola (\Sexpr{sum(deprels$nscop$indicatorprops[c("asunto","asun#tola","opiskelija-asuntola")])} \%)
+            [\emph{Ulkomaisille opiskelijoille tarkoitettu asuntola on vain kolme vuotta vanha ja täten melko moderni.}, text width=7cm]
+            [\emph{Yliopiston asuntola on mielestäni ihan toimiva asumisvaihtoehto vaihdon ajaksi.}, text width=8cm]
+        ]
+        [other subjects
+            [\emph{Yleisesti ottaen Frankfurtin asuntotilanne on huono.}, text width=6cm]
+        ]
     ]
     [other (\Sexpr{sum(deprels$props[8:length(deprels$props)])} \%)
     ]
