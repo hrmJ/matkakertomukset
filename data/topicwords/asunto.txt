@@ -1,0 +1,13 @@
+asunto
+asun#tola
+Kotmerckx-asuntolasta
+opiskelija-asunto
+rivi#talo#asunto
+solu#asunto
+opiskelija-asuntola#huone
+perhe#asunto
+vuokra-asunto
+asun#tola#paikka
+opiskelija-asuntola
+asun#tola#majoitus
+asuin#paikka

@@ -1,0 +1,108 @@
+
+```{r, echo=FALSE}
+
+library(knitr)
+library(pander)
+library(stringr)
+library(knitr)
+library(jsonlite)
+library(ggplot2)
+library(readr)
+library(cluster)
+source("r/utilities.R")
+source("r/functions.R")
+source("r/loader.R")
+withindicator <- ClassifyVerbs(withindicator)
+withindicator <- ClassifyWords(withindicator,"../data/topicwords/","indicatorword","indicator.classified")
+```
+
+
+```{r tree, echo=FALSE}
+
+popular.indicators <- sort(table(withindicator$indicator.deprel),d=T)
+popular.indicators <- popular.indicators[popular.indicators>20]
+mydata <- withindicator[withindicator$indicator.deprel %in% names(popular.indicators),c("headverb_person_simple", "indicator.deprel","verbtype","indicator.classified","indicatorword_case")]
+mydata$indicatorword_case[mydata$indicatorword_case %in% c("Ela","Abl","Ade","Ine","Ill")] <- "locative"
+mydata$indicatorword_case[grepl("Mood",mydata$indicatorword_case)] <- "verb"
+mydata$indicatorword_case[!mydata$indicatorword_case %in% c("locative","verb")] <- "other"
+
+mydata$headverb_person_simple <- as.character(mydata$headverb_person_simple)
+mydata$headverb_person_simple[mydata$headverb_person_simple %in% c("--","3p")] <- "other"
+mydata$indicator.deprel <- as.character(mydata$indicator.deprel)
+#..Factorize
+for(cn in colnames(mydata)){
+    mydata[[cn]] <- as.factor(mydata[[cn]])
+}
+
+tree <- ctree(indicator.classified ~ ., data=mydata)
+plot(tree)
+
+```
+
+
+```{r otherstuff, echo=FALSE}
+md <- mydata
+
+round(100*prop.table(xtabs(~ indicator.deprel,md)))
+
+md <- subset(mydata,indicator.deprel=="dobj")
+
+round(100*prop.table(xtabs(~ verbtype,md)))
+
+
+
+
+
+
+mydata <- withindicator[withindicator$indicator.deprel=="dobj", c("headverb_person_simple", "verbtype")]
+#..Factorize
+for(cn in colnames(mydata)){
+    mydata[[cn]] <- as.factor(mydata[[cn]])
+}
+
+
+mdist <- daisy(mydata)
+
+```
+
+
+### Question
+
+Method for trying out different groupings of data
+
+I have a linguistic dataset consisting of 389 sentences and my aim is to
+classify these sentences into meaningful groups. If the size of the dataset
+would be smaller -- say, only twenty or thirty sentences -- I could just read
+each sentence, compare it to other sentences and conclude that:
+- sentences 1, 3, 8, 14 and 20 resemble each other and can be treated as a distinct group
+- sentences 4 and 5 resemble each other and can be treated as a distinct group
+- etc..
+
+However, as the dataset is larger, analyzing each sentence manually would be laborious
+and methodologically unsound. Luckily, I have some categorical variables that describe each
+sentence -- for instance, the semantic class of the main verb of the sentence,
+the presence / absence of certain thematically important words, the dependency
+roles of these words  etc. So, I have been experimenting with these variables
+and creating different groupings of the data. Here's a made-up example of what I've done:
+
+Step 1. I categorize my data by variable A, getting seven different groups with group 1 containing, say, 20% of the
+cases, group 2 18%, group 3 14,5% and so on. 
+
+Step 2. I further categorize the groups from step 1.  Group 1 could be divided
+into subgroups by variable B, which would give me roughly three subgroups
+(let's call them s1, s2 and s3). One
+of these -- say, s1, might be further split in to subsubgroups by variable C.
+s2 and s3 are so small that there is no point in creating any more subgroups from them.
+
+Step 3. Group 2 from step 1 seems to split nicely if I use variable C right
+away. This produces four subgroups, two of which might be reasonably split
+further by variable B.
+
+Now, my problem is, that although this kind of approach in the end gives me distinct groups that
+I am quite happy with, the methodology involved seems unexplainable / ad hoc. 
+
+
+
+
+
+

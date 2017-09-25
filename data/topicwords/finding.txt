@@ -1,0 +1,4 @@
+asunto#etsintä
+asunto#saanti
+asunto#haku
+asunto#ilmoitus

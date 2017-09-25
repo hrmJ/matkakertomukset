@@ -1,0 +1,9 @@
+asunto#politiikka
+asunto#tila
+asua#tilanne
+asunto#tarjonta
+asunto#mahdollisuus
+asukas
+asua#vaihto#ehto
+opiskelija-asunto#tila
+asua#mahdollisuus

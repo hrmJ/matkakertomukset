@@ -1,0 +1,6 @@
+asunto#toimisto
+asunto#tarjoaja
+opiskelija-asunto#säätiö
+asunto#palvelu
+asunto#kanava
+asunto#tarjous

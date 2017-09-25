@@ -1,3 +1,21 @@
+ClassifyWords <- function(mydf,path,sourcecol,targetcol){
+    types <- setNames(lapply(paste(path,list.files(path),sep=""),function(x) return (unname(as.vector(readLines(x))))),gsub(".txt","",list.files(path)))
+    types.df <- data.frame(token=c(),type=c())
+    for(type in names(types)){
+        types.df <- rbind(types.df, data.frame(token=types[[type]],type=type))
+    }
+    types.df$token <- as.character(types.df$token)
+    mydf[[targetcol]] <- sapply(mydf[[sourcecol]],function(x,vt){
+                                 classified <- vt$type[which(vt$token==x)]
+                                 if(x %in% vt$token){
+                                     return(as.character(classified[1]))
+                                 }
+                                 return("other")
+                                    }
+                                 ,vt=types.df)
+    return(mydf)
+}
+
 
 ClassifyVerbs <- function(mydf){
     path="../data/verbs_fi/"
