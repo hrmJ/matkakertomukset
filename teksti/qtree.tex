@@ -1,0 +1,46 @@
+\documentclass[finnish]{standalone}
+\usepackage{forest}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[finnish]{babel}
+\begin{document}
+
+
+\begin{forest}
+  for tree={
+    child anchor=west,
+    parent anchor=east,
+    grow'=east,
+  %minimum size=1cm,%new possibility
+  %text width=4cm,%
+    %draw,
+    anchor=west,
+    %edge path={
+    %  \noexpand\path[\forestoption{edge}]
+    %    (.child anchor) -| +(-5pt,0) -- +(-5pt,0) |-
+    %    (!u.parent anchor)\forestoption{edge label};
+    %},
+  }
+[All sentences
+    [{Group 1: Variable A = a (20\%)}
+        [{s1: Variable B = a (80\%)}
+            [{Variable C=a}]
+            [{Variable C=b}]
+            [{Variable C=c}]
+        ]
+        [{s2: Variable B = b (10\%)}]
+        [{s3: Variable B = c (10\%)}]
+    ]
+    [{Group 2: Variable A = b (18\%)}
+        [{Variable C=a}]
+        [{Variable C=b}]
+        [{Variable C=c}]
+    ]
+    [{Group 3: Variable A = c (14.5\%)} 
+        [{some subdivision, possibly different from the ones used above}]
+    ]
+    [etc.]
+]
+\end{forest}
+
+\end{document}

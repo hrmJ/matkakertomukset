@@ -9,6 +9,7 @@ library(jsonlite)
 library(ggplot2)
 library(readr)
 library(cluster)
+library(party)
 source("r/utilities.R")
 source("r/functions.R")
 source("r/loader.R")
@@ -99,7 +100,21 @@ away. This produces four subgroups, two of which might be reasonably split
 further by variable B.
 
 Now, my problem is, that although this kind of approach in the end gives me distinct groups that
-I am quite happy with, the methodology involved seems unexplainable / ad hoc. 
+I am quite happy with, the methodology involved seems unexplainable / ad hoc. I would like to
+know
+
+a) Is there some "real" statistical method that could be used for trying out different kind of groupings? E.g. a way
+to find out by which variable I should split the data first in order to minimize the number of further subdivisions
+
+b) If I just look at the data and manually, try out different ways of grouping it and end up with a particular grouping,
+would that be a serious method that could actually be used? Is there a name for such an approach -- something like "manual cluster analysis"?
+
+I have a feeling that some form of cluster analysis might be appropriate, but so far
+I haven't got any sensible results. It feels like the data is not clean enough for that to work -- the process, as if it were,
+cries out for human intervention at some stage.
+I also tried out conditional inference trees by just arbitrarily selecting one variable as the response variable, but
+that also seemed to be somewhat dubious.
+
 
 
 
