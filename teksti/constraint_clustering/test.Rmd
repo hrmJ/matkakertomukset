@@ -1,0 +1,13 @@
+
+
+(Tsekkaa 1:)[https://github.com/Behrouz-Babaki/COP-Kmeans/blob/master/examples/iris.constraints]
+(Tsekkaa 2:)[https://cran.r-project.org/web/packages/conclust/conclust.pdf]
+
+Aineistoa haravoidaan ensin käsin -- käyttäen kuitenkin hyväksi (ja
+lähtökohtana) dependenssirooleja ynnä muuta informaatiota. Tältä pohjalta laaditaan joukko
+lauseita, joista tiedetään, että ne ovat ikään kuin yhtä ja samaa klusteria.
+
+Esim1: asunnon henkkiminen on x + asunnon hakeminen oli x
+Esim2: Asunnon hankin sieltä... + asumisen järjestin ...
+
+
