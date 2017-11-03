@@ -1,0 +1,80 @@
+---
+title: Sata ja yksi tapaa ilmaista topiikkia
+author: Juho Härme & Kirsi Sandberg, TaY
+output: ioslides_presentation
+widescreen: true
+logo: utalogo350px_fin.png
+css: pres.css
+---
+
+
+```{r datan_lataus, echo=FALSE}
+library(knitr)
+library(rmarkdown)
+library(pander)
+library(stringr)
+library(knitr)
+library(jsonlite)
+library(ggplot2)
+library(readr)
+library(wordcloud)
+if(file.exists("esitys_afinla.Rmd")) setwd("../")
+source("r/utilities.R")
+source("r/functions.R")
+source("r/loader.R")
+
+#..Nmod
+deprels$nmod$kanssa <- deprels$nmod$df$sentence[grepl("(asunnon|asumisen|vuokranantajan) (kanssa|suhteen|osalta)",deprels$nmod$df$sentence,ignore.case=T)
+                                                | grepl("mitä.*asumiseen.*tulee",deprels$nmod$df$sentence,ignore.case=T)]
+deprels$nmod$locatives <- deprels$nmod$df$sentence[deprels$nmod$df$headverb_person != "1" & deprels$nmod$df$indicatorword_case %in%c("Ade","All","Abl","Ela","Ill","Ine") & !(deprels$nmod$df$sentence %in% deprels$nmod$kanssa)]
+#..Root
+deprels$root$where <- deprels$root$df[grepl("(asui[a-ö]+|asuu|asuvat|en asunut|emme asuneet) .*(luona|[a-ö]+(ss|ll)[aä])[ \\.\\?\\!,\\(]",deprels$root$df$sentence, ignore.case=T),]
+#..Nsubj
+deprels$nsubj$asunto.verbs <- round(100*prop.table(table(deprels$nsubj$df$headverb_lemma[deprels$nsubj$df$indicatorword=="asunto"])))
+deprels$nsubj$asunto.olla.poss.share <- round(length(which(deprels$nsubj$df$indicatorword=="asunto"&deprels$nsubj$df$headverb_lemma=="olla" & grepl("(meillä|minulla)",deprels$nsubj$df$sentence, ignore.case=T))) / length(which(deprels$nsubj$df$indicatorword=="asunto"&deprels$nsubj$df$headverb_lemma=="olla"))*100)
+#..gobj
+deprels$gobj$df$hascopula <- "no"
+deprels$gobj$df$hascopula[grepl("(minen ([a-öA-Ö]+ )?(oli|ei ole)| (oli|on) [a-öA-Ö]+ [a-öA-Ö]+minen|minen ([a-öA-Ö]+ )?on| on [a-öA-Ö]+minen| on haastavaa)",deprels$gobj$df$sentence,ignore.case=T)]  <- "yes"
+deprels$gobj$copulaprops <- round(100*prop.table(xtabs(~hascopula, deprels$gobj$df,subset=headverb_person!=1)))
+deprels$gobj$df$auttaminen <- "no"
+deprels$gobj$df$auttaminen[grepl("ohjeita|apua|auttoi|tarjosi|avusti|auttanut",deprels$gobj$df$sentence)] <- "yes"
+deprels$gobj$auttaminenprops <- round(100*prop.table(xtabs(~auttaminen, deprels$gobj$df,subset=headverb_person!=1 & hascopula=="no")))
+#..nmod:poss
+
+#deprels$nmposs$df$sentence[!grepl("non [a-ö]+int[aä]",deprels$nmposs$df$sentence,ignore.case=T)]  
+#deprels$nmposs$df$sentence[grepl("(asumisen|asuntoloiden)",deprels$nmposs$df$sentence,ignore.case=T)]  
+
+```
+
+---
+
+
+
+<div id="wc">
+```{r wcloud, echo=FALSE}
+
+freqtab <- table(withindicator$indicatorword)
+words <- unique(withindicator$indicatorword)
+freqs <- freqtab[words]
+
+wordcloud(words,as.vector(freqs))
+
+```
+</div>
+
+---
+
+<iframe  scrolling="no" width="700" height="600" src="tree.html"></iframe>
+
+
+---
+
+<script>
+
+//var ts = document.querySelector(".title-slide");
+//var wc = document.querySelector("#wc");
+//wc.style.marginBottom="9em";
+//ts.appendChild(wc);
+
+</script>
+

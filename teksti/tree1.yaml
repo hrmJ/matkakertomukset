@@ -1,0 +1,72 @@
+dobj:
+    Verbs of aquiring / searching:
+        first person:
+                Asunnon hankin yksityiseltä vuokranantajalta, ja se oli valmiina saapuessani. 
+                Asumisen järjestin itselleni jo Suomesta käsin. 
+        third person / passive :
+    other:
+        Yliopisto takaa asunnot kaikille vaihto-opiskelijoille. 
+nmod:
+    first person:
+        Kuljin rautatieasemalta metrolla yliopiston asuntolalle, missä... 
+    other:
+        locative cases:
+            Elative:
+                Asunnosta muodostui kriittisin osa koko vaihtoa. 
+            Illative:
+                Suurin osa Pietarin vaihtareista majoittuu samaan asuntolaan, 
+            Inessive:
+                Meidän lisäksi samassa asunnossa asui italialainen tyttö, jonka kanssa jaoimme vessan, suihkun ja jääkaapin. 
+        Asunnon suhteen / kanssa:
+            Minulla kävi tuuri asunnon kanssa, sillä eräs tuttuni omistaa asunnon Berliinissä. 
+        other:
+            Rekistöröityminen paikalliseksi asukkaaksi sujui helposti,  
+root:
+    asua + locative adjunct:
+        First person:
+            Asuin vaihtoni ajan North Park Universityn kampuksella, Ohlson-asuntolassa. 
+        other:
+            Lähes kaikki Bratislavan kauppakorkeakoulun vaihto-opiskelijat asuivat Ekonom-nimisessä dormitoryssa. 
+    other: parsing errors
+nsubj:
+    subject = asunto/asuntola:
+        with copula:
+            Possessive (1st pers.):
+                Minulla oli valmiiksi asunto, kun saavuin Prahaan.
+            Other:
+                Asunto oli välittömästi valmiina käyttöön kun saavuin paikalle.
+        other:
+            Asunto järjestyi erittäin helposti jo etukäteen yliopiston tarjoamassa asuntolassa. 
+            Asuntoni sijaitsi lähellä Takasakan juna-asemaa ja parin kilometrin päässä yliopistolta. 
+    subject = asuminen/asumisjärjestely/asuntoasia:
+        Asuminen tapahtui kampuksella asuntoloissa kahden henkilön huoneissa. 
+        Asuminen maksaa vähemmän kuin Suomessa. 
+    other subjects:
+nmod_gobj:
+    verbs of aquiring / searching:
+        first person:
+            Eniten jännitin asunnon saamista.
+        third person / passive:
+            with copula:
+                Asunnon hankkiminen Kööpenhaminassa on erittäin hankalaa ja vuokrataso on hyvin korkea. 
+                Asunnon hakeminen oli todella helppoa. 
+                Kaikkein vaikein asia oli asunnon löytäminen. 
+            other:
+                helping:
+                    Ammanin päästä kansainvälinen toimisto avusti asunnon etsimisessä. 
+                other:
+                    Asunnon hankkiminen kannattaa aloittaa suhteellisen aikaisin. 
+                    Myös asunnon hankkiminen sujui minun kohdallani kivuttomasti. 
+nmod_poss:
+    Asumisen taso on usein räikeästi huonompi kuin Suomessa, siihen kannattaa varautua jo alunperin. 
+    Jos halusi saada paikallisen opiskelija-asuntosäätiön asunnon, piti tehdä online-hakemus suoraan kyseiselle taholle. 
+    lot of parsing errors / similar to gmod
+nsubj_cop:
+    subjelt = asuminen/asumisjärjestely/asumisratkaisu:
+        Asuminen Tokiossa on aika kallista. 
+    subject = asunto/asuntola:
+        Ulkomaisille opiskelijoille tarkoitettu asuntola on vain kolme vuotta vanha ja täten melko moderni. 
+        Yliopiston asuntola on mielestäni ihan toimiva asumisvaihtoehto vaihdon ajaksi. 
+    other subjects:
+        Yleisesti ottaen Frankfurtin asuntotilanne on huono. 
+other:
