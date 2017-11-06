@@ -38,7 +38,15 @@ source("r/loader.R")
 
 ---
 
-<iframe  scrolling="no" width="700" height="600" src="tree.html"></iframe>
+<embed type="image/svg+xml" src="tree1.svg" id="my-embed"/>
+
+<script src="svg-pan-zoom.min.js"></script>
+<script>
+document.getElementById('my-embed').addEventListener('load', function(){
+  // Will get called after embed element was loaded
+  svgPanZoom(document.getElementById('my-embed')); 
+})
+</script>
 
 
 ---

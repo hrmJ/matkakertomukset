@@ -116,9 +116,16 @@
 
 <slide class=''><hgroup><h2></h2></hgroup><article >
 
-<iframe scrolling="no" width="700" height="600" src="tree.html">
+<embed type="image/svg+xml" src="tree1.svg" id="my-embed"/>
 
-</iframe>
+<script src="svg-pan-zoom.min.js"></script>
+
+<script>
+document.getElementById('my-embed').addEventListener('load', function(){
+  // Will get called after embed element was loaded
+  svgPanZoom(document.getElementById('my-embed')); 
+})
+</script>
 
 </article></slide><slide class=''><hgroup><h2></h2></hgroup><article >
 
