@@ -54,31 +54,35 @@
 \usepackage[T1]{fontenc}
 \usepackage[finnish]{babel}
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+
+
+\usepackage[colorlinks]{hyperref}
+
 \begin{document}
 
 
 
 \begin{forest}
   for tree={
-  %%  child anchor=west,
-  %%  parent anchor=east,
-  %%  grow'=east,
-  %minimum size=1cm,%new possibility
+    child anchor=west,
+    parent anchor=east,
+    grow'=east,
+  minimum size=1cm,%new possibility
   %text width=4cm,%
     %draw,
-  %  anchor=west,
-  %  edge path={
-  %    \noexpand\path[\forestoption{edge}]
-  %      (.child anchor) -| +(-5pt,0) -- +(-5pt,0) |-
-  %      (!u.parent anchor)\forestoption{edge label};
-  %  },
+    anchor=west,
+    edge path={
+      \noexpand\path[\forestoption{edge}]
+        (.child anchor) -| +(-5pt,0) -- +(-5pt,0) |-
+        (!u.parent anchor)\forestoption{edge label};
+    },
   }
 [Topic indicators
     [dobj (28 \%)
         [Verbs of aquiring / searching: 55 \%
             [first person
                 [78 \%
-                    [\emph{Asunnon hankin yksityiseltä vuokranantajalta\, ja se oli valmiina saapuessani.}, text width=7cm]
+                    [\emph{{\color{red} Asunnon hankin yksityiseltä vuokranantajalta\, ja se oli valmiina saapuessani.}}, text width=7cm]
                     [\emph{Asumisen järjestin itselleni jo Suomesta käsin.}, text width=7.6cm]
                 ]
             ]
