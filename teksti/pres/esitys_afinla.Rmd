@@ -5,6 +5,7 @@ output: ioslides_presentation
 widescreen: true
 logo: utalogo350px_fin.png
 css: pres.css
+incremental: true
 ---
 
 
@@ -25,13 +26,52 @@ source("r/loader.R")
 
 ```
 
+
+---
+
+## Tutkimuskysymys (abstraktista)
+
+>- Tavoitteenamme oli kartoittaa rakenteet, joita varioimalla kirjoittajat
+  indikoivat kappaleen topiikkia. (tämä täytyy avata, Vuorijärvi käyttää
+  käsittääkseni samoin, ks. myöhempi dia.)
+
+>- Tekstikappaleen ytimen tavoittelun sijaan tarkoituksenamme on tässä
+  tutkimuksessa selvittää, minkälaisten vihjeiden avulla lukija johdatellaan
+  kappaleen aiheeseen. 
+
+>- Kappaleiden sujuva liittyminen toisiinsa on yksi keskeinen kriteeri mm.
+  äidinkielen ylioppilaskokeen arvioinnissa (Ylioppilastutkintolautakunta
+  2017). 
+
+>- Lopputuloksena hahmottelemme asumiseen liittyvien topiikki-indikaattorien
+  taksonomian.
+
+
+
+<div class="notes">
+
+Mitä tarkoitamme topiikilla on se kysymys, josta esitelmä ja artikkelikin olisi hyvä aloittaa.
+
+Suomessa puhutaan ohjekirjallisuudessa (esim. äikän opetus) esim. ydinvirkkeistä.
+
+
+</div>
+
+
+
+
+
+---
+
+
+
 ```{r wcloud, echo=FALSE}
 
-#freqtab <- table(withindicator$indicatorword)
-#words <- unique(withindicator$indicatorword)
-#freqs <- freqtab[words]
-#
-#wordcloud(words,as.vector(freqs))
+freqtab <- table(withindicator$indicatorword)
+words <- unique(withindicator$indicatorword)
+freqs <- freqtab[words]
+
+wordcloud(words,as.vector(freqs))
 
 ```
 
