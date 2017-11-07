@@ -1,0 +1,62 @@
+
+## Miksi ihmeessä? {.smaller}
+
+-  **Uusi kirjoittaja** ei kysy, miten minun pitäisi tämä tehdä vaan *millä eri
+tavoilla tämä on tehty*.
+
+### Opetuksessa
+
+-  Tutkimusperusteinen kirjoittamisenopetuksen tueksi tarvitaan
+  käyttöpohjaista, kuvailevaa tutkimusta
+-  Kappaleiden sujuva liittyminen toisiinsa on yksi keskeinen kriteeri mm.
+  äidinkielen ylioppilaskokeen arvioinnissa (Ylioppilastutkintolautakunta
+  2017).
+-  Tarve syntaksin ja tekstin rajapinnan analyysille (lähdeviite, eu-kartoitus)
+  -> sovellusmahdollisuudet
+
+### Muussa tutkimuksessa
+
+-  Taksonomiaa voisi käyttää tulevaisuudessa tilastollisten mallien pohjana /
+  koneoppimisen harjoitussyötteenä. Esim. *constrained cluster analysis*
+  [@wagstaff2001]  tai  *topic modelling*, [@blei2008]
+
+
+--- 
+
+(dia, jossa rinnakkain ohje ja esimerkkikappaleita)
+
+
+## Aineisto teksteinä
+
+*”Keskeistä on, että saman tekstilajin toteutumien avulla pyritään tyypillisesti samankaltaisiin tavoitteisiin. Samoin osallistujien välinen roolijako pysyy tekstilajin toteumasta toiseen karkeasti ottaen samankaltaisena. ” [@honkanen2012]*
+
+Kappaleiden rakenteesta ja funktioista osana opiskelijoiden tekstejä ks.
+Komppa 2012, Vuorijärvi 2013. Koosteen fennistisestä tekstin rakenteen
+tutkimuksesta tekevät Juvonen, Virtanen ja Voutilainen [-@juvonen2012].
+
+## Kappaleen alku kytkee sen jollain tasolla aiempaan tekstiin ja/tai otsikkoon {.smaller}
+
+
+- ”Kun tekstin osat ovat rinnaisteisia ja kummankaan ei voi sanoa muodostavan ydintä, on kyseessä moniytiminen suhde. Osat ovat tällöin tasavertaisia.
+- Moniytimisiä suhteita on nimetty murto-osa ydin-satelliittisuhteisiin nähden, joskin juuri moniytimisiin suhteisiin on viime aikoina alettu kiinnittää enemmän huomiota (esim. Stede 2008).
+- Kyseessä on sarja sekvenssisuhteita, jolloin tekstin osat ovat samanarvoisia ja kronologisessa suhteessa toisiinsa.”
+- Lista- ja sekvenssisuhteet ovat keskenään läheisiä suhdetyyppejä. Sekvenssisuhteet ovat kausaalisia ja tyypillisia narratiivisille tekstinosille. Listasuhteet taas ovat tyypillisiä ekspositorisille teksteille. (s. 77)
+- <span class="red2">(Ajattelen, että aineistomme on hyvin tämän kuvauksen tyyppistä, ja tällöin kappaleen alku on ”uuden sekvenssin merkki” ja siksi niiden tarkastelu on mielekästä.)</span>
+
+## Topiikki-indikaattorien dependenssiroolit  
+
+
+(kuvio)
+
+---
+
+(puu)
+
+
+---
+
+Kaavio alatopiikista
+
+---
+
+lähteet ()

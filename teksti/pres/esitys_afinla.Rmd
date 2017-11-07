@@ -1,11 +1,17 @@
 ---
 title: Sata ja yksi tapaa ilmaista topiikkia
 author: Juho Härme & Kirsi Sandberg, TaY
-output: ioslides_presentation
-widescreen: true
-logo: utalogo350px_fin.png
+output:
+    ioslides_presentation:
+        widescreen: true
+        logo: utalogo350px_fin.png
+        includes:
+          in_header: header.html
 css: pres.css
-incremental: true
+bibliography: bibliography.bib
+csl: utaltl.csl
+nocite: |
+  @komppa2012, @vuorijarvi2013, @haverinen2013tdt
 ---
 
 
@@ -14,7 +20,6 @@ library(knitr)
 library(rmarkdown)
 library(pander)
 library(stringr)
-library(knitr)
 library(jsonlite)
 library(ggplot2)
 library(readr)
@@ -24,59 +29,107 @@ source("r/utilities.R")
 source("r/functions.R")
 source("r/loader.R")
 
+knitr::opts_chunk$set(dev='svg')
+
 ```
 
 
----
+## Miksi ihmeessä? {.smaller}
 
-## Tutkimuskysymys (abstraktista)
+-  **Uusi kirjoittaja** ei kysy, miten minun pitäisi tämä tehdä vaan *millä eri
+tavoilla tämä on tehty*.
 
->- Tavoitteenamme oli kartoittaa rakenteet, joita varioimalla kirjoittajat
-  indikoivat kappaleen topiikkia. (tämä täytyy avata, Vuorijärvi käyttää
-  käsittääkseni samoin, ks. myöhempi dia.)
+### Opetuksessa
 
->- Tekstikappaleen ytimen tavoittelun sijaan tarkoituksenamme on tässä
-  tutkimuksessa selvittää, minkälaisten vihjeiden avulla lukija johdatellaan
-  kappaleen aiheeseen. 
-
->- Kappaleiden sujuva liittyminen toisiinsa on yksi keskeinen kriteeri mm.
+-  Tutkimusperusteinen kirjoittamisenopetuksen tueksi tarvitaan
+  käyttöpohjaista, kuvailevaa tutkimusta
+-  Kappaleiden sujuva liittyminen toisiinsa on yksi keskeinen kriteeri mm.
   äidinkielen ylioppilaskokeen arvioinnissa (Ylioppilastutkintolautakunta
-  2017). 
+  2017).
+-  Tarve syntaksin ja tekstin rajapinnan analyysille (lähdeviite, eu-kartoitus)
+  -> sovellusmahdollisuudet
 
->- Lopputuloksena hahmottelemme asumiseen liittyvien topiikki-indikaattorien
-  taksonomian.
+### Muussa tutkimuksessa
 
-
-
-<div class="notes">
-
-Mitä tarkoitamme topiikilla on se kysymys, josta esitelmä ja artikkelikin olisi hyvä aloittaa.
-
-Suomessa puhutaan ohjekirjallisuudessa (esim. äikän opetus) esim. ydinvirkkeistä.
+-  Taksonomiaa voisi käyttää tulevaisuudessa tilastollisten mallien pohjana /
+  koneoppimisen harjoitussyötteenä. Esim. *constrained cluster analysis*
+  [@wagstaff2001]  tai  *topic modelling*, [@blei2008]
 
 
-</div>
+--- 
+
+<article class="build columncontainer smaller">
+
+Etukäteisjärjestelyt Suomessa: Hakuprosessi: Oliko erityisiä ongelmia oman tai kohdemaan yliopiston kanssa… otitko erillistä matkavakuutusta? Muuta mainitsemisen arvoista...
+
+*Hakuprosessi sujui ongelmitta. Informaatio vaihtokohteen kv-toimistosta oli todella tarkkaa ja tuli ajoissa. Kv-toimiston henkilökunta oli muutoinkin todella ystävällistä ja auttavaista. Viisumi saapui\-\-*
+
+</article>
+
+<article class="build columncontainer smaller">
+
+Asuminen: Oliko asunto valmiina saavuttuasi paikalle? Vuokrataso? Onko sinulla suosituksia asunnon hankinnassa tai muita neuvoja asumisen suhteen?
+
+*Asuin kampuksella asuntolassa kolmen hengen budjetti-huoneessa. Vuokra oli alhainen, mutta huone oli pieni ja jaettu. Budjettihuoneen vuokra yhdeltä lukukaudelta oli alle 500 E. Asuntolassa on jokaisessa kerroksessa\-\-*
+
+</article>
 
 
+<div class="build columncontainer smaller">
 
-
-
----
-
-
-
-```{r wcloud, echo=FALSE}
+```{r wcloud, echo=FALSE, fig.width=2.5, fig.height=2.5}
+par(mar=c(0,0,0,0))
 
 freqtab <- table(withindicator$indicatorword)
 words <- unique(withindicator$indicatorword)
 freqs <- freqtab[words]
-
 wordcloud(words,as.vector(freqs))
 
 ```
 
+- Yht: `r genstats["tekstit"]`
+- Kappale asumisesta:   `r genstats["tekstit"] - genstats["kpl_0"]`  
+- Asua-johdos 1. virkkeessä:  `r table(fsstats1$sentence_number)["1"]` 
+
+</div>
+
+## Aineisto teksteinä
+
+*”Keskeistä on, että saman tekstilajin toteutumien avulla pyritään tyypillisesti samankaltaisiin tavoitteisiin. Samoin osallistujien välinen roolijako pysyy tekstilajin toteumasta toiseen karkeasti ottaen samankaltaisena. ” [@honkanen2012]*
+
+Kappaleiden rakenteesta ja funktioista osana opiskelijoiden tekstejä ks.
+Komppa 2012, Vuorijärvi 2013. Koosteen fennistisestä tekstin rakenteen
+tutkimuksesta tekevät Juvonen, Virtanen ja Voutilainen [-@juvonen2012].
+
+## Kappaleen alku kytkee sen jollain tasolla aiempaan tekstiin ja/tai otsikkoon {.smaller}
+
+
+- ”Kun tekstin osat ovat rinnaisteisia ja kummankaan ei voi sanoa muodostavan ydintä, on kyseessä moniytiminen suhde. Osat ovat tällöin tasavertaisia.
+- Moniytimisiä suhteita on nimetty murto-osa ydin-satelliittisuhteisiin nähden, joskin juuri moniytimisiin suhteisiin on viime aikoina alettu kiinnittää enemmän huomiota (esim. Stede 2008).
+- Kyseessä on sarja sekvenssisuhteita, jolloin tekstin osat ovat samanarvoisia ja kronologisessa suhteessa toisiinsa.”
+- Lista- ja sekvenssisuhteet ovat keskenään läheisiä suhdetyyppejä. Sekvenssisuhteet ovat kausaalisia ja tyypillisia narratiivisille tekstinosille. Listasuhteet taas ovat tyypillisiä ekspositorisille teksteille. (s. 77)
+- <span class="red2">(Ajattelen, että aineistomme on hyvin tämän kuvauksen tyyppistä, ja tällöin kappaleen alku on ”uuden sekvenssin merkki” ja siksi niiden tarkastelu on mielekästä.)</span>
+
+## Topiikki-indikaattorien dependenssiroolit  
+
+
+
+<div class="build">
+
+Subjekteja (nsubj), objekteja(dobj), predikaatteja (root), luokittelemattomia adverbiaaleja (nmod), kopulalauseen subjekteja (nsubj:cop)  ym.
+
+```{r, echo=FALSE}
+
+ggplot(subset(withindicator,indicator.deprel %in% c("dobj","nmod", "root", "nsubj")),aes(x=indicator.deprel)) + geom_bar() + coord_flip() + theme_minimal() + theme(axis.title.y=element_text(size=0),axis.title.x=element_text(size=0), text=element_text(size=40),plot.margin=unit(c(2,2,2,2),"cm"))
+
+```
+
+</div>
+
 
 ---
+
+<!-- TÄSSÄ ON PUU -->
 
 <embed type="image/svg+xml" src="tree1.svg" id="my-embed"/>
 
@@ -86,17 +139,79 @@ document.getElementById('my-embed').addEventListener('load', function(){
   // Will get called after embed element was loaded
   svgPanZoom(document.getElementById('my-embed')); 
 })
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelector("#refs").parentElement.className = "smaller";
+}, false);
+
 </script>
+
+
+<!-- PUUDIA loppuu -->
+
+
+## Rakenteiden tason synonyymeja
+
+<article class="chartcolumn_chart smaller synonm_chart build">
+
+
+<div class="vertcont">
+
+<div class="node vert chart-1 parent">Alatopiikki</div>
+
+</div>
+
+<div class="build">
+
+<div class="node child chart-border">
+Asunnon hankin yksityiseltä vuokranantajalta ja se
+oli valmiina saapuessani.
+</div>
+
+<div class="node child chart-border">
+Asunnosta muodostui kriittisin osa koko vaihtoa.
+</div>
+
+<div class="node child chart-border">
+Asuminen tapahtui kampuksella asuntolassa kahden
+hengen soluissa
+</div>
+
+</div>
+
+<div class="build">
+
+<div class="node chart-1 grandchild">Objekti</div>
+
+<div class="node chart-1 grandchild">Adverbiaali</div>
+
+<div class="node chart-1 grandchild">Subjekti</div>
+
+</div>
+
+
+</article>
+
 
 
 ---
 
+
 <script>
 
-//var ts = document.querySelector(".title-slide");
-//var wc = document.querySelector("#wc");
-//wc.style.marginBottom="9em";
-//ts.appendChild(wc);
+$(".synonm_chart .parent").click(function(){
+    $(".synonm_chart .parent").connections({"to":".synonm_chart .child","class":"bgconnection"});
+});
+
+$(".synonm_chart .child").click(function(){
+    $(".synonm_chart .child").each(function(){
+        $(this).connections({"to":".synonm_chart .grandchild:eq("+$(this).index()+")","class":"bgconnection"});
+    })
+});
+
+$(".synonm_chart .grandchild").click(function(){
+    $(".synonm_chart .parent, .synonm_chart .child").connections("remove");
+});
 
 </script>
-
