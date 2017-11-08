@@ -90,3 +90,10 @@ slides > slide:not(.nobackground):before {
     color:darkgrey;
 }
 
+.additional-text{
+    margin-top:3em;
+}
+
+div.additional-text p{
+    font-size:14px;
+}

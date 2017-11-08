@@ -39,17 +39,17 @@ knitr::opts_chunk$set(dev='svg')
 -  **Uusi kirjoittaja** ei kysy, miten minun pitäisi tämä tehdä vaan *millä eri
 tavoilla tämä on tehty*.
 
-### Opetuksessa
+### Pedagogiikka, tukimateraalit ja sovellukset
 
 -  Tutkimusperusteinen kirjoittamisenopetuksen tueksi tarvitaan
   käyttöpohjaista, kuvailevaa tutkimusta
 -  Kappaleiden sujuva liittyminen toisiinsa on yksi keskeinen kriteeri mm.
   äidinkielen ylioppilaskokeen arvioinnissa (Ylioppilastutkintolautakunta
   2017).
--  Tarve syntaksin ja tekstin rajapinnan analyysille (lähdeviite, eu-kartoitus)
+-  Tarve syntaksin ja tekstin rajapinnan analyysille [@koskenniemi2012]
   -> sovellusmahdollisuudet
 
-### Muussa tutkimuksessa
+### Tutkimus
 
 -  Taksonomiaa voisi käyttää tulevaisuudessa tilastollisten mallien pohjana /
   koneoppimisen harjoitussyötteenä. Esim. *constrained cluster analysis*
@@ -95,20 +95,24 @@ wordcloud(words,as.vector(freqs))
 
 ## Aineisto teksteinä
 
-*”Keskeistä on, että saman tekstilajin toteutumien avulla pyritään tyypillisesti samankaltaisiin tavoitteisiin. Samoin osallistujien välinen roolijako pysyy tekstilajin toteumasta toiseen karkeasti ottaen samankaltaisena. ” [@honkanen2012]*
+*”- - saman tekstilajin toteutumien avulla pyritään tyypillisesti samankaltaisiin tavoitteisiin. Samoin osallistujien välinen roolijako pysyy tekstilajin toteumasta toiseen karkeasti ottaen samankaltaisena. ” [@honkanen2012]*
 
-Kappaleiden rakenteesta ja funktioista osana opiskelijoiden tekstejä ks.
-Komppa 2012, Vuorijärvi 2013. Koosteen fennistisestä tekstin rakenteen
-tutkimuksesta tekevät Juvonen, Virtanen ja Voutilainen [-@juvonen2012].
+## Kappaleen alku toimii kytköksenä aiempaan tekstiin ja/tai otsikkoon 
 
-## Kappaleen alku kytkee sen jollain tasolla aiempaan tekstiin ja/tai otsikkoon {.smaller}
+### Retorisen rakenteen teoriassa [@komppa2012]
 
+- Rinnasteisia tekstinosia kuvataan moniytimisen suhteen kautta.
+- Sekvenssisuhteissa osat ovat samanarvoisia ja kronologisia, tyypillisiä narratiivisille tekstinosille. 
+- Listasuhteet tyypillisiä eritteleville teksteille.
 
-- ”Kun tekstin osat ovat rinnaisteisia ja kummankaan ei voi sanoa muodostavan ydintä, on kyseessä moniytiminen suhde. Osat ovat tällöin tasavertaisia.
-- Moniytimisiä suhteita on nimetty murto-osa ydin-satelliittisuhteisiin nähden, joskin juuri moniytimisiin suhteisiin on viime aikoina alettu kiinnittää enemmän huomiota (esim. Stede 2008).
-- Kyseessä on sarja sekvenssisuhteita, jolloin tekstin osat ovat samanarvoisia ja kronologisessa suhteessa toisiinsa.”
-- Lista- ja sekvenssisuhteet ovat keskenään läheisiä suhdetyyppejä. Sekvenssisuhteet ovat kausaalisia ja tyypillisia narratiivisille tekstinosille. Listasuhteet taas ovat tyypillisiä ekspositorisille teksteille. (s. 77)
-- <span class="red2">(Ajattelen, että aineistomme on hyvin tämän kuvauksen tyyppistä, ja tällöin kappaleen alku on ”uuden sekvenssin merkki” ja siksi niiden tarkastelu on mielekästä.)</span>
+<div class="additional-text">
+
+Kappaleiden rakenteesta ja funktioista opiskelijoiden teksteissä ks. Komppa 2012, Vuorijärvi 2013. 
+
+Kooste fennistisestä tekstin rakenteen tutkimuksesta Juvonen, Virtanen ja Voutilainen [-@juvonen2012].
+
+</div>
+
 
 ## Topiikki-indikaattorien dependenssiroolit  
 
@@ -158,7 +162,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <div class="vertcont">
 
-<div class="node vert chart-1 parent">Alatopiikki &nbsp; [esim. @dik1981]</div>
+<div class="node vert chart-1 parent">Alatopiikki</div>
 
 </div>
 
