@@ -158,7 +158,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <div class="vertcont">
 
-<div class="node vert chart-1 parent">Alatopiikki</div>
+<div class="node vert chart-1 parent">Alatopiikki &nbsp; [esim. @dik1981]</div>
 
 </div>
 
