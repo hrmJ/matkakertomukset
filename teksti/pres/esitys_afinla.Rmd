@@ -4,7 +4,7 @@ author: Juho Härme & Kirsi Sandberg, TaY
 output:
     ioslides_presentation:
         widescreen: true
-        logo: utalogo350px_fin.png
+        logo: uta_ja_plural.png
         includes:
           in_header: header.html
 css: pres.css
@@ -220,3 +220,31 @@ $(".synonm_chart .grandchild").click(function(){
 });
 
 </script>
+
+
+
+## Kiitos
+
+<div style="float:left;margin-right:5em;">
+
+kirsi.sandberg@uta.fi
+
+<div>
+<span><img src="social-twitter-icon.png" width="40px"></span>
+<span>\@Sndbrg_K</span>
+</div>
+
+</div>
+
+
+<div style="float:left">
+
+juho.harme@uta.fi
+
+<span><img src="social-twitter-icon.png" width="40px"></span>
+<span>\@jharme</span>
+
+</div>
+
+---
+

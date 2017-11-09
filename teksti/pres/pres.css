@@ -1,12 +1,17 @@
+
+h3{
+
+    color:black;
+}
 .gdbar img {
   width: 350px !important;
-  height: 66px !important;
+  height: 199px !important;
   margin: 8px 8px;
 }
 
 .gdbar {
   width: 400px !important;
-  height: 90px !important;
+  height: 199px !important;
 }
 
 
@@ -91,7 +96,7 @@ slides > slide:not(.nobackground):before {
 }
 
 .additional-text{
-    margin-top:3em;
+    margin-top:1.5em;
 }
 
 div.additional-text p{
