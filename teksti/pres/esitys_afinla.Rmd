@@ -11,7 +11,7 @@ css: pres.css
 bibliography: bibliography.bib
 csl: utaltl.csl
 nocite: |
-  @komppa2012, @vuorijarvi2013, @haverinen2013tdt
+  @komppa2012, @vuorijarvi2013, @haverinen2013tdt, @bhatia2012
 ---
 
 
@@ -93,13 +93,13 @@ wordcloud(words,as.vector(freqs))
 
 </div>
 
-## Aineisto teksteinä
+## Aineisto teksteinä {.build}
 
 *”- - saman tekstilajin toteutumien avulla pyritään tyypillisesti samankaltaisiin tavoitteisiin. Samoin osallistujien välinen roolijako pysyy tekstilajin toteumasta toiseen karkeasti ottaen samankaltaisena. ” [@honkanen2012]*
 
-## Kappaleen alku toimii kytköksenä aiempaan tekstiin ja/tai otsikkoon 
+### Kappaleen alku toimii kytköksenä aiempaan tekstiin ja/tai otsikkoon 
 
-### Retorisen rakenteen teoriassa [@komppa2012]
+#### Retorisen rakenteen teoriassa [@komppa2012]
 
 - Rinnasteisia tekstinosia kuvataan moniytimisen suhteen kautta.
 - Sekvenssisuhteissa osat ovat samanarvoisia ja kronologisia, tyypillisiä narratiivisille tekstinosille. 
@@ -107,11 +107,12 @@ wordcloud(words,as.vector(freqs))
 
 <div class="additional-text">
 
-Kappaleiden rakenteesta ja funktioista opiskelijoiden teksteissä ks. Komppa 2012, Vuorijärvi 2013. 
+Kappaleiden rakenteesta ja funktioista opiskelijoiden teksteissä ks. Komppa [-@komppa2012], Vuorijärvi [-@vuorijarvi2013] 
 
 Kooste fennistisestä tekstin rakenteen tutkimuksesta Juvonen, Virtanen ja Voutilainen [-@juvonen2012].
 
 </div>
+
 
 
 ## Topiikki-indikaattorien dependenssiroolit  
