@@ -5,6 +5,18 @@ import json
 from utils import BuildString
 import sys
 
+def PrintText(t_id):
+    """
+    t_id: id of the text to be printed
+    """
+    engine = db.create_engine('sqlite:///matkakertomukset.db', echo=False)
+    Session = db.sessionmaker(bind=engine)
+    session = Session()
+    chapterids = [cid[0] for cid in session.query(db.Chapter.id).filter(db.Chapter.text_id == t_id).all()]
+    ps = session.query(db.Paragraph).filter(db.Paragraph.chapter_id.in_(chapterids)).all()
+    for p in ps:
+        print("{}\n\n".format(p.content))
+
 def TextStats(fname):
     """
     fname: the file containing the ids of the texts
@@ -31,7 +43,7 @@ def TextStats(fname):
         alltext.append({"text_id":tid,"paragraphs":len(ps),"sentences":sentences_text,"words":words_text})
     outputfile = "data/text_stats.json"
     with open(outputfile,"w") as f:
-        json.dump(alltext)
+        json.dump(alltext,f,indent=4,ensure_ascii = False)
     print("Done! Data saved in " + outputfile)
 
 class Analysis():
