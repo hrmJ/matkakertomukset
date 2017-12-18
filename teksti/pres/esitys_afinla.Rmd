@@ -150,7 +150,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelector("#refs").parentElement.className = "smaller";
     var total = $("slide:eq(0)").attr("data-total-slides")*1;
     //Siirrä lähteet viimeiseksi
-    $("slide:eq("+(total-1)+")").prependTo($("slide:eq("+(total-2)+")"));
+    //$("slide:eq("+(total-1)+")").prependTo($("slide:eq("+(total-2)+")"));
 }, false);
 
 </script>

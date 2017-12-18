@@ -5,6 +5,34 @@ import json
 from utils import BuildString
 import sys
 
+def TextStats(fname):
+    """
+    fname: the file containing the ids of the texts
+    """
+    engine = db.create_engine('sqlite:///matkakertomukset.db', echo=False)
+    Session = db.sessionmaker(bind=engine)
+    with open(fname,"r") as f:
+        text_ids = json.loads(f.read())
+    session = Session()
+    alltext = list()
+    for idx, tid in enumerate(text_ids):
+        if idx % 10 == 0:
+            print("{}/{}".format(idx, len(text_ids)))
+        chapterids = [cid[0] for cid in session.query(db.Chapter.id).filter(db.Chapter.text_id == tid).all()]
+        ps = session.query(db.Paragraph).filter(db.Paragraph.chapter_id.in_(chapterids)).all()
+        words_text = 0
+        sentences_text = 0
+        for p in ps:
+            if p.parsed:
+                for sentence_number, sentence_string in enumerate(p.parsed.strip().split("\n\n")):
+                    s = language.Sentence(sentence_string)
+                    words_text += len([w for w in s.words if w.deprel.lower() not in ["punct","punc"]])
+                    sentences_text += 1
+        alltext.append({"text_id":tid,"paragraphs":len(ps),"sentences":sentences_text,"words":words_text})
+    outputfile = "data/text_stats.json"
+    with open(outputfile,"w") as f:
+        json.dump(alltext)
+    print("Done! Data saved in " + outputfile)
 
 class Analysis():
 
@@ -134,5 +162,5 @@ class FirstSentenceStats(Analysis):
 
 
 #hv = HeadverbStats()
-fs = FirstSentenceStats()
+#fs = FirstSentenceStats()
 
