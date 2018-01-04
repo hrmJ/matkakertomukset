@@ -85,6 +85,7 @@ class Analysis():
                     p.previous_paragraph = allps_dict[p.id-1]
                 except KeyError:
                     p.previous_paragraph = ""
+                p.chaptertitle = session.query(db.Chapter.header).filter(db.Chapter.id==p.chapter_id).first()[0]
                 p.textid = tid[0]
                 p.pnumber = pidx + 1
                 p.ptotal = len(ps)
@@ -167,6 +168,7 @@ class FirstSentenceStats(Analysis):
                                       "headverb_person":hvperson,
                                       "headverb_feat":hvfeat,
                                       "previous_paragraph": p.previous_paragraph,
+                                      "chaptertitle": p.chaptertitle,
                                       "featmean":feats,
                                       "first_word_of_sentence_token": s.words[0].token if "pun" not in s.words[0].pos.lower() else s.words[1].token,
                                       "first_word_of_sentence_lemma": s.words[0].lemma if "pun" not in s.words[0].pos.lower() else s.words[1].lemma,
