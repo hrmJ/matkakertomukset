@@ -70,12 +70,21 @@ class Analysis():
             chapterids = [thisid[0] for thisid in session.query(db.Chapter.id).filter(db.Chapter.text_id==tid[0]).all()]
             ps = session.query(db.Paragraph).filter(db.Paragraph.chapter_id.in_(chapterids)).filter(db.Paragraph.theme=="Asuminen").all()
 
+            allps = session.query(db.Paragraph).filter(db.Paragraph.chapter_id.in_(chapterids)).all()
+            allps_dict = dict()
+            for thisp in allps:
+                allps_dict[thisp.id] = thisp.content
+
             if len(ps)>3:
                 pamounts["n"]+=1
             else:
                 pamounts[len(ps)]+=1
 
             for pidx, p in enumerate(ps):
+                try:
+                    p.previous_paragraph = allps_dict[p.id-1]
+                except KeyError:
+                    p.previous_paragraph = ""
                 p.textid = tid[0]
                 p.pnumber = pidx + 1
                 p.ptotal = len(ps)
@@ -157,6 +166,7 @@ class FirstSentenceStats(Analysis):
                                       "sentence_number":sentence_number+1,
                                       "headverb_person":hvperson,
                                       "headverb_feat":hvfeat,
+                                      "previous_paragraph": p.previous_paragraph,
                                       "featmean":feats,
                                       "first_word_of_sentence_token": s.words[0].token if "pun" not in s.words[0].pos.lower() else s.words[1].token,
                                       "first_word_of_sentence_lemma": s.words[0].lemma if "pun" not in s.words[0].pos.lower() else s.words[1].lemma,
@@ -174,5 +184,5 @@ class FirstSentenceStats(Analysis):
 
 
 #hv = HeadverbStats()
-#fs = FirstSentenceStats()
+fs = FirstSentenceStats()
 
